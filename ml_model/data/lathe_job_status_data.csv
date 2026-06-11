@@ -1,0 +1,6 @@
+"Current_Job_SLNo";"Batch_PartNo";"Part_SLNo";"Component";"Production_Started";"Production_Completed";"Avaliability";"Performance";"Quality";"OEE";"Planned_Sales";"Income";"Loss";"Customer_ID";"Project";"Supervisor_ID"
+1;"RA-21-A-X";3;"25/08/2025 12:19:00";"25/08/2025 12:22:01";"Base plate";"100";"99";"67";"62";"Rs 6000";"4000";"2000";"ABB_101";"Robotic_Actuator";"Parveen_101"
+2;"RA-21-A-X";3;"25/08/2025 19:53:00";"25/08/2025 19:56:30";"Base plate";"98";"86";"100";"87";"Rs 6000";"6000";"0";"ABB_101";"Robotic_Actuator";"Parveen_101"
+3;"RA-21-A-X";3;"25/08/2025 20:06:00";"25/08/2025 20:10:07";"Base plate";"100";"73";"100";"70";"Rs 6000";"6000";"0";"ABB_101";"Robotic_Actuator";"Parveen_101"
+4;"RA-21-A-X";3;"25/08/2025 20:32:00";"25/08/2025 20:35:59";"Base plate";"98";"75";"100";"65";"Rs 6000";"6000";"0";"ABB_101";"Robotic_Actuator";"Parveen_101"
+5;"RA-21-A-X";3;"27/08/2025 14:45:00";"27/08/2025 14:54:04";"Base plate";"100";"33";"67";"34";"Rs 6000";"4000";"2000";"ABB_101";"Robotic_Actuator";"Parveen_101"

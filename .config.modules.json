@@ -1,0 +1,9 @@
+{
+    "moment": {
+        "spec": "moment",
+        "module": "moment",
+        "subpath": "",
+        "builtin": false,
+        "known": false
+    }
+}

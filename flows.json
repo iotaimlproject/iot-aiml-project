@@ -28001,7 +28001,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
+        "x": 1140,
         "y": 400,
         "wires": []
     },
@@ -28022,7 +28022,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 770,
+        "x": 750,
         "y": 400,
         "wires": [
             [
@@ -33519,6 +33519,136 @@
         "name": "Push To table status",
         "x": 1140,
         "y": 7920,
+        "wires": []
+    },
+    {
+        "id": "f7277156a5a4cdf8",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 7460,
+        "wires": [
+            [
+                "c7d92a4b4ffa416c"
+            ]
+        ]
+    },
+    {
+        "id": "9305a8db4dc02ad1",
+        "type": "debug",
+        "z": "06948f76d5659ec2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 7520,
+        "wires": []
+    },
+    {
+        "id": "c7d92a4b4ffa416c",
+        "type": "function",
+        "z": "06948f76d5659ec2",
+        "name": "function 20",
+        "func": "msg.payload = {\n    availability: flow.get(\"avaliability%\"),\n    performance: flow.get(\"Performance%\"),\n    quality: flow.get(\"Quality%\"),\n    oee: flow.get(\"OEE\"),\n    income: flow.get(\"Total_Income\"),\n    loss: flow.get(\"Capital_Loss\")\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 7520,
+        "wires": [
+            [
+                "9305a8db4dc02ad1"
+            ]
+        ]
+    },
+    {
+        "id": "89feff24cdfaa9a7",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 7720,
+        "wires": [
+            [
+                "80794470f15a31a3"
+            ]
+        ]
+    },
+    {
+        "id": "80794470f15a31a3",
+        "type": "function",
+        "z": "06948f76d5659ec2",
+        "name": "function 23",
+        "func": "msg.payload = {\n    availability: flow.get(\"avaliability%\"),\n    performance: flow.get(\"Performance%\"),\n    quality: flow.get(\"Quality%\"),\n    oee: flow.get(\"OEE\"),\n    income: flow.get(\"Total_Income\"),\n    loss: flow.get(\"Capital_Loss\")\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 7800,
+        "wires": [
+            [
+                "478bb6903ac2c459"
+            ]
+        ]
+    },
+    {
+        "id": "478bb6903ac2c459",
+        "type": "debug",
+        "z": "06948f76d5659ec2",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 7800,
         "wires": []
     },
     {
