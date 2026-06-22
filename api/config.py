@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     db_host: str = "localhost"
     db_port: int = 3306
     db_user: str = "root"
-    db_password: str = "iotaimlproject"
+    db_password: str = "@iotaimlproject999"
     db_database: str = "lathe"
     db_table: str = "manufacture_ai_data"
 

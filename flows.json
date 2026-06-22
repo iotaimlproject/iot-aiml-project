@@ -1,13 +1,5 @@
 [
     {
-        "id": "fe514418138a09d7",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "413e4a02b73e8664",
         "type": "tab",
         "label": "Supervisor DB",
@@ -27,7 +19,7 @@
         "id": "3b749428d849f316",
         "type": "tab",
         "label": "Idea lab dashboard",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -35,9 +27,14 @@
         "id": "f77fc6864f564ae2",
         "type": "tab",
         "label": "Actuator_DB",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
+    },
+    {
+        "id": "bc452dfad4aef27a",
+        "type": "tab",
+        "label": "AI Optimize"
     },
     {
         "id": "2c9330c11f6a4001",
@@ -2954,6 +2951,36 @@
         "order": 5,
         "width": "3",
         "height": "1"
+    },
+    {
+        "id": "opt_tab",
+        "type": "ui_tab",
+        "name": "AI Optimize",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "opt_group",
+        "type": "ui_group",
+        "name": "AI Optimize",
+        "tab": "opt_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "opt_db_group",
+        "type": "ui_group",
+        "name": "DB Row View",
+        "tab": "opt_tab",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "0ce6edb24a23fbb1",
@@ -39806,5 +39833,790 @@
         "x": 580,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "opt_oee_gauge",
+        "type": "ui_gauge",
+        "z": "bc452dfad4aef27a",
+        "name": "OEE",
+        "group": "opt_group",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "OEE",
+        "label": "OEE %",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 200,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "opt_rpm_gauge",
+        "type": "ui_gauge",
+        "z": "bc452dfad4aef27a",
+        "name": "RPM",
+        "group": "opt_group",
+        "order": 4,
+        "width": 2,
+        "height": 4,
+        "gtype": "gage",
+        "title": "RPM",
+        "label": "RPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 600,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "opt_avail_gauge",
+        "type": "ui_gauge",
+        "z": "bc452dfad4aef27a",
+        "name": "Availability",
+        "group": "opt_group",
+        "order": 5,
+        "width": 2,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Availability",
+        "label": "Avail %",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "opt_perf_gauge",
+        "type": "ui_gauge",
+        "z": "bc452dfad4aef27a",
+        "name": "Performance",
+        "group": "opt_group",
+        "order": 6,
+        "width": 2,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Performance",
+        "label": "Perf %",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "opt_qual_gauge",
+        "type": "ui_gauge",
+        "z": "bc452dfad4aef27a",
+        "name": "Quality",
+        "group": "opt_group",
+        "order": 7,
+        "width": 2,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Quality",
+        "label": "Qual %",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1000,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "opt_produce_start_btn",
+        "type": "ui_button",
+        "z": "bc452dfad4aef27a",
+        "name": "Produce Start",
+        "group": "opt_group",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "▶ Start",
+        "tooltip": "Start data injection",
+        "color": "#00b500",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "opt_produce_start_func"
+            ]
+        ]
+    },
+    {
+        "id": "opt_produce_stop_btn",
+        "type": "ui_button",
+        "z": "bc452dfad4aef27a",
+        "name": "Produce Stop",
+        "group": "opt_group",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "■ Stop",
+        "tooltip": "Stop data injection",
+        "color": "#ca3838",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "opt_produce_stop_func"
+            ]
+        ]
+    },
+    {
+        "id": "opt_dropdown",
+        "type": "ui_dropdown",
+        "z": "bc452dfad4aef27a",
+        "name": "Horizon",
+        "label": "Horizon",
+        "tooltip": "",
+        "place": "Select horizon",
+        "group": "opt_group",
+        "order": 8,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "30 min",
+                "value": "30m",
+                "type": "str"
+            },
+            {
+                "label": "1 hour",
+                "value": "1h",
+                "type": "str"
+            },
+            {
+                "label": "2 hours",
+                "value": "2h",
+                "type": "str"
+            },
+            {
+                "label": "6 hours",
+                "value": "6h",
+                "type": "str"
+            },
+            {
+                "label": "8 hours",
+                "value": "8h",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "opt_store_horizon"
+            ]
+        ]
+    },
+    {
+        "id": "opt_predict_btn",
+        "type": "ui_button",
+        "z": "bc452dfad4aef27a",
+        "name": "AI Predict",
+        "group": "opt_group",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "label": "AI Predict",
+        "tooltip": "Predict OEE across horizons",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "opt_build_predict"
+            ]
+        ]
+    },
+    {
+        "id": "opt_optimize_btn",
+        "type": "ui_button",
+        "z": "bc452dfad4aef27a",
+        "name": "Optimize",
+        "group": "opt_group",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "label": "Optimize",
+        "tooltip": "Find optimal RPM for target OEE",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "x": 120,
+        "y": 800,
+        "wires": [
+            [
+                "opt_build_optimize"
+            ]
+        ]
+    },
+    {
+        "id": "opt_apply_btn",
+        "type": "ui_button",
+        "z": "bc452dfad4aef27a",
+        "name": "APPLY",
+        "group": "opt_group",
+        "order": 11,
+        "width": 2,
+        "height": 1,
+        "label": "APPLY",
+        "tooltip": "Apply current values to DB",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "x": 120,
+        "y": 940,
+        "wires": [
+            [
+                "opt_apply"
+            ]
+        ]
+    },
+    {
+        "id": "opt_predict_text",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "opt_group",
+        "name": "Prediction",
+        "order": 12,
+        "width": 6,
+        "height": 4,
+        "format": "<div style=\"padding:12px\">\n  <b>Predicted OEE ({{msg.payload.prediction.horizon}}):</b><br><br>\n  <span style=\"font-size:24px;color:#0094CE;font-weight:bold\">{{msg.payload.prediction.value}}%</span><br><br>\n  <i>RPM={{msg.payload.prediction.current_rpm}} | Current OEE={{msg.payload.prediction.current_oee}}%</i>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 200,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_optimize_text",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "opt_group",
+        "name": "Optimization",
+        "order": 13,
+        "width": 6,
+        "height": 4,
+        "format": "<div style=\"padding:12px\">\n  <b>Optimization Result</b><br><br>\n  Feasible: <b>{{msg.payload.feasible ? 'Yes' : 'No'}}</b><br>\n  Optimal RPM: <b>{{msg.payload.optimal_rpm}}</b><br>\n  Optimal Hz: <b>{{msg.payload.optimal_hz}}</b><br>\n  Predicted OEE: <b>{{msg.payload.predicted_oee}}%</b><br>\n  Current OEE: <b>{{msg.payload.current_oee}}%</b><br>\n  Target OEE: <b>{{msg.payload.target_oee}}%</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 840,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_chart",
+        "type": "ui_chart",
+        "z": "bc452dfad4aef27a",
+        "name": "OEE Predictions",
+        "group": "opt_group",
+        "order": 15,
+        "width": 12,
+        "height": 6,
+        "chartType": "line",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 3600,
+        "outputs": 1,
+        "className": "",
+        "x": 600,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_status_text",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "opt_group",
+        "name": "Status",
+        "order": 14,
+        "width": 12,
+        "height": 2,
+        "format": "<div style=\"padding:8px 12px; border-radius:4px; background-color:#263238; color:#eceff1; font-size:14px; font-weight:bold; border-left:4px solid #0094CE\">{{msg.payload}}</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 700,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_inject5",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Every 5s",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "SELECT id, timestamp, rpm, availability, performance, quality, oee, downtime_minutes FROM manufacture_ai_data ORDER BY id DESC LIMIT 1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "topic": "SELECT id, timestamp, rpm, availability, performance, quality, oee, downtime_minutes FROM manufacture_ai_data ORDER BY id DESC LIMIT 1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "opt_produce_filter"
+            ]
+        ]
+    },
+    {
+        "id": "opt_produce_filter",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Produce Filter",
+        "func": "if (flow.get(\"produce_enabled\")) { return msg; } else { return null; }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "opt_fetch_latest"
+            ]
+        ]
+    },
+    {
+        "id": "opt_fetch_latest",
+        "type": "mysql",
+        "z": "bc452dfad4aef27a",
+        "mydb": "79ea3cb23e58b11c",
+        "name": "Fetch Latest",
+        "x": 300,
+        "y": 100,
+        "wires": [
+            [
+                "opt_generate"
+            ]
+        ]
+    },
+    {
+        "id": "opt_generate",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Generate & Split",
+        "func": "var row = msg.payload && msg.payload[0];\nvar rpm, availability, performance, quality, oee, downtime;\nif (!row) {\n    node.warn(\"No row data, using defaults\");\n    rpm = 400; availability = 85.0; performance = 80.0; quality = 90.0; oee = 72.0; downtime = 5.0;\n} else {\n    node.warn(\"Generating from row id=\" + row.id + \" rpm=\" + row.rpm + \" oee=\" + row.oee);\n    rpm = Math.round(row.rpm * (1 + (Math.random() - 0.5) * 0.1));\n    rpm = Math.min(500, Math.max(300, rpm));\n    availability = parseFloat((row.availability * (1 + (Math.random() - 0.5) * 0.06)).toFixed(2));\n    availability = Math.min(100, Math.max(0, availability));\n    performance = parseFloat((row.performance * (1 + (Math.random() - 0.5) * 0.06)).toFixed(2));\n    performance = Math.min(100, Math.max(0, performance));\n    quality = parseFloat((row.quality * (1 + (Math.random() - 0.5) * 0.06)).toFixed(2));\n    quality = Math.min(100, Math.max(0, quality));\n    downtime = parseFloat((row.downtime_minutes * (1 + (Math.random() - 0.5) * 0.2)).toFixed(2));\n    downtime = Math.max(0, downtime);\n    oee = parseFloat((availability * performance * quality / 10000).toFixed(2));\n}\nnode.warn(\"Generated: rpm=\" + rpm + \" avail=\" + availability + \" perf=\" + performance + \" qual=\" + quality + \" oee=\" + oee + \" downtime=\" + downtime);\nflow.set(\"current_rpm\", rpm);\nflow.set(\"current_oee\", oee);\nflow.set(\"current_availability\", availability);\nflow.set(\"current_performance\", performance);\nflow.set(\"current_quality\", quality);\nflow.set(\"current_downtime\", downtime);\nflow.set(\"current_timestamp\", new Date().toISOString());\nvar insertMsg = { topic: \"INSERT INTO manufacture_ai_data (timestamp, rpm, availability, performance, quality, oee, downtime_minutes) VALUES (NOW(), ?, ?, ?, ?, ?, ?)\", payload: [rpm, availability, performance, quality, oee, downtime] };\nvar oeeMsg = { payload: oee };\nvar rpmMsg = { payload: rpm };\nvar availMsg = { payload: availability };\nvar perfMsg = { payload: performance };\nvar qualMsg = { payload: quality };\nreturn [[insertMsg], [oeeMsg], [rpmMsg], [availMsg], [perfMsg], [qualMsg]];",
+        "outputs": 6,
+        "noerr": 0,
+        "x": 500,
+        "y": 100,
+        "wires": [
+            [
+                "opt_insert"
+            ],
+            [
+                "opt_oee_gauge"
+            ],
+            [
+                "opt_rpm_gauge"
+            ],
+            [
+                "opt_avail_gauge"
+            ],
+            [
+                "opt_perf_gauge"
+            ],
+            [
+                "opt_qual_gauge"
+            ]
+        ]
+    },
+    {
+        "id": "opt_insert",
+        "type": "mysql",
+        "z": "bc452dfad4aef27a",
+        "mydb": "79ea3cb23e58b11c",
+        "name": "Insert Data",
+        "x": 720,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_produce_start_func",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Enable Production",
+        "func": "flow.set(\"produce_enabled\", true);\nflow.set(\"production_status\", \"▶ RUNNING\");\nnode.warn(\"Production STARTED\");\nreturn { payload: \"▶ Production RUNNING\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "opt_status_text"
+            ]
+        ]
+    },
+    {
+        "id": "opt_produce_stop_func",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Disable Production",
+        "func": "flow.set(\"produce_enabled\", false);\nflow.set(\"production_status\", \"■ STOPPED\");\nnode.warn(\"Production STOPPED\");\nreturn { payload: \"■ Production STOPPED\" };",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "opt_status_text"
+            ]
+        ]
+    },
+    {
+        "id": "opt_store_horizon",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Horizon",
+        "func": "flow.set(\"selected_horizon\", msg.payload);\nnode.warn(\"Horizon set to: \" + msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_build_predict",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Build Predict",
+        "func": "var rpm = flow.get(\"current_rpm\") || 400;\nvar oee = flow.get(\"current_oee\") || 70;\nvar avail = flow.get(\"current_availability\") || 85;\nvar perf = flow.get(\"current_performance\") || 80;\nvar qual = flow.get(\"current_quality\") || 90;\nvar downtime = flow.get(\"current_downtime\") || 5;\nnode.warn(\"Predict: rpm=\" + rpm + \" oee=\" + oee);\nmsg.url = \"http://127.0.0.1:8000/predict-oee\";\nmsg.method = \"POST\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    current_rpm: rpm, current_oee: oee, availability: avail,\n    performance: perf, quality: qual, downtime_minutes: downtime,\n    current_time: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 540,
+        "wires": [
+            [
+                "opt_http_predict"
+            ]
+        ]
+    },
+    {
+        "id": "opt_http_predict",
+        "type": "http request",
+        "z": "bc452dfad4aef27a",
+        "name": "POST /predict-oee",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "headers": [],
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "opt_parse_predict"
+            ]
+        ]
+    },
+    {
+        "id": "opt_parse_predict",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Parse Predict",
+        "func": "var resp = msg.payload;\nvar selectedHorizon = flow.get(\"selected_horizon\") || \"1h\";\nnode.warn(\"Predict status=\" + msg.statusCode + \" horizon=\" + selectedHorizon + \" oee=\" + (resp.current_oee || \"N/A\"));\nvar preds = resp.predictions;\nif (!preds) { node.warn(\"No predictions\"); return [msg, msg]; }\nvar key = \"pred_\" + selectedHorizon;\nvar value = preds[key];\nif (value === undefined) { node.warn(\"Unknown horizon: \" + selectedHorizon); return [msg, msg]; }\nvar horizonLabel = {\"30m\":\"30 min\",\"1h\":\"1 hour\",\"2h\":\"2 hours\",\"6h\":\"6 hours\",\"8h\":\"8 hours\"}[selectedHorizon] || selectedHorizon;\nvar dataMsg = { payload: { prediction: {\n    value: value.toFixed(2),\n    horizon: horizonLabel,\n    current_rpm: resp.current_rpm,\n    current_oee: resp.current_oee.toFixed(2)\n}}};\nvar chartMsg = { payload: value, topic: \"OEE \" + selectedHorizon };\nreturn [dataMsg, chartMsg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 660,
+        "y": 540,
+        "wires": [
+            [
+                "opt_predict_text"
+            ],
+            [
+                "opt_chart"
+            ]
+        ]
+    },
+    {
+        "id": "opt_build_optimize",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Build Optimize",
+        "func": "var rpm = flow.get(\"current_rpm\") || 400;\nvar oee = flow.get(\"current_oee\") || 70;\nvar avail = flow.get(\"current_availability\") || 85;\nvar perf = flow.get(\"current_performance\") || 80;\nvar qual = flow.get(\"current_quality\") || 90;\nvar downtime = flow.get(\"current_downtime\") || 5;\nvar horizon = flow.get(\"selected_horizon\") || \"1h\";\nnode.warn(\"Optimize: rpm=\" + rpm + \" oee=\" + oee + \" horizon=\" + horizon);\nmsg.url = \"http://127.0.0.1:8000/optimize-oee\";\nmsg.method = \"POST\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    current_rpm: rpm, current_oee: oee, availability: avail,\n    performance: perf, quality: qual, downtime_minutes: downtime,\n    target_oee_percentage: 10, horizon: horizon\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 800,
+        "wires": [
+            [
+                "opt_http_optimize"
+            ]
+        ]
+    },
+    {
+        "id": "opt_http_optimize",
+        "type": "http request",
+        "z": "bc452dfad4aef27a",
+        "name": "POST /optimize-oee",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "headers": [],
+        "x": 470,
+        "y": 800,
+        "wires": [
+            [
+                "opt_parse_optimize"
+            ]
+        ]
+    },
+    {
+        "id": "opt_parse_optimize",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Parse Optimize",
+        "func": "var resp = msg.payload;\nnode.warn(\"Optimize: feasible=\" + resp.feasible + \" optimal_rpm=\" + resp.optimal_rpm);\nreturn { payload: {\n    feasible: resp.feasible ? \"Yes\" : \"No\",\n    optimal_rpm: resp.optimal_rpm,\n    optimal_hz: (resp.optimal_hz || 0).toFixed(2),\n    predicted_oee: (resp.predicted_oee || 0).toFixed(2),\n    current_oee: (resp.current_oee || 0).toFixed(2),\n    target_oee: (resp.target_oee || 0).toFixed(2)\n}};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 800,
+        "wires": [
+            [
+                "opt_optimize_text"
+            ]
+        ]
+    },
+    {
+        "id": "opt_apply",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Apply to DB",
+        "func": "var rpm = flow.get(\"current_rpm\") || 400;\nvar oee = flow.get(\"current_oee\") || 70;\nvar avail = flow.get(\"current_availability\") || 85;\nvar perf = flow.get(\"current_performance\") || 80;\nvar qual = flow.get(\"current_quality\") || 90;\nvar downtime = flow.get(\"current_downtime\") || 5;\nnode.warn(\"APPLY: inserting rpm=\" + rpm + \" oee=\" + oee);\nvar insertMsg = { topic: \"INSERT INTO manufacture_ai_data (timestamp, rpm, availability, performance, quality, oee, downtime_minutes) VALUES (NOW(), ?, ?, ?, ?, ?, ?)\", payload: [rpm, avail, perf, qual, oee, downtime] };\nvar statusMsg = { payload: \"Applied \" + new Date().toLocaleTimeString() + \": rpm=\" + rpm + \" oee=\" + oee + \"%\" };\nreturn [[insertMsg], [statusMsg]];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "opt_apply_insert"
+            ],
+            [
+                "opt_status_text"
+            ]
+        ]
+    },
+    {
+        "id": "opt_apply_insert",
+        "type": "mysql",
+        "z": "bc452dfad4aef27a",
+        "mydb": "79ea3cb23e58b11c",
+        "name": "Apply Insert",
+        "x": 500,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_inject3",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Every 3s",
+        "repeat": "3",
+        "topic": "SELECT id, timestamp, rpm, availability, performance, quality, oee, downtime_minutes FROM manufacture_ai_data ORDER BY id DESC LIMIT 1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1080,
+        "wires": [
+            [
+                "opt_fetch_row"
+            ]
+        ]
+    },
+    {
+        "id": "opt_fetch_row",
+        "type": "mysql",
+        "z": "bc452dfad4aef27a",
+        "mydb": "79ea3cb23e58b11c",
+        "name": "Fetch Row",
+        "x": 300,
+        "y": 1080,
+        "wires": [
+            [
+                "opt_format_row"
+            ]
+        ]
+    },
+    {
+        "id": "opt_format_row",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Format Row",
+        "func": "var row = msg.payload && msg.payload[0];\nif (!row) {\n    var emptyRows = flow.get(\"opt_rows\") || [];\n    return [{ payload: { id: \"-\", timestamp: \"No data\", rpm: \"-\", availability: \"-\", performance: \"-\", quality: \"-\", oee: \"-\", downtime: \"-\" } }, { payload: emptyRows }];\n}\nnode.warn(\"Row id=\" + row.id + \" ts=\" + row.timestamp + \" oee=\" + row.oee);\nvar rows = flow.get(\"opt_rows\") || [];\nrows.unshift({\n    id: row.id,\n    timestamp: row.timestamp,\n    rpm: row.rpm,\n    availability: parseFloat(row.availability).toFixed(2) + \"%\",\n    performance: parseFloat(row.performance).toFixed(2) + \"%\",\n    quality: parseFloat(row.quality).toFixed(2) + \"%\",\n    oee: parseFloat(row.oee).toFixed(2) + \"%\",\n    downtime: parseFloat(row.downtime_minutes).toFixed(1) + \"min\"\n});\nif (rows.length > 20) rows = rows.slice(0, 20);\nflow.set(\"opt_rows\", rows);\nvar dataRow = {\n    id: row.id,\n    timestamp: row.timestamp,\n    rpm: row.rpm,\n    availability: parseFloat(row.availability).toFixed(2) + \"%\",\n    performance: parseFloat(row.performance).toFixed(2) + \"%\",\n    quality: parseFloat(row.quality).toFixed(2) + \"%\",\n    oee: parseFloat(row.oee).toFixed(2) + \"%\",\n    downtime: parseFloat(row.downtime_minutes).toFixed(1) + \"min\"\n};\nreturn [{ payload: dataRow }, { payload: rows }];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 490,
+        "y": 1080,
+        "wires": [
+            [
+                "opt_dbrow_text"
+            ],
+            [
+                "opt_dbrow_template"
+            ]
+        ]
+    },
+    {
+        "id": "opt_dbrow_text",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "opt_db_group",
+        "name": "DB Row",
+        "order": 1,
+        "width": 12,
+        "height": 5,
+        "format": "<div style=\"white-space:pre-wrap;line-height:1.6\">\n<b>Latest DB Row</b><br>\nID: <b>{{msg.payload.id}}</b> | Time: {{msg.payload.timestamp}}<br>\nRPM: <b>{{msg.payload.rpm}}</b> | Avail: <b>{{msg.payload.availability}}</b> | Perf: <b>{{msg.payload.performance}}</b><br>\nQual: <b>{{msg.payload.quality}}</b> | OEE: <b>{{msg.payload.oee}}</b> | D/T: <b>{{msg.payload.downtime}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 840,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "opt_dbrow_template",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "opt_db_group",
+        "name": "DB Row Table",
+        "order": 2,
+        "width": 12,
+        "height": 13,
+        "format": "<style>\n.db-table { width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; }\n.db-table th { background-color: #0094CE; color: white; padding: 6px 8px; text-align: center; font-weight: bold; border: 1px solid #ddd; font-size: 12px; }\n.db-table td { padding: 5px 8px; text-align: center; border: 1px solid #ddd; font-size: 11px; }\n.db-table tr:nth-child(even) { background-color: #f2f8ff; }\n.db-table tr:hover { background-color: #d0e8ff; }\n.db-val { font-weight: bold; color: #0094CE; }\n.db-id { font-weight: bold; color: #333; }\n.db-time { font-size: 0.85em; color: #555; }\n.db-count { color: #666; font-size: 12px; margin-bottom: 6px; }\n</style>\n<div class=\"db-count\">Showing {{msg.payload.length}} rows (newest first)</div>\n<div style=\"max-height:300px; overflow-y:auto\">\n<table class=\"db-table\">\n  <thead>\n    <tr>\n      <th>ID</th>\n      <th>Timestamp</th>\n      <th>RPM</th>\n      <th>Avail</th>\n      <th>Perf</th>\n      <th>Qual</th>\n      <th>OEE</th>\n      <th>D/T</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr ng-repeat=\"row in msg.payload\">\n      <td class=\"db-id\">{{row.id}}</td>\n      <td class=\"db-time\">{{row.timestamp}}</td>\n      <td class=\"db-val\">{{row.rpm}}</td>\n      <td class=\"db-val\">{{row.availability}}</td>\n      <td class=\"db-val\">{{row.performance}}</td>\n      <td class=\"db-val\">{{row.quality}}</td>\n      <td class=\"db-val\">{{row.oee}}</td>\n      <td class=\"db-val\">{{row.downtime}}</td>\n    </tr>\n  </tbody>\n</table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 1140,
+        "wires": [
+            []
+        ]
     }
 ]
