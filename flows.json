@@ -137,6 +137,10 @@
             {
                 "addr": "DB1,X54.0",
                 "name": "Actuator_On_OFF"
+            },
+            {
+                "addr": "DB1,X60.0",
+                "name": "Prod_Stop_Checker"
             }
         ]
     },
@@ -242,6 +246,10 @@
             {
                 "addr": "DB1,X40.5",
                 "name": "NR_Demo_Stop_Coli"
+            },
+            {
+                "addr": "DB1,X60.0",
+                "name": "Prod_Stop_Checked"
             }
         ]
     },
@@ -16452,7 +16460,8 @@
                 "19257c6760f6f9a2",
                 "8abf451584adb222",
                 "b74fa10e25221613",
-                "731c60241077a187"
+                "731c60241077a187",
+                "35e11c020138497d"
             ]
         ]
     },
@@ -25869,6 +25878,35 @@
         "name": "Machine On-off",
         "x": 1620,
         "y": 6200,
+        "wires": []
+    },
+    {
+        "id": "3afe31c0a95df90b",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "link in 1",
+        "links": [
+            "ae2218d04c4da19f"
+        ],
+        "x": 75,
+        "y": 1960,
+        "wires": [
+            [
+                "f3b1bac03ae04339"
+            ]
+        ]
+    },
+    {
+        "id": "35e11c020138497d",
+        "type": "link out",
+        "z": "413e4a02b73e8664",
+        "name": "Stop_Production_Actuator",
+        "mode": "link",
+        "links": [
+            "533f6f88eb6a74f9"
+        ],
+        "x": 2665,
+        "y": 6000,
         "wires": []
     },
     {
@@ -38702,7 +38740,8 @@
         "y": 1100,
         "wires": [
             [
-                "5d15516e90557526"
+                "5d15516e90557526",
+                "bef269d865ede794"
             ]
         ]
     },
@@ -38729,7 +38768,6 @@
             [
                 "049492cc6e244ea1",
                 "c72a65da04523e57",
-                "417ae9671163ece3",
                 "1d0590d66a4d9b16"
             ]
         ]
@@ -38750,8 +38788,7 @@
         "y": 1020,
         "wires": [
             [
-                "a4e1abac4175baad",
-                "417ae9671163ece3"
+                "a4e1abac4175baad"
             ]
         ]
     },
@@ -38848,7 +38885,9 @@
             [
                 "a4e1abac4175baad",
                 "c72a65da04523e57",
-                "ed3cc4dba9d7af64"
+                "ed3cc4dba9d7af64",
+                "bef269d865ede794",
+                "7868ec9425af1a02"
             ]
         ]
     },
@@ -38947,13 +38986,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "true",
+        "payload": "false",
         "payloadType": "bool",
         "x": 830,
         "y": 1560,
         "wires": [
             [
-                "417ae9671163ece3"
+                "bef269d865ede794"
             ]
         ]
     },
@@ -39070,17 +39109,6 @@
         ]
     },
     {
-        "id": "417ae9671163ece3",
-        "type": "s7 out",
-        "z": "f77fc6864f564ae2",
-        "endpoint": "2c9330c11f6a4001",
-        "variable": "A_Start_Production",
-        "name": "",
-        "x": 1070,
-        "y": 1600,
-        "wires": []
-    },
-    {
         "id": "5c4588b417938e76",
         "type": "s7 out",
         "z": "f77fc6864f564ae2",
@@ -39147,17 +39175,6 @@
         "wires": []
     },
     {
-        "id": "1c49a1874fba32f5",
-        "type": "s7 out",
-        "z": "f77fc6864f564ae2",
-        "endpoint": "2c9330c11f6a4001",
-        "variable": "Motor_Reset",
-        "name": "",
-        "x": 830,
-        "y": 2080,
-        "wires": []
-    },
-    {
         "id": "6be75248a4a39028",
         "type": "s7 out",
         "z": "f77fc6864f564ae2",
@@ -39184,16 +39201,14 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "true",
+        "payloadType": "bool",
         "topic": "topic",
         "topicType": "msg",
-        "x": 870,
+        "x": 830,
         "y": 1600,
         "wires": [
-            [
-                "417ae9671163ece3"
-            ]
+            []
         ]
     },
     {
@@ -39263,7 +39278,8 @@
         "wires": [
             [
                 "3b46f421f7843a26",
-                "e15a77f009a6a5ef"
+                "e15a77f009a6a5ef",
+                "7e855208ced4df7b"
             ]
         ]
     },
@@ -39507,7 +39523,8 @@
         "y": 740,
         "wires": [
             [
-                "c216f48d40f7b110"
+                "c216f48d40f7b110",
+                "ae2218d04c4da19f"
             ]
         ]
     },
@@ -39578,30 +39595,6 @@
             [
                 "5d8b5e746e99428e",
                 "5c4588b417938e76"
-            ]
-        ]
-    },
-    {
-        "id": "c2b3491d21c407e9",
-        "type": "ui_template",
-        "z": "f77fc6864f564ae2",
-        "group": "5e022236e47e8d05",
-        "name": "Reset",
-        "order": 16,
-        "width": "2",
-        "height": "1",
-        "format": "<script>\n(function(scope) {\n    scope.resetActive = false;\n\n    scope.pressRESET = function() {\n        scope.resetActive = true;\n        scope.send({ payload: true });\n        scope.$apply(); // Update UI\n    };\n\n    scope.releaseRESET = function() {\n        scope.resetActive = false;\n        scope.send({ payload: false });\n        scope.$apply(); // Update UI\n    };\n})(scope);\n</script>\n\n<style>\n.icon-reset-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    user-select: none;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    padding: 5px;\n}\n\n.icon-reset-button {\n    font-size: 1.2em;\n    font-weight: bold;\n    width: 100%;       /* Full width of 1 column */\n    height: 100%;      /* Full height of 3 rows */\n    border-radius: 12px; /* Rectangle with rounded corners */\n    border: 3px solid #4CAF50;  /* Green border */\n    background-color: #4CAF50;  /* Green background */\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s ease;\n    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);\n    cursor: pointer;\n}\n\n.reset-active {\n    box-shadow: 0 0 15px #4CAF50, 0 0 25px #66bb6a, 0 0 35px #81c784;\n}\n</style>\n\n<div class=\"icon-reset-container\">\n    <div class=\"icon-reset-button\"\n         ng-class=\"resetActive ? 'reset-active' : ''\"\n         ng-mousedown=\"pressRESET()\"\n         ng-mouseup=\"releaseRESET()\"\n         ng-mouseleave=\"releaseRESET()\"\n         ng-touchstart=\"pressRESET()\"\n         ng-touchend=\"releaseRESET()\">\n        RESET\n    </div>\n</div>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 190,
-        "y": 2020,
-        "wires": [
-            [
-                "2da33addef93999f",
-                "1c49a1874fba32f5"
             ]
         ]
     },
@@ -39806,5 +39799,245 @@
         "x": 580,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "bef269d865ede794",
+        "type": "s7 out",
+        "z": "f77fc6864f564ae2",
+        "endpoint": "2c9330c11f6a4001",
+        "variable": "A_Start_Production",
+        "name": "",
+        "x": 1070,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "67ec87e53eca5f68",
+        "type": "inject",
+        "z": "f77fc6864f564ae2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 830,
+        "y": 1520,
+        "wires": [
+            [
+                "bef269d865ede794"
+            ]
+        ]
+    },
+    {
+        "id": "39b57f9f4d994cf2",
+        "type": "s7 out",
+        "z": "f77fc6864f564ae2",
+        "endpoint": "2c9330c11f6a4001",
+        "variable": "Motor_Reset",
+        "name": "",
+        "x": 850,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "c2b3491d21c407e9",
+        "type": "ui_template",
+        "z": "f77fc6864f564ae2",
+        "group": "5e022236e47e8d05",
+        "name": "Reset",
+        "order": 16,
+        "width": "2",
+        "height": "1",
+        "format": "<script>\n(function(scope) {\n    scope.resetActive = false;\n\n    scope.pressRESET = function() {\n        scope.resetActive = true;\n        scope.send({ payload: true });\n        scope.$apply(); // Update UI\n    };\n\n    scope.releaseRESET = function() {\n        scope.resetActive = false;\n        scope.send({ payload: false });\n        scope.$apply(); // Update UI\n    };\n})(scope);\n</script>\n\n<style>\n.icon-reset-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    user-select: none;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    padding: 5px;\n}\n\n.icon-reset-button {\n    font-size: 1.2em;\n    font-weight: bold;\n    width: 100%;       /* Full width of 1 column */\n    height: 100%;      /* Full height of 3 rows */\n    border-radius: 12px; /* Rectangle with rounded corners */\n    border: 3px solid #4CAF50;  /* Green border */\n    background-color: #4CAF50;  /* Green background */\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s ease;\n    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);\n    cursor: pointer;\n}\n\n.reset-active {\n    box-shadow: 0 0 15px #4CAF50, 0 0 25px #66bb6a, 0 0 35px #81c784;\n}\n</style>\n\n<div class=\"icon-reset-container\">\n    <div class=\"icon-reset-button\"\n         ng-class=\"resetActive ? 'reset-active' : ''\"\n         ng-mousedown=\"pressRESET()\"\n         ng-mouseup=\"releaseRESET()\"\n         ng-mouseleave=\"releaseRESET()\"\n         ng-touchstart=\"pressRESET()\"\n         ng-touchend=\"releaseRESET()\">\n        RESET\n    </div>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 190,
+        "y": 2020,
+        "wires": [
+            [
+                "2da33addef93999f",
+                "968452777faf00b1",
+                "39b57f9f4d994cf2"
+            ]
+        ]
+    },
+    {
+        "id": "968452777faf00b1",
+        "type": "debug",
+        "z": "f77fc6864f564ae2",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "5b04deda9b17b49d",
+        "type": "inject",
+        "z": "f77fc6864f564ae2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 510,
+        "y": 2140,
+        "wires": [
+            [
+                "39b57f9f4d994cf2"
+            ]
+        ]
+    },
+    {
+        "id": "7e855208ced4df7b",
+        "type": "function",
+        "z": "f77fc6864f564ae2",
+        "name": "True to False ",
+        "func": "var MSG = msg.payload;\nif (MSG == true)\n\n{\nmsg.payload = false\nreturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1980,
+        "wires": [
+            [
+                "39b57f9f4d994cf2"
+            ]
+        ]
+    },
+    {
+        "id": "ae2218d04c4da19f",
+        "type": "link out",
+        "z": "f77fc6864f564ae2",
+        "name": "Actuator_Prod_Date_Supervisor",
+        "mode": "link",
+        "links": [
+            "3afe31c0a95df90b"
+        ],
+        "x": 495,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "533f6f88eb6a74f9",
+        "type": "link in",
+        "z": "f77fc6864f564ae2",
+        "name": "Stop_Production_acturator",
+        "links": [
+            "35e11c020138497d"
+        ],
+        "x": 585,
+        "y": 1700,
+        "wires": [
+            [
+                "73705adcf7f9147d",
+                "7868ec9425af1a02"
+            ]
+        ]
+    },
+    {
+        "id": "7868ec9425af1a02",
+        "type": "s7 out",
+        "z": "f77fc6864f564ae2",
+        "endpoint": "2c9330c11f6a4001",
+        "variable": "Prod_Stop_Checker",
+        "name": "",
+        "x": 960,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "246345245a3bfab1",
+        "type": "inject",
+        "z": "f77fc6864f564ae2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 630,
+        "y": 1740,
+        "wires": [
+            [
+                "7868ec9425af1a02"
+            ]
+        ]
+    },
+    {
+        "id": "4c42a68d18c63a45",
+        "type": "inject",
+        "z": "f77fc6864f564ae2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 650,
+        "y": 1780,
+        "wires": [
+            [
+                "7868ec9425af1a02"
+            ]
+        ]
     }
 ]
