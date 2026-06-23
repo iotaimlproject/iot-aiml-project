@@ -1790,16 +1790,6 @@
         "height": 1
     },
     {
-        "id": "6c6a59c27a0556f0",
-        "type": "ui_spacer",
-        "z": "f77fc6864f564ae2",
-        "name": "spacer",
-        "group": "5e022236e47e8d05",
-        "order": 18,
-        "width": "2",
-        "height": "1"
-    },
-    {
         "id": "c0b8eff4a34136ff",
         "type": "MySQLdatabase",
         "name": "akash",
@@ -2954,13 +2944,33 @@
         ]
     },
     {
-        "id": "c9ecc9f59229d6f9",
+        "id": "a26ab33cbdbee8b6",
+        "type": "ui_tab",
+        "name": "Machine DB",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b6ec6f01ada09fa7",
+        "type": "ui_group",
+        "name": "LInear Actuator",
+        "tab": "a26ab33cbdbee8b6",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51146644edbbf36e",
         "type": "ui_spacer",
         "z": "f77fc6864f564ae2",
         "name": "spacer",
         "group": "5e022236e47e8d05",
-        "order": 5,
-        "width": "3",
+        "order": 15,
+        "width": "2",
         "height": "1"
     },
     {
@@ -3319,7 +3329,8 @@
         "y": 1620,
         "wires": [
             [
-                "205c68a6263915d1"
+                "205c68a6263915d1",
+                "4b47bed80188c79f"
             ]
         ]
     },
@@ -15696,7 +15707,8 @@
         "name": "link out Emergency to shutdown",
         "mode": "link",
         "links": [
-            "c923faa05935dd6e"
+            "c923faa05935dd6e",
+            "27f3cc75072ca36b"
         ],
         "x": 2025,
         "y": 6220,
@@ -16417,7 +16429,7 @@
         "y": 6460,
         "wires": [
             [
-                "f107c89bc9c5d32f"
+                "36c3670b447b9a39"
             ]
         ]
     },
@@ -19419,15 +19431,15 @@
         "order": 19,
         "width": "2",
         "height": 1,
-        "passthru": false,
+        "passthru": true,
         "label": "Update",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "true",
+        "payloadType": "bool",
         "topic": "topic",
         "topicType": "msg",
         "x": 160,
@@ -24914,23 +24926,6 @@
         ]
     },
     {
-        "id": "f107c89bc9c5d32f",
-        "type": "OpcUa-Item",
-        "z": "413e4a02b73e8664",
-        "item": "ns=4;s=|var|CODESYS Control Win V3 x64.Application.Padder_program.Con_Stop_Raw_Material_Emmitter",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "Stop_RM_Emmiter",
-        "x": 2170,
-        "y": 6480,
-        "wires": [
-            [
-                "d4e33a6ed2d8b739",
-                "f4c7076d85905faa"
-            ]
-        ]
-    },
-    {
         "id": "2e625edd9d22303f",
         "type": "OpcUa-Item",
         "z": "413e4a02b73e8664",
@@ -25889,26 +25884,6 @@
         "wires": []
     },
     {
-        "id": "f4c7076d85905faa",
-        "type": "rbe",
-        "z": "413e4a02b73e8664",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 2370,
-        "y": 6460,
-        "wires": [
-            [
-                "36c3670b447b9a39"
-            ]
-        ]
-    },
-    {
         "id": "36c3670b447b9a39",
         "type": "delay",
         "z": "413e4a02b73e8664",
@@ -25932,6 +25907,112 @@
                 "5192b1039f45f854"
             ]
         ]
+    },
+    {
+        "id": "7d9b4e1f0f4995a7",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "Actuator_Start_Prod_In",
+        "links": [
+            "96e503545798f47f"
+        ],
+        "x": 35,
+        "y": 2400,
+        "wires": [
+            [
+                "30142affd8b55596"
+            ]
+        ]
+    },
+    {
+        "id": "30142affd8b55596",
+        "type": "delay",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 140,
+        "y": 2400,
+        "wires": [
+            [
+                "b647b0519ada873a"
+            ]
+        ]
+    },
+    {
+        "id": "f1997de538611334",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "Actuator_Set_Qty_In",
+        "links": [
+            "cc1c56b3531ced3d"
+        ],
+        "x": 85,
+        "y": 2020,
+        "wires": [
+            [
+                "3f01a2e435923c82"
+            ]
+        ]
+    },
+    {
+        "id": "132c9a7dec84a432",
+        "type": "ui_numeric",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "label": "SlNo",
+        "tooltip": "",
+        "group": "5e022236e47e8d05",
+        "order": 2,
+        "width": "2",
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "10",
+        "step": 1,
+        "className": "",
+        "x": 50,
+        "y": 1780,
+        "wires": [
+            [
+                "fee2c4bfa1428b55"
+            ]
+        ]
+    },
+    {
+        "id": "4b47bed80188c79f",
+        "type": "ui_text",
+        "z": "413e4a02b73e8664",
+        "group": "5e022236e47e8d05",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Item",
+        "format": "{{msg.payload}}",
+        "layout": "row-right",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1070,
+        "y": 1720,
+        "wires": []
     },
     {
         "id": "7ae9310347369f66",
@@ -39210,41 +39291,15 @@
         "wires": []
     },
     {
-        "id": "23cc24d875af7e0c",
-        "type": "ui_button",
-        "z": "f77fc6864f564ae2",
-        "name": "",
-        "group": "5e022236e47e8d05",
-        "order": 19,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Manual Start",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 830,
-        "y": 1600,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "ed3cc4dba9d7af64",
         "type": "ui_switch",
         "z": "f77fc6864f564ae2",
         "name": "",
-        "label": "Start production",
+        "label": "Place Order",
         "tooltip": "",
         "group": "5e022236e47e8d05",
-        "order": 9,
-        "width": "5",
+        "order": 6,
+        "width": "3",
         "height": "1",
         "passthru": true,
         "decouple": "false",
@@ -39261,13 +39316,15 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 120,
+        "x": 110,
         "y": 1040,
         "wires": [
             [
                 "46a4c70e7a3e14e4",
                 "abb487ae889fc713",
-                "9937c863c09235af"
+                "9937c863c09235af",
+                "96e503545798f47f",
+                "7b9d673047d5b118"
             ]
         ]
     },
@@ -39279,7 +39336,7 @@
         "label": "STOP ",
         "tooltip": "",
         "group": "5e022236e47e8d05",
-        "order": 17,
+        "order": 14,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -39315,7 +39372,7 @@
         "label": "Set Qty :",
         "tooltip": "",
         "group": "5e022236e47e8d05",
-        "order": 6,
+        "order": 5,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -39330,7 +39387,8 @@
         "wires": [
             [
                 "05def23e54113162",
-                "ee41b22e442c5e74"
+                "ee41b22e442c5e74",
+                "cc1c56b3531ced3d"
             ]
         ]
     },
@@ -39341,7 +39399,7 @@
         "name": "",
         "label": "Set Delay :",
         "tooltip": "",
-        "group": "5e022236e47e8d05",
+        "group": "b6ec6f01ada09fa7",
         "order": 7,
         "width": "2",
         "height": "1",
@@ -39365,7 +39423,7 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "5e022236e47e8d05",
-        "order": 12,
+        "order": 10,
         "width": "7",
         "height": "1",
         "name": "",
@@ -39386,13 +39444,13 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "5e022236e47e8d05",
-        "order": 2,
-        "width": "4",
+        "order": 1,
+        "width": "7",
         "height": "1",
         "name": "",
         "label": "Clock ",
         "format": "{{msg.payload }}",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": true,
         "font": "",
@@ -39400,27 +39458,6 @@
         "color": "#ff0000",
         "x": 1110,
         "y": 840,
-        "wires": []
-    },
-    {
-        "id": "03ebb390ab023c40",
-        "type": "ui_text",
-        "z": "f77fc6864f564ae2",
-        "group": "5e022236e47e8d05",
-        "order": 1,
-        "width": "3",
-        "height": "1",
-        "name": "",
-        "label": "Machine 101 ",
-        "format": "{{msg.payload }}",
-        "layout": "row-left",
-        "className": "",
-        "style": true,
-        "font": "Arial,Arial,Helvetica,sans-serif",
-        "fontSize": "20",
-        "color": "#00ff1e",
-        "x": 470,
-        "y": 940,
         "wires": []
     },
     {
@@ -39449,7 +39486,7 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "5e022236e47e8d05",
-        "order": 13,
+        "order": 11,
         "width": "3",
         "height": "1",
         "name": "",
@@ -39470,7 +39507,7 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "5e022236e47e8d05",
-        "order": 14,
+        "order": 12,
         "width": "3",
         "height": "1",
         "name": "",
@@ -39491,7 +39528,7 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "5e022236e47e8d05",
-        "order": 15,
+        "order": 13,
         "width": 0,
         "height": 0,
         "name": "",
@@ -39511,7 +39548,7 @@
         "id": "831987173c54859e",
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
-        "group": "5e022236e47e8d05",
+        "group": "b6ec6f01ada09fa7",
         "order": 8,
         "width": "3",
         "height": "1",
@@ -39676,11 +39713,11 @@
         "id": "9937c863c09235af",
         "type": "ui_led",
         "z": "f77fc6864f564ae2",
-        "order": 10,
+        "order": 8,
         "group": "5e022236e47e8d05",
         "width": "3",
         "height": "2",
-        "label": "Auto Mode",
+        "label": "Order",
         "labelPlacement": "left",
         "labelAlignment": "left",
         "colorForValue": [
@@ -39707,7 +39744,7 @@
         "id": "c72a65da04523e57",
         "type": "ui_led",
         "z": "f77fc6864f564ae2",
-        "order": 11,
+        "order": 9,
         "group": "5e022236e47e8d05",
         "width": "4",
         "height": "2",
@@ -39733,40 +39770,6 @@
         "x": 1380,
         "y": 1140,
         "wires": []
-    },
-    {
-        "id": "2547cfcb7b631d34",
-        "type": "ui_switch",
-        "z": "f77fc6864f564ae2",
-        "name": "",
-        "label": "Actutaor_On_OFF",
-        "tooltip": "",
-        "group": "5e022236e47e8d05",
-        "order": 3,
-        "width": "3",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 410,
-        "y": 640,
-        "wires": [
-            [
-                "ec8a639d3ddc8911"
-            ]
-        ]
     },
     {
         "id": "ec8a639d3ddc8911",
@@ -40061,6 +40064,89 @@
         "wires": [
             [
                 "7868ec9425af1a02"
+            ]
+        ]
+    },
+    {
+        "id": "96e503545798f47f",
+        "type": "link out",
+        "z": "f77fc6864f564ae2",
+        "name": "Actuator_Start_Prod",
+        "mode": "link",
+        "links": [
+            "7d9b4e1f0f4995a7"
+        ],
+        "x": 455,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "cc1c56b3531ced3d",
+        "type": "link out",
+        "z": "f77fc6864f564ae2",
+        "name": "Actuator_Set_Qty_Out",
+        "mode": "link",
+        "links": [
+            "f1997de538611334"
+        ],
+        "x": 395,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "27f3cc75072ca36b",
+        "type": "link in",
+        "z": "f77fc6864f564ae2",
+        "name": "Machine On Off_In",
+        "links": [
+            "8e4bde0e789d775d"
+        ],
+        "x": 575,
+        "y": 640,
+        "wires": [
+            [
+                "ec8a639d3ddc8911"
+            ]
+        ]
+    },
+    {
+        "id": "dd87aefd71c7c2c5",
+        "type": "ui_text",
+        "z": "f77fc6864f564ae2",
+        "group": "5e022236e47e8d05",
+        "order": 7,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "Status : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 340,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "7b9d673047d5b118",
+        "type": "function",
+        "z": "f77fc6864f564ae2",
+        "name": "Order_status",
+        "func": "var Order_status = msg.payload;\nif ( Order_status ==  true)\n\n{\n    msg.payload = \"Order Placed\";\n    return msg; \n}\n\nif ( Order_status ==  false)\n\n{\n    msg.payload = \"None\";\n    return msg; \n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 900,
+        "wires": [
+            [
+                "dd87aefd71c7c2c5"
             ]
         ]
     }
