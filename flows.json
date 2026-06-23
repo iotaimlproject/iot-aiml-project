@@ -16406,7 +16406,7 @@
         "type": "function",
         "z": "413e4a02b73e8664",
         "name": "Stop_RM_Emmiter",
-        "func": "var Raw_material_count = msg.payload ; //flow.get(\"Raw_material_count\");\nvar Finished_Qty_Required = flow.get(\"Finished_Qty_Required_Supervisor\");\n\n\nif (Raw_material_count == Finished_Qty_Required )\n\n{\n\n    msg.payload = true;\n    return msg;\n}\n\nif (Raw_material_count < Finished_Qty_Required )\n\n{\n\n    msg.payload = false ;\n    return msg;\n}\n\n\n",
+        "func": "var Raw_material_count = msg.payload;// flow.get(\"Part_SLNo\");\nvar Finished_Qty_Required = flow.get(\"Finished_Qty_Required_Supervisor\");\n\n\nif (Raw_material_count == Finished_Qty_Required)\n\n{\n\n    msg.payload = true;\n    return msg;\n}\n\nif (Raw_material_count < Finished_Qty_Required )\n\n{\n\n    msg.payload = false ;\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18861,29 +18861,6 @@
         "wires": []
     },
     {
-        "id": "76f735bf485a4c48",
-        "type": "delay",
-        "z": "413e4a02b73e8664",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "4",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2340,
-        "y": 6480,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f20261b0029098ff",
         "type": "debug",
         "z": "413e4a02b73e8664",
@@ -19222,7 +19199,8 @@
             [
                 "6c1fde0a3c029397",
                 "f2c0ba655dda5b6b",
-                "de7e7f8e2552abc7"
+                "de7e7f8e2552abc7",
+                "a3f372903935bb46"
             ]
         ]
     },
@@ -19395,7 +19373,7 @@
         "endpoint": "2c9330c11f6a4001",
         "variable": "Stop_RM_Emmiter",
         "name": "",
-        "x": 2550,
+        "x": 2830,
         "y": 6460,
         "wires": []
     },
@@ -24947,7 +24925,8 @@
         "y": 6480,
         "wires": [
             [
-                "d4e33a6ed2d8b739"
+                "d4e33a6ed2d8b739",
+                "f4c7076d85905faa"
             ]
         ]
     },
@@ -25908,6 +25887,51 @@
         "x": 2665,
         "y": 6000,
         "wires": []
+    },
+    {
+        "id": "f4c7076d85905faa",
+        "type": "rbe",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2370,
+        "y": 6460,
+        "wires": [
+            [
+                "36c3670b447b9a39"
+            ]
+        ]
+    },
+    {
+        "id": "36c3670b447b9a39",
+        "type": "delay",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2600,
+        "y": 6460,
+        "wires": [
+            [
+                "5192b1039f45f854"
+            ]
+        ]
     },
     {
         "id": "7ae9310347369f66",
