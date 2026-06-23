@@ -1,0 +1,7 @@
+INFO:     127.0.0.1:14908 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:14909 - "POST /predict-oee HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6442 - "POST /optimize-oee HTTP/1.1" 200 OK
+INFO:     127.0.0.1:14430 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:14430 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:2636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6960 - "GET /health HTTP/1.1" 200 OK

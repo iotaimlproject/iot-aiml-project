@@ -1,13 +1,5 @@
 [
     {
-        "id": "fe514418138a09d7",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "413e4a02b73e8664",
         "type": "tab",
         "label": "Supervisor DB",
@@ -27,7 +19,7 @@
         "id": "3b749428d849f316",
         "type": "tab",
         "label": "Idea lab dashboard",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -35,9 +27,14 @@
         "id": "f77fc6864f564ae2",
         "type": "tab",
         "label": "Actuator_DB",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
+    },
+    {
+        "id": "bc452dfad4aef27a",
+        "type": "tab",
+        "label": "AI Optimize"
     },
     {
         "id": "2c9330c11f6a4001",
@@ -2972,6 +2969,36 @@
         "order": 15,
         "width": "2",
         "height": "1"
+    },
+    {
+        "id": "opt_tab",
+        "type": "ui_tab",
+        "name": "AI Optimize",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "opt_group",
+        "type": "ui_group",
+        "name": "AI Optimize",
+        "tab": "opt_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "opt_db_group",
+        "type": "ui_group",
+        "name": "DB Row View",
+        "tab": "opt_tab",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "0ce6edb24a23fbb1",
