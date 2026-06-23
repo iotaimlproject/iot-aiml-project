@@ -19,7 +19,7 @@
         "id": "3b749428d849f316",
         "type": "tab",
         "label": "Idea lab dashboard",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -27,7 +27,7 @@
         "id": "f77fc6864f564ae2",
         "type": "tab",
         "label": "Actuator_DB",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -40175,6 +40175,33 @@
             [
                 "dd87aefd71c7c2c5"
             ]
+        ]
+    },
+    {
+        "id": "ee32793b8912a0c4",
+        "type": "inject",
+        "z": "f77fc6864f564ae2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 460,
+        "wires": [
+            []
         ]
     }
 ]
