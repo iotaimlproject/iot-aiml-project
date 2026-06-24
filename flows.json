@@ -7965,7 +7965,7 @@
         "type": "function",
         "z": "413e4a02b73e8664",
         "name": "Insert part_no_operational_data",
-        "func": "var OP_Data_SLNo= msg.payload ;//flow.get(\"OP_Data_SLNo\") ;\nvar Batch_PartNo = flow.get(\"Live_Batch_PartNo\");\nvar Part_SLNo = flow.get(\"Live_Part_SLNo\");\nvar Part_No = flow.get(\"Live_Part_No\");\nvar Operation_No = flow.get(\"Live_Operation_No\");\nvar Operation_Type = flow.get(\"Live_Operation_Type\");\nvar Live_RPM = flow.get(\"Live_RPM_inject\");\nvar Live_Feed_Rate = flow.get(\"Live_FeedRate_inject\");\nvar Live_Depth_Of_Cut = flow.get(\"Live_Depth_of_cut_inject\");\nvar Live_Tool_Angle = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Finish_Lenght = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Production_Duration = flow.get(\"Live_Production_Duration\");\nvar Live_Planned_Production_Duration= flow.get(\"Live_Planned_Production_Duration\");\nvar Production_Delay = flow.get(\"Production_Delay\");\nvar OP_Job_Start_Date_Time = flow.get(\"Job_Start_Date_Time_SP\");\nvar Job_Finish_Date_Time= flow.get(\"Job_Finish_Date_Time_SP\");\n\n\n//msg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Job_SlNo`,`Batch_PartNo`,`Part_No`,`Live_Operation_Type`,`Live_RPM_Final`,`Live_Feed_Rate_Final`,`Live_Depth_of_cut_Final`,`Live_Tool_Angle_Final`,`Live_Start_Lenght_Final`)VALUES( ' + Job_SlNo + ',\"' + Batch_PartNo + '\",\"' + Part_No + '\", \"' + Live_Operation_Type + '\", ' + Live_RPM_Final + ',' + Live_Feed_Rate_Final + ',' + Live_Depth_of_cut_Final + ',' + Live_Tool_Angle_Final + ',' + Live_Start_Lenght_Final + ', );';\n\n\n\n\nmsg.topic = ' INSERT INTO `lathe`.`part_no_operational_data`(`OP_Data_SLNo`,`Batch_PartNo`,`Part_SLNo`,`Part_No`,`Operation_No`,`Operation_Type`,`Live_RPM`,`Live_Feed_Rate`,`Live_Depth_Of_Cut`,`Live_Tool_Angle`,`Live_Finish_Lenght`,`Live_Production_Duration`,`Live_Planned_Production_Duration`,`Production_Delay`,`OP_Job_Start_Date_Time`,`Job_Finish_Date_Time`)VALUES( ' + OP_Data_SLNo + ',\"' + Batch_PartNo + '\",' + Part_SLNo + ',\"' + Part_No + '\",' + Operation_No + ',\"' + Operation_Type + '\",' + Live_RPM + ',' + Live_Feed_Rate + ',' + Live_Depth_Of_Cut + ',' + Live_Tool_Angle + ',' + Live_Finish_Lenght + ',\"' + Live_Production_Duration + '\",\"' + Live_Planned_Production_Duration + '\",\"' + Production_Delay + '\",\"' + OP_Job_Start_Date_Time + '\",\"' + Job_Finish_Date_Time +'\");';\nreturn msg; ",
+        "func": "var OP_Data_SLNo= msg.payload ;//flow.get(\"OP_Data_SLNo\") ;\nvar Batch_PartNo = flow.get(\"Live_Batch_PartNo\");\nvar Part_SLNo = flow.get(\"Live_Part_SLNo\");\nvar Part_No = flow.get(\"Live_Part_No\");\nvar Operation_No = flow.get(\"Live_Operation_No\");\nvar Operation_Type = flow.get(\"Live_Operation_Type\");\nvar Live_RPM = flow.get(\"Live_RPM_inject\");\nvar Live_Feed_Rate = flow.get(\"Live_FeedRate_inject\");\nvar Live_Depth_Of_Cut = flow.get(\"Live_Depth_of_cut_inject\");\nvar Live_Tool_Angle = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Finish_Lenght = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Production_Duration = flow.get(\"Live_Production_Duration\");\nvar Live_Planned_Production_Duration= flow.get(\"Live_Planned_Production_Duration\");\nvar Production_Delay = flow.get(\"Production_Delay\");\nvar OP_Job_Start_Date_Time = flow.get(\"Job_Start_Date_Time_SP\");\nvar Job_Finish_Date_Time= flow.get(\"Job_Finish_Date_Time_SP\");\nvar Avaliability = flow.get(\"Live_Avaliabilty_OP\");\nvar Performance = flow.get(\"Live_Performance_OP\");\nvar Quality = flow.get(\"Live_Quality_OP\");\nvar OEE = flow.get(\"OP_OEE\");\nvar DownTime=  flow.get(\"DownTime\");\n\n\n//msg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Job_SlNo`,`Batch_PartNo`,`Part_No`,`Live_Operation_Type`,`Live_RPM_Final`,`Live_Feed_Rate_Final`,`Live_Depth_of_cut_Final`,`Live_Tool_Angle_Final`,`Live_Start_Lenght_Final`)VALUES( ' + Job_SlNo + ',\"' + Batch_PartNo + '\",\"' + Part_No + '\", \"' + Live_Operation_Type + '\", ' + Live_RPM_Final + ',' + Live_Feed_Rate_Final + ',' + Live_Depth_of_cut_Final + ',' + Live_Tool_Angle_Final + ',' + Live_Start_Lenght_Final + ', );';\n\n\n\n\nmsg.topic = ' INSERT INTO `lathe`.`part_no_operational_data`(`OP_Data_SLNo`,`Batch_PartNo`,`Part_SLNo`,`Part_No`,`Operation_No`,`Operation_Type`,`Live_RPM`,`Live_Feed_Rate`,`Live_Depth_Of_Cut`,`Live_Tool_Angle`,`Live_Finish_Lenght`,`Live_Production_Duration`,`Live_Planned_Production_Duration`,`Production_Delay`,`OP_Job_Start_Date_Time`,`Job_Finish_Date_Time`,`Avaliability`,`Performance`,`Quality`,`OEE`,`DownTime`)VALUES( ' + OP_Data_SLNo + ',\"' + Batch_PartNo + '\",' + Part_SLNo + ',\"' + Part_No + '\",' + Operation_No + ',\"' + Operation_Type + '\",' + Live_RPM + ',' + Live_Feed_Rate + ',' + Live_Depth_Of_Cut + ',' + Live_Tool_Angle + ',' + Live_Finish_Lenght + ',\"' + Live_Production_Duration + '\",\"' + Live_Planned_Production_Duration + '\",\"' + Production_Delay + '\",\"' + OP_Job_Start_Date_Time + '\",\"' + Job_Finish_Date_Time +'\",\"' + Avaliability + '\",\"' + Performance + '\",\"' + Quality + '\",\"' + OEE + '\",\"' +DownTime+'\");';\nreturn msg; ",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8619,8 +8619,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 3660,
-        "y": 3740,
+        "x": 3520,
+        "y": 3800,
         "wires": [
             [
                 "57a5da1ce89fe007",
@@ -8638,7 +8638,11 @@
                 "a3c1fc1be92e5bf5",
                 "243d8594c9c2ef35",
                 "3a3a6a9407cb7229",
-                "a3f524638fd0332e"
+                "a3f524638fd0332e",
+                "88efab0191214056",
+                "71a14b677bb6b45e",
+                "f61855f9e51e7200",
+                "d0b6e501accc3e70"
             ]
         ]
     },
@@ -8650,8 +8654,8 @@
         "links": [
             "4597aa695f7bc4d9"
         ],
-        "x": 3655,
-        "y": 3780,
+        "x": 3595,
+        "y": 3760,
         "wires": [
             [
                 "57a5da1ce89fe007",
@@ -8670,7 +8674,11 @@
                 "3a3a6a9407cb7229",
                 "243d8594c9c2ef35",
                 "a3f524638fd0332e",
-                "18bd9394b1606a37"
+                "18bd9394b1606a37",
+                "88efab0191214056",
+                "71a14b677bb6b45e",
+                "f61855f9e51e7200",
+                "d0b6e501accc3e70"
             ]
         ]
     },
@@ -23505,7 +23513,7 @@
         "order": 2,
         "width": 31,
         "height": 10,
-        "format": "<style>\n    #history {\n      font-family: \"Arial\";\n        border-collapse: collapse;\n        width: 100%;\n        }\n        \n        #history td, #history th {\n        border: 1px solid #ddd;\n        padding: 8px;\n        }\n        #history tr:nth-child(even){background-color: #A8EEF8;}\n        \n        #history tr:hover {background-color: #40aeea;}\n        \n        #history th {\n        padding-top: 12px;\n        padding-bottom: 12px;\n        text-align: center;\n        background-color: #696969;\n        color: white;\n        }\n        </style>\n        \n        <table id=\"history\" border=\"1\">\n            <tr align=\"center\">\n                <th>SLNo</th>\n                <th>Batch__No</th>\n                <th>Part_SLNo</th>\n                <th>Part____No</th>\n                <th>Operation_No</th>\n                <th>Operation_Type</th>\n                <th>Live_RPM</th>\n                <th>Live_Feed_Rate</th>\n                <th>Live_Depth_of_cut</th>\n                <th>Live_Tool_Angle</th>\n                <th>Live_Finish_Lenght</th>\n                <th>Live_Planned_Production_Duration</th>\n                <th>Live_Production_Duration</th>\n                <th>Production_Delay</th>\n              \n                </tr>\n                <tbody>\n                    <tr align=\"center\" ng-repeat=\"row in msg.payload\">\n                        <td ng-repeat=\"item in row\" >{{item}}</td>\n                        </tr>\n                        </tbody>\n                        </table>\n        ",
+        "format": "<style>\n    #history {\n      font-family: \"Arial\";\n        border-collapse: collapse;\n        width: 100%;\n        }\n        \n        #history td, #history th {\n        border: 1px solid #ddd;\n        padding: 8px;\n        }\n        #history tr:nth-child(even){background-color: #A8EEF8;}\n        \n        #history tr:hover {background-color: #40aeea;}\n        \n        #history th {\n        padding-top: 12px;\n        padding-bottom: 12px;\n        text-align: center;\n        background-color: #696969;\n        color: white;\n        }\n        </style>\n        \n        <table id=\"history\" border=\"1\">\n            <tr align=\"center\">\n                <th>SLNo</th>\n                <th>Batch__No</th>\n                <th>Part_SLNo</th>\n                <th>Part____No</th>\n                <th>Operation_No</th>\n                <th>Operation_Type</th>\n                <th>Live_RPM</th>\n                <th>Live_Feed_Rate</th>\n                <th>Live_Depth_of_cut</th>\n                <th>Live_Tool_Angle</th>\n                <th>Live_Finish_Lenght</th>\n                <th>Live_Planned_Production_Duration</th>\n                <th>Live_Production_Duration</th>\n                <th>Delay</th>\n                <th>Start_Date_Time</th>\n                 <th>Finish_Date_Time</th>\n                <th>Avability</th>\n                <th>Performance</th>\n                <th>Quality</th>\n                <th>OEE</th>\n                 <th>Downtime</th>\n                \n\n              \n                </tr>\n                <tbody>\n                    <tr align=\"center\" ng-repeat=\"row in msg.payload\">\n                        <td ng-repeat=\"item in row\" >{{item}}</td>\n                        </tr>\n                        </tbody>\n                        </table>\n        ",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -26042,6 +26050,373 @@
         "wires": []
     },
     {
+        "id": "5e87f803fb845066",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "link in OEE",
+        "links": [
+            "a26b0f6e9af3d5e6"
+        ],
+        "x": 3385,
+        "y": 4720,
+        "wires": [
+            [
+                "589bbffb446e9d97"
+            ]
+        ]
+    },
+    {
+        "id": "589bbffb446e9d97",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Set flow = OEE",
+        "func": "flow.set(\"OP_OEE\",msg.payload)",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3500,
+        "y": 4720,
+        "wires": [
+            [
+                "d0b6e501accc3e70"
+            ]
+        ]
+    },
+    {
+        "id": "d0b6e501accc3e70",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Flow get = Live_OP_OEE",
+        "func": "msg.payload =flow.get(\"OP_OEE\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3890,
+        "y": 4720,
+        "wires": [
+            [
+                "a46d02678eee6d77"
+            ]
+        ]
+    },
+    {
+        "id": "b7d9abf549bdf65d",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Set flow = Live_Avaliabilty_OP",
+        "func": "flow.set(\"Live_Avaliabilty_OP\",msg.payload)",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3550,
+        "y": 4600,
+        "wires": [
+            [
+                "88efab0191214056"
+            ]
+        ]
+    },
+    {
+        "id": "88efab0191214056",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Flow get = Live_Avaliabilty_OP",
+        "func": "msg.payload =flow.get(\"Live_Avaliabilty_OP\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3910,
+        "y": 4600,
+        "wires": [
+            [
+                "688c9c9071b82674"
+            ]
+        ]
+    },
+    {
+        "id": "58122a144f955081",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "link in Avaliability",
+        "links": [
+            "762b0fcac61e77f1",
+            "51a77e7bdefb8a2c"
+        ],
+        "x": 3385,
+        "y": 4600,
+        "wires": [
+            [
+                "b7d9abf549bdf65d"
+            ]
+        ]
+    },
+    {
+        "id": "8705aa9e8624c774",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "link in Performance",
+        "links": [
+            "6e6b143235ae0845"
+        ],
+        "x": 3385,
+        "y": 4640,
+        "wires": [
+            [
+                "0ecf087a10600c6a"
+            ]
+        ]
+    },
+    {
+        "id": "f80f398bfde645c5",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "link in Quality",
+        "links": [
+            "031780f81b8a8cd1",
+            "26f622e94d5b80fa"
+        ],
+        "x": 3385,
+        "y": 4680,
+        "wires": [
+            [
+                "b72acc7071746bec"
+            ]
+        ]
+    },
+    {
+        "id": "0ecf087a10600c6a",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Set flow = Live_Performance_OP",
+        "func": "flow.set(\"Live_Performance_OP\",msg.payload)",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3560,
+        "y": 4640,
+        "wires": [
+            [
+                "71a14b677bb6b45e"
+            ]
+        ]
+    },
+    {
+        "id": "71a14b677bb6b45e",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Flow get = Live_Performance_OP",
+        "func": "msg.payload =flow.get(\"Live_Performance_OP\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3920,
+        "y": 4640,
+        "wires": [
+            [
+                "79fb392a2b4de674"
+            ]
+        ]
+    },
+    {
+        "id": "b72acc7071746bec",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Set flow = Live_Quality_OP",
+        "func": "flow.set(\"Live_Quality_OP\",msg.payload)",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3540,
+        "y": 4680,
+        "wires": [
+            [
+                "f61855f9e51e7200"
+            ]
+        ]
+    },
+    {
+        "id": "f61855f9e51e7200",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Flow get = Live_Quality_OP",
+        "func": "msg.payload =flow.get(\"Live_Quality_OP\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3900,
+        "y": 4680,
+        "wires": [
+            [
+                "0b4910ba91205664"
+            ]
+        ]
+    },
+    {
+        "id": "688c9c9071b82674",
+        "type": "debug",
+        "z": "413e4a02b73e8664",
+        "name": "Live_Avaliability",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4220,
+        "y": 4600,
+        "wires": []
+    },
+    {
+        "id": "79fb392a2b4de674",
+        "type": "debug",
+        "z": "413e4a02b73e8664",
+        "name": "Live_Performance",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4230,
+        "y": 4640,
+        "wires": []
+    },
+    {
+        "id": "0b4910ba91205664",
+        "type": "debug",
+        "z": "413e4a02b73e8664",
+        "name": "Live_Quality",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4210,
+        "y": 4680,
+        "wires": []
+    },
+    {
+        "id": "a46d02678eee6d77",
+        "type": "debug",
+        "z": "413e4a02b73e8664",
+        "name": "Live_OEE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4200,
+        "y": 4720,
+        "wires": []
+    },
+    {
+        "id": "f97fe2718da39b9a",
+        "type": "link in",
+        "z": "413e4a02b73e8664",
+        "name": "link in Batch Downtime",
+        "links": [
+            "20e79959d0dfc836"
+        ],
+        "x": 3385,
+        "y": 4760,
+        "wires": [
+            [
+                "72e5fdd281ebd1cd"
+            ]
+        ]
+    },
+    {
+        "id": "72e5fdd281ebd1cd",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Set flow = Machine_DownTime",
+        "func": "flow.set(\"DownTime\",msg.payload)",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3550,
+        "y": 4760,
+        "wires": [
+            [
+                "e6052b2424f166e6"
+            ]
+        ]
+    },
+    {
+        "id": "e6052b2424f166e6",
+        "type": "function",
+        "z": "413e4a02b73e8664",
+        "name": "Flow get = Machine_DownTime",
+        "func": "msg.payload =flow.get(\"DownTime\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3910,
+        "y": 4760,
+        "wires": [
+            [
+                "942034f0c15e55f1"
+            ]
+        ]
+    },
+    {
+        "id": "942034f0c15e55f1",
+        "type": "debug",
+        "z": "413e4a02b73e8664",
+        "name": "DownTime",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4210,
+        "y": 4760,
+        "wires": []
+    },
+    {
         "id": "7ae9310347369f66",
         "type": "inject",
         "z": "06948f76d5659ec2",
@@ -26192,7 +26567,8 @@
         "name": "link out Actual production time",
         "mode": "link",
         "links": [
-            "0266d45482cd00c2"
+            "0266d45482cd00c2",
+            "8218a538999e70b0"
         ],
         "x": 1405,
         "y": 3080,
@@ -26418,7 +26794,8 @@
         "name": "link out Avaliabilty",
         "mode": "link",
         "links": [
-            "202a83245dd5a6e8"
+            "202a83245dd5a6e8",
+            "58122a144f955081"
         ],
         "x": 1355,
         "y": 2280,
@@ -26488,7 +26865,8 @@
         "name": "link out Total Quality",
         "mode": "link",
         "links": [
-            "db6543843d34bac1"
+            "db6543843d34bac1",
+            "f80f398bfde645c5"
         ],
         "x": 1235,
         "y": 7220,
@@ -26548,7 +26926,8 @@
         "name": "link out % Avaliabilty ",
         "mode": "link",
         "links": [
-            "202a83245dd5a6e8"
+            "202a83245dd5a6e8",
+            "58122a144f955081"
         ],
         "x": 1335,
         "y": 2240,
@@ -26561,7 +26940,8 @@
         "name": "link out % Performance",
         "mode": "link",
         "links": [
-            "91c67a0d26cc52f2"
+            "91c67a0d26cc52f2",
+            "8705aa9e8624c774"
         ],
         "x": 1325,
         "y": 4580,
@@ -26574,7 +26954,8 @@
         "name": "link out % Current Quality ",
         "mode": "link",
         "links": [
-            "db6543843d34bac1"
+            "db6543843d34bac1",
+            "f80f398bfde645c5"
         ],
         "x": 1075,
         "y": 5420,
@@ -26587,7 +26968,8 @@
         "name": "link out % OEE",
         "mode": "link",
         "links": [
-            "0bdd25c500c2bbb6"
+            "0bdd25c500c2bbb6",
+            "5e87f803fb845066"
         ],
         "x": 995,
         "y": 7120,
@@ -27025,7 +27407,6 @@
             "111093553c97aa5e",
             "12cbbbfca2c4fb15",
             "2f9d763770cd0c5f",
-            "3f824508c74158fa",
             "4cf06f3064827563",
             "5f72878617e3fe3a",
             "88b02b0a321354ce",
@@ -27066,7 +27447,8 @@
         "mode": "link",
         "links": [
             "bc6bd7c31d43b1d0",
-            "bdfcd94941ed2585"
+            "bdfcd94941ed2585",
+            "7803b8c045251501"
         ],
         "x": 1385,
         "y": 2680,
@@ -28491,7 +28873,8 @@
         "name": "link out Convert_Downtime",
         "mode": "link",
         "links": [
-            "6b1f893dd436f916"
+            "6b1f893dd436f916",
+            "f97fe2718da39b9a"
         ],
         "x": 955,
         "y": 1320,
@@ -29016,8 +29399,7 @@
         "z": "06948f76d5659ec2",
         "name": "link in Clear current downtime",
         "links": [
-            "d17cb2d0594d37d6",
-            "eda4945daf06ddb2"
+            "d17cb2d0594d37d6"
         ],
         "x": 255,
         "y": 1500,
@@ -32062,7 +32444,8 @@
         "name": "link out Production_Delay",
         "mode": "link",
         "links": [
-            "a75f61e0c4b571aa"
+            "a75f61e0c4b571aa",
+            "5ac93ad715da0529"
         ],
         "x": 665,
         "y": 3220,
