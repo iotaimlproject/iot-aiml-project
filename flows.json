@@ -16,6 +16,11 @@
         "env": []
     },
     {
+        "id": "bc452dfad4aef27a",
+        "type": "tab",
+        "label": "AI Optimize"
+    },
+    {
         "id": "3b749428d849f316",
         "type": "tab",
         "label": "Idea lab dashboard",
@@ -30,11 +35,6 @@
         "disabled": false,
         "info": "",
         "env": []
-    },
-    {
-        "id": "bc452dfad4aef27a",
-        "type": "tab",
-        "label": "AI Optimize"
     },
     {
         "id": "2c9330c11f6a4001",
@@ -138,6 +138,10 @@
             {
                 "addr": "DB1,X60.0",
                 "name": "Prod_Stop_Checker"
+            },
+            {
+                "addr": "DB1,X60.1",
+                "name": "NR_Stop_CNC"
             }
         ]
     },
@@ -247,6 +251,10 @@
             {
                 "addr": "DB1,X60.0",
                 "name": "Prod_Stop_Checked"
+            },
+            {
+                "addr": "DB1,X1.3",
+                "name": "RM_Status"
             }
         ]
     },
@@ -276,31 +284,6 @@
             {
                 "addr": "DB1,X0.7",
                 "name": "StopPB"
-            }
-        ]
-    },
-    {
-        "id": "a058580dd31eb109",
-        "type": "s7 endpoint",
-        "transport": "iso-on-tcp",
-        "address": "10.11.15.193",
-        "port": "102",
-        "rack": "0",
-        "slot": "2",
-        "localtsaphi": "01",
-        "localtsaplo": "00",
-        "remotetsaphi": "01",
-        "remotetsaplo": "00",
-        "connmode": "rack-slot",
-        "adapter": "",
-        "busaddr": 2,
-        "cycletime": 1000,
-        "timeout": 2000,
-        "name": "",
-        "vartable": [
-            {
-                "addr": "",
-                "name": ""
             }
         ]
     },
@@ -768,7 +751,7 @@
         "tab": "0a25afb0b7a2a950",
         "order": 2,
         "disp": false,
-        "width": "21",
+        "width": "22",
         "collapse": false,
         "className": ""
     },
@@ -1019,18 +1002,18 @@
         "tab": "0a25afb0b7a2a950",
         "order": 4,
         "disp": false,
-        "width": "31",
+        "width": 32,
         "collapse": false,
         "className": ""
     },
     {
         "id": "5d0bfe04d04539d8",
         "type": "ui_group",
-        "name": "Sales ",
+        "name": "AI Dashboard",
         "tab": "0a25afb0b7a2a950",
         "order": 3,
         "disp": false,
-        "width": "21",
+        "width": "22",
         "collapse": false,
         "className": ""
     },
@@ -1687,106 +1670,6 @@
         "height": 1
     },
     {
-        "id": "a356b9682c76637c",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f9876c0981ce6492",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f7eeb7816ffea4f1",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 8,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "55271ec6ad4fb059",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 12,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "66b16cc9a56a7b32",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "72376e144dfaaef1",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 14,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "0b906d26ade67c8d",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 15,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "edbeff4396cc69f2",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 16,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "706bf5dbb0f03f3d",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 17,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "487570381e4e58e9",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 10,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "c0b8eff4a34136ff",
         "type": "MySQLdatabase",
         "name": "akash",
@@ -1822,16 +1705,6 @@
         "host": "127.0.0.1",
         "port": "3306",
         "db": "lathe",
-        "tz": "",
-        "charset": "UTF8"
-    },
-    {
-        "id": "f52cf6270c847958",
-        "type": "MySQLdatabase",
-        "name": "miet",
-        "host": "127.0.0.1",
-        "port": "3306",
-        "db": "miet",
         "tz": "",
         "charset": "UTF8"
     },
@@ -2095,20 +1968,9 @@
         "parallelUnitIdsAllowed": true
     },
     {
-        "id": "149871b0549cd023",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://10.11.15.80:4840",
-        "secpol": "None",
-        "secmode": "None",
-        "none": true,
-        "login": false,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
-    },
-    {
         "id": "e12cf8c1858ec10b",
         "type": "OpcUa-Endpoint",
+        "name": "",
         "endpoint": "opc.tcp://DESKTOP-I31NQVK:53530/OPCUA/SimulationServer",
         "secpol": "None",
         "secmode": "None",
@@ -2999,6 +2861,404 @@
         "width": 12,
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "b73cd67e7e369a6d",
+        "type": "ui_tab",
+        "name": "AI_Backend_DB",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7b41df74657aac38",
+        "type": "ui_group",
+        "name": "AI_Data",
+        "tab": "b73cd67e7e369a6d",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "83621cc9f65eec3d",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "85e69bebd02bd8a7",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "52bca795889b4ab4",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "38f8c1a64f684b2c",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 10,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "aa6202f3596ed263",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f662cb2a90b6045b",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7078fb20f8a3cd77",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "5bf45c79e747363f",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "28c99e0777d7f1b2",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "4d1a870a36967368",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6f34b21b81c3bfec",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c72030db9993a653",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 9,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "6ac3738c0f95418e",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "906634c72e651eac",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ee416cbba433c881",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 12,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "5539cb87be337ece",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9418f7a5ae4c8228",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "eac78cbc405a0415",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 15,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "54a28b07c8482890",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "6e82969c283a247c",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 17,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "5b5079733e2448a5",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 18,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "b24081eca22c0105",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 19,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "051dddb795577f90",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 20,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9af7518d3f42deee",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "5d0bfe04d04539d8",
+        "order": 21,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "7e2414e18f49deb3",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "92cafd3b08404384",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "faf9d501564b00c9",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "afb9b75b72fd37e0",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2e24f4cbdd6537ea",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "80bbfbf1b44e7ac4",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d88b35b99dda5370",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 17,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d8c54b5a5d480c18",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 18,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7ce2702bdc35f381",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 19,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "66383afa0d0d4be9",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 20,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "59c1e4730f5821ca",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9982a7a91925ee2c",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 22,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "01a5acd510fa5e56",
+        "type": "ui_spacer",
+        "z": "413e4a02b73e8664",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 23,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7e97f9b7516b351e",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "0a25afb0b7a2a950",
+        "order": 5,
+        "disp": true,
+        "width": 6
     },
     {
         "id": "0ce6edb24a23fbb1",
@@ -6633,7 +6893,7 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "ns=3;i=1009;dataype=BaseDataType",
+        "topic": "NodeId ns=3;i=1001",
         "payload": "",
         "payloadType": "date",
         "x": 1690,
@@ -7481,7 +7741,7 @@
         "y": 4660,
         "wires": [
             [
-                "f09751efa7fa644a"
+                "43c42b78b300a223"
             ]
         ]
     },
@@ -7556,7 +7816,7 @@
         "y": 4740,
         "wires": [
             [
-                "23357a9ad004ee20"
+                "2ad950da5d350620"
             ]
         ]
     },
@@ -7965,7 +8225,7 @@
         "type": "function",
         "z": "413e4a02b73e8664",
         "name": "Insert part_no_operational_data",
-        "func": "var OP_Data_SLNo= msg.payload ;//flow.get(\"OP_Data_SLNo\") ;\nvar Batch_PartNo = flow.get(\"Live_Batch_PartNo\");\nvar Part_SLNo = flow.get(\"Live_Part_SLNo\");\nvar Part_No = flow.get(\"Live_Part_No\");\nvar Operation_No = flow.get(\"Live_Operation_No\");\nvar Operation_Type = flow.get(\"Live_Operation_Type\");\nvar Live_RPM = flow.get(\"Live_RPM_inject\");\nvar Live_Feed_Rate = flow.get(\"Live_FeedRate_inject\");\nvar Live_Depth_Of_Cut = flow.get(\"Live_Depth_of_cut_inject\");\nvar Live_Tool_Angle = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Finish_Lenght = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Production_Duration = flow.get(\"Live_Production_Duration\");\nvar Live_Planned_Production_Duration= flow.get(\"Live_Planned_Production_Duration\");\nvar Production_Delay = flow.get(\"Production_Delay\");\nvar OP_Job_Start_Date_Time = flow.get(\"Job_Start_Date_Time_SP\");\nvar Job_Finish_Date_Time= flow.get(\"Job_Finish_Date_Time_SP\");\nvar Avaliability = flow.get(\"Live_Avaliabilty_OP\");\nvar Performance = flow.get(\"Live_Performance_OP\");\nvar Quality = flow.get(\"Live_Quality_OP\");\nvar OEE = flow.get(\"OP_OEE\");\nvar DownTime=  flow.get(\"DownTime\");\n\n\n//msg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Job_SlNo`,`Batch_PartNo`,`Part_No`,`Live_Operation_Type`,`Live_RPM_Final`,`Live_Feed_Rate_Final`,`Live_Depth_of_cut_Final`,`Live_Tool_Angle_Final`,`Live_Start_Lenght_Final`)VALUES( ' + Job_SlNo + ',\"' + Batch_PartNo + '\",\"' + Part_No + '\", \"' + Live_Operation_Type + '\", ' + Live_RPM_Final + ',' + Live_Feed_Rate_Final + ',' + Live_Depth_of_cut_Final + ',' + Live_Tool_Angle_Final + ',' + Live_Start_Lenght_Final + ', );';\n\n\n\n\nmsg.topic = ' INSERT INTO `lathe`.`part_no_operational_data`(`OP_Data_SLNo`,`Batch_PartNo`,`Part_SLNo`,`Part_No`,`Operation_No`,`Operation_Type`,`Live_RPM`,`Live_Feed_Rate`,`Live_Depth_Of_Cut`,`Live_Tool_Angle`,`Live_Finish_Lenght`,`Live_Production_Duration`,`Live_Planned_Production_Duration`,`Production_Delay`,`OP_Job_Start_Date_Time`,`Job_Finish_Date_Time`,`Avaliability`,`Performance`,`Quality`,`OEE`,`DownTime`)VALUES( ' + OP_Data_SLNo + ',\"' + Batch_PartNo + '\",' + Part_SLNo + ',\"' + Part_No + '\",' + Operation_No + ',\"' + Operation_Type + '\",' + Live_RPM + ',' + Live_Feed_Rate + ',' + Live_Depth_Of_Cut + ',' + Live_Tool_Angle + ',' + Live_Finish_Lenght + ',\"' + Live_Production_Duration + '\",\"' + Live_Planned_Production_Duration + '\",\"' + Production_Delay + '\",\"' + OP_Job_Start_Date_Time + '\",\"' + Job_Finish_Date_Time +'\",\"' + Avaliability + '\",\"' + Performance + '\",\"' + Quality + '\",\"' + OEE + '\",\"' +DownTime+'\");';\nreturn msg; ",
+        "func": "var OP_Data_SLNo= msg.payload ;//flow.get(\"OP_Data_SLNo\") ;\nvar Batch_PartNo = flow.get(\"Live_Batch_PartNo\");\nvar Part_SLNo = flow.get(\"Live_Part_SLNo\");\nvar Part_No = flow.get(\"Live_Part_No\");\nvar Operation_No = flow.get(\"Live_Operation_No\");\nvar Operation_Type = flow.get(\"Live_Operation_Type\");\nvar Live_RPM = flow.get(\"Live_RPM_inject\");\nvar Live_Feed_Rate = flow.get(\"Live_FeedRate_inject\");\nvar Live_Depth_Of_Cut = flow.get(\"Live_Depth_of_cut_inject\");\nvar Live_Tool_Angle = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Finish_Lenght = flow.get(\"Live_Tool_Angle_inject\");\nvar Live_Production_Duration = flow.get(\"Live_Production_Duration\");\nvar Live_Planned_Production_Duration= flow.get(\"Live_Planned_Production_Duration\");\nvar Production_Delay = flow.get(\"Production_Delay\");\nvar OP_Job_Start_Date_Time = flow.get(\"Job_Start_Date_Time_SP\");\nvar Job_Finish_Date_Time= flow.get(\"Job_Finish_Date_Time_SP\");\nvar Avaliability = flow.get(\"Live_Avaliabilty_OP\");\nvar Performance = flow.get(\"Live_Performance_OP\");\nvar Quality = flow.get(\"Live_Quality_OP\");\nvar OEE = flow.get(\"OP_OEE\");\nvar DownTime=  flow.get(\"DownTime\");\n\n\n//msg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Job_SlNo`,`Batch_PartNo`,`Part_No`,`Live_Operation_Type`,`Live_RPM_Final`,`Live_Feed_Rate_Final`,`Live_Depth_of_cut_Final`,`Live_Tool_Angle_Final`,`Live_Start_Lenght_Final`)VALUES( ' + Job_SlNo + ',\"' + Batch_PartNo + '\",\"' + Part_No + '\", \"' + Live_Operation_Type + '\", ' + Live_RPM_Final + ',' + Live_Feed_Rate_Final + ',' + Live_Depth_of_cut_Final + ',' + Live_Tool_Angle_Final + ',' + Live_Start_Lenght_Final + ', );';\n\n\n\n\nmsg.topic = ' INSERT INTO `lathe`.`part_no_operational_data`(`OP_Data_SLNo`,`Batch_PartNo`,`Part_SLNo`,`Part_No`,`Operation_No`,`Operation_Type`,`Live_RPM`,`Live_Feed_Rate`,`Live_Depth_Of_Cut`,`Live_Tool_Angle`,`Live_Finish_Lenght`,`Live_Production_Duration`,`Live_Planned_Production_Duration`,`Production_Delay`,`OP_Job_Start_Date_Time`,`Job_Finish_Date_Time`,`Avaliability`,`Performance`,`Quality`,`OEE`,`DownTime`)VALUES( ' + OP_Data_SLNo + ',\"' + Batch_PartNo + '\",' + Part_SLNo + ',\"' + Part_No + '\",' + Operation_No + ',\"' + Operation_Type + '\",' + Live_RPM + ',' + Live_Feed_Rate + ',' + Live_Depth_Of_Cut + ',' + Live_Tool_Angle + ',' + Live_Finish_Lenght + ',\"' + Live_Production_Duration + '\",\"' + Live_Planned_Production_Duration + '\",\"' + Production_Delay + '\",\"' + OP_Job_Start_Date_Time + '\",\"' + Job_Finish_Date_Time +'\",' + Avaliability + ',' + Performance + ',' + Quality + ',' + OEE + ',\"' +DownTime+'\");';\nreturn msg; ",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8160,8 +8420,8 @@
         "id": "7038563a46d24b6c",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 38",
-        "active": false,
+        "name": " Live_Operation_Type",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8169,7 +8429,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4200,
         "y": 4060,
         "wires": []
     },
@@ -8177,8 +8437,8 @@
         "id": "186ee51da420d120",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 40",
-        "active": false,
+        "name": "Live_Part_SLNo",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8186,7 +8446,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4180,
         "y": 3940,
         "wires": []
     },
@@ -8194,8 +8454,8 @@
         "id": "dcb5e0fc8e61459f",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 41",
-        "active": false,
+        "name": " Live_Operation_No",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8203,7 +8463,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4190,
         "y": 4020,
         "wires": []
     },
@@ -8211,8 +8471,8 @@
         "id": "6c8a8a0501242be3",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 42",
-        "active": false,
+        "name": "Live_Part_No",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8220,7 +8480,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4180,
         "y": 3980,
         "wires": []
     },
@@ -8284,8 +8544,8 @@
         "id": "09b209f444857427",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 43",
-        "active": false,
+        "name": "Live_Batch_PartNo",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8293,7 +8553,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4190,
         "y": 3900,
         "wires": []
     },
@@ -8517,7 +8777,7 @@
         "id": "7daa9da9ca9ecdc4",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 44",
+        "name": " Live_RPM_inject",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -8526,7 +8786,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4190,
         "y": 4120,
         "wires": []
     },
@@ -8534,7 +8794,7 @@
         "id": "555f420641d68cd4",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 45",
+        "name": "Live_FeedRate_inject",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -8543,7 +8803,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4200,
         "y": 4180,
         "wires": []
     },
@@ -8551,7 +8811,7 @@
         "id": "6f67c4978bce9caf",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 46",
+        "name": "Live_Depth_of_cut_inject",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -8560,7 +8820,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4210,
         "y": 4240,
         "wires": []
     },
@@ -8568,7 +8828,7 @@
         "id": "94bbecbaf64ebdda",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 47",
+        "name": "Live_Tool_Angle_inject",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -8577,7 +8837,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4160,
+        "x": 4200,
         "y": 4300,
         "wires": []
     },
@@ -8585,7 +8845,7 @@
         "id": "c5c113c79d1f43cd",
         "type": "debug",
         "z": "413e4a02b73e8664",
-        "name": "debug 48",
+        "name": "Live_Finish_Lenght_inject",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -8594,7 +8854,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4180,
+        "x": 4230,
         "y": 4340,
         "wires": []
     },
@@ -8619,8 +8879,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 3520,
-        "y": 3800,
+        "x": 3620,
+        "y": 3780,
         "wires": [
             [
                 "57a5da1ce89fe007",
@@ -8642,7 +8902,9 @@
                 "88efab0191214056",
                 "71a14b677bb6b45e",
                 "f61855f9e51e7200",
-                "d0b6e501accc3e70"
+                "d0b6e501accc3e70",
+                "e6052b2424f166e6",
+                "18bd9394b1606a37"
             ]
         ]
     },
@@ -8654,8 +8916,8 @@
         "links": [
             "4597aa695f7bc4d9"
         ],
-        "x": 3595,
-        "y": 3760,
+        "x": 3735,
+        "y": 3740,
         "wires": [
             [
                 "57a5da1ce89fe007",
@@ -8678,7 +8940,8 @@
                 "88efab0191214056",
                 "71a14b677bb6b45e",
                 "f61855f9e51e7200",
-                "d0b6e501accc3e70"
+                "d0b6e501accc3e70",
+                "e6052b2424f166e6"
             ]
         ]
     },
@@ -11200,7 +11463,7 @@
         "type": "debug",
         "z": "413e4a02b73e8664",
         "name": "Live Part Sl No",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -12070,7 +12333,7 @@
         "type": "debug",
         "z": "413e4a02b73e8664",
         "name": "Total Parts Array",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -15100,7 +15363,7 @@
         "type": "debug",
         "z": "413e4a02b73e8664",
         "name": "Live Part Sl No",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -15139,8 +15402,8 @@
         "links": [
             "ea07bc026c297540"
         ],
-        "x": 2025,
-        "y": 5860,
+        "x": 2145,
+        "y": 5820,
         "wires": [
             [
                 "c16d876bd1460c07",
@@ -15377,7 +15640,8 @@
                 "265344dc45818577",
                 "c16d876bd1460c07",
                 "eecad7ad061bcf39",
-                "0ac4eeddb4524d01"
+                "0ac4eeddb4524d01",
+                "38d5b8ae6ff5ead7"
             ]
         ]
     },
@@ -15468,7 +15732,8 @@
             "88405687f724901d",
             "3f824508c74158fa",
             "c6c2326c0fb5bb36",
-            "a5c49093aa7cd02c"
+            "a5c49093aa7cd02c",
+            "5cda220085284a44"
         ],
         "x": 1925,
         "y": 6280,
@@ -15742,11 +16007,11 @@
         "name": "link out Emergency to shutdown",
         "mode": "link",
         "links": [
-            "c923faa05935dd6e",
-            "27f3cc75072ca36b"
+            "27f3cc75072ca36b",
+            "c923faa05935dd6e"
         ],
         "x": 2025,
-        "y": 6220,
+        "y": 6160,
         "wires": []
     },
     {
@@ -15878,7 +16143,7 @@
         "type": "debug",
         "z": "413e4a02b73e8664",
         "name": "Increment value",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16479,11 +16744,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1730,
+        "x": 1650,
         "y": 6420,
         "wires": [
             [
-                "b09aa733a91e8080",
                 "c546cdc012d2ef94"
             ]
         ]
@@ -16517,7 +16781,7 @@
         "type": "debug",
         "z": "413e4a02b73e8664",
         "name": "Active_Part_No(Stop)",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16551,7 +16815,7 @@
         "type": "function",
         "z": "413e4a02b73e8664",
         "name": "Stop_PM_Emmitter",
-        "func": "var Production_Produced_Parts = msg.payload ; //flow.get(\"Production_Produced_Parts\");\nvar Finished_Qty_Required = flow.get(\"Finished_Qty_Required_Supervisor\");\n\n\nif (Production_Produced_Parts == Finished_Qty_Required )\n\n{\n\n    msg.payload = true;\n    return msg;\n}\n\n\nif (Production_Produced_Parts < Finished_Qty_Required )\n\n{\n\n    msg.payload = false ;\n    return msg;\n}\n\n\n",
+        "func": "var Production_Produced_Parts = flow.get(\"Production_Produced_Parts\");\nvar Finished_Qty_Required = flow.get(\"Finished_Qty_Required_Supervisor\");\n\n\nif (Production_Produced_Parts == Finished_Qty_Required )\n\n{\n\n    msg.payload = true;\n    return msg;\n}\n\n\nif (Production_Produced_Parts < Finished_Qty_Required )\n\n{\n\n    msg.payload = false ;\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16561,9 +16825,7 @@
         "x": 1930,
         "y": 6420,
         "wires": [
-            [
-                "2e625edd9d22303f"
-            ]
+            []
         ]
     },
     {
@@ -16591,11 +16853,10 @@
         "links": [
             "e8f6f2012fedada4"
         ],
-        "x": 1645,
+        "x": 1515,
         "y": 6280,
         "wires": [
             [
-                "b09aa733a91e8080",
                 "e6b088256dec6f48"
             ]
         ]
@@ -17181,7 +17442,9 @@
         "x": 3940,
         "y": 3860,
         "wires": [
-            []
+            [
+                "9012997b66272a58"
+            ]
         ]
     },
     {
@@ -17329,9 +17592,9 @@
         "id": "bc6bd7c31d43b1d0",
         "type": "link in",
         "z": "413e4a02b73e8664",
-        "name": "link in Actual_Production_Duration",
+        "name": "link in Planned_Production_Duration",
         "links": [
-            "7b8d1137e74b0203"
+            "d493a661abfdf807"
         ],
         "x": 3385,
         "y": 4420,
@@ -17715,7 +17978,8 @@
         "wires": [
             [
                 "ce80f05517350929",
-                "4777083ddec8821d"
+                "4777083ddec8821d",
+                "0f3cc90d398f7820"
             ]
         ]
     },
@@ -17745,7 +18009,7 @@
         "type": "debug",
         "z": "413e4a02b73e8664",
         "name": "Array length",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17799,7 +18063,8 @@
         "y": 3420,
         "wires": [
             [
-                "3d4732a6d3892261"
+                "3d4732a6d3892261",
+                "07415c01e038034d"
             ]
         ]
     },
@@ -19150,10 +19415,11 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1620,
-        "y": 6160,
+        "y": 6280,
         "wires": [
             [
-                "bda71c4081de41ee"
+                "bda71c4081de41ee",
+                "b09aa733a91e8080"
             ]
         ]
     },
@@ -19436,24 +19702,13 @@
         "wires": []
     },
     {
-        "id": "816b60cdf61a7207",
-        "type": "s7 out",
-        "z": "413e4a02b73e8664",
-        "endpoint": "2c9330c11f6a4001",
-        "variable": "Motor_Reset",
-        "name": "",
-        "x": 2770,
-        "y": 6220,
-        "wires": []
-    },
-    {
         "id": "53c7d641a9c61038",
         "type": "s7 out",
         "z": "413e4a02b73e8664",
-        "endpoint": "a058580dd31eb109",
+        "endpoint": "",
         "variable": "",
         "name": "",
-        "x": 3100,
+        "x": 3050,
         "y": 5920,
         "wires": []
     },
@@ -20089,7 +20344,7 @@
         "y": 6340,
         "wires": [
             [
-                "816b60cdf61a7207"
+                "d17cb2d0594d37d6"
             ]
         ]
     },
@@ -20212,13 +20467,10 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1830,
+        "x": 1770,
         "y": 6160,
         "wires": [
             [
-                "d60cd71ac464992c",
-                "b74fa10e25221613",
-                "7ff75223ee7835aa",
                 "8e4bde0e789d775d",
                 "c3203a06eb0a8985"
             ]
@@ -20296,7 +20548,8 @@
         "y": 6640,
         "wires": [
             [
-                "0640d903db1cd355"
+                "0640d903db1cd355",
+                "7fc3f3bf20c7a1c0"
             ]
         ]
     },
@@ -20326,16 +20579,16 @@
         "offcolor": "Red",
         "animate": false,
         "className": "",
-        "x": 1820,
+        "x": 1800,
         "y": 6200,
         "wires": [
             [
                 "b74fa10e25221613",
                 "7ff75223ee7835aa",
-                "8e4bde0e789d775d",
                 "228bbdf3fe029762",
                 "d4e4fda0baeccc20",
-                "cbd4717d9271c4bb"
+                "cbd4717d9271c4bb",
+                "ec8a639d3ddc8911"
             ]
         ]
     },
@@ -22581,16 +22834,16 @@
         "z": "413e4a02b73e8664",
         "group": "bd503191652db753",
         "order": 1,
-        "width": 10,
+        "width": 5,
         "height": 1,
         "name": "",
         "label": "Active Batch Part No.",
         "format": "{{msg.payload}}",
-        "layout": "row-center",
+        "layout": "row-left",
         "className": "",
         "style": true,
         "font": "",
-        "fontSize": "20",
+        "fontSize": "16",
         "color": "#ff0000",
         "x": 3100,
         "y": 1580,
@@ -22601,17 +22854,17 @@
         "type": "ui_text",
         "z": "413e4a02b73e8664",
         "group": "bd503191652db753",
-        "order": 6,
-        "width": 10,
+        "order": 2,
+        "width": 5,
         "height": 1,
         "name": "",
         "label": "Active Part No :",
         "format": "{{msg.payload}}",
-        "layout": "row-center",
+        "layout": "row-left",
         "className": "",
         "style": true,
         "font": "",
-        "fontSize": "20",
+        "fontSize": "16",
         "color": "#f90101",
         "x": 2800,
         "y": 3120,
@@ -22685,7 +22938,7 @@
         "type": "ui_text",
         "z": "413e4a02b73e8664",
         "group": "bd503191652db753",
-        "order": 2,
+        "order": 3,
         "width": 5,
         "height": 1,
         "name": "",
@@ -22706,7 +22959,7 @@
         "type": "ui_text",
         "z": "413e4a02b73e8664",
         "group": "bd503191652db753",
-        "order": 3,
+        "order": 4,
         "width": 5,
         "height": 1,
         "name": "",
@@ -23513,7 +23766,7 @@
         "order": 2,
         "width": 31,
         "height": 10,
-        "format": "<style>\n    #history {\n      font-family: \"Arial\";\n        border-collapse: collapse;\n        width: 100%;\n        }\n        \n        #history td, #history th {\n        border: 1px solid #ddd;\n        padding: 8px;\n        }\n        #history tr:nth-child(even){background-color: #A8EEF8;}\n        \n        #history tr:hover {background-color: #40aeea;}\n        \n        #history th {\n        padding-top: 12px;\n        padding-bottom: 12px;\n        text-align: center;\n        background-color: #696969;\n        color: white;\n        }\n        </style>\n        \n        <table id=\"history\" border=\"1\">\n            <tr align=\"center\">\n                <th>SLNo</th>\n                <th>Batch__No</th>\n                <th>Part_SLNo</th>\n                <th>Part____No</th>\n                <th>Operation_No</th>\n                <th>Operation_Type</th>\n                <th>Live_RPM</th>\n                <th>Live_Feed_Rate</th>\n                <th>Live_Depth_of_cut</th>\n                <th>Live_Tool_Angle</th>\n                <th>Live_Finish_Lenght</th>\n                <th>Live_Planned_Production_Duration</th>\n                <th>Live_Production_Duration</th>\n                <th>Delay</th>\n                <th>Start_Date_Time</th>\n                 <th>Finish_Date_Time</th>\n                <th>Avability</th>\n                <th>Performance</th>\n                <th>Quality</th>\n                <th>OEE</th>\n                 <th>Downtime</th>\n                \n\n              \n                </tr>\n                <tbody>\n                    <tr align=\"center\" ng-repeat=\"row in msg.payload\">\n                        <td ng-repeat=\"item in row\" >{{item}}</td>\n                        </tr>\n                        </tbody>\n                        </table>\n        ",
+        "format": "<style>\n    #history {\n      font-family: \"Arial\";\n        border-collapse: collapse;\n        width: 100%;\n        }\n        \n        #history td, #history th {\n        border: 1px solid #ddd;\n        padding: 8px;\n        }\n        #history tr:nth-child(even){background-color: #A8EEF8;}\n        \n        #history tr:hover {background-color: #40aeea;}\n        \n        #history th {\n        padding-top: 12px;\n        padding-bottom: 12px;\n        text-align: center;\n        background-color: #696969;\n        color: white;\n        }\n        </style>\n        \n        <table id=\"history\" border=\"1\">\n            <tr align=\"center\">\n                <th>SLNo</th>\n                <th>Batch__No</th>\n                <th>Part_SLNo</th>\n                <th>Part____No</th>\n                <th>Operation_No</th>\n                <th>Operation_Type</th>\n                <th>Live_RPM</th>\n                <th>Live_Feed_Rate</th>\n                <th>Live_Depth_of_cut</th>\n                <th>Live_Tool_Angle</th>\n                <th>Live_Finish_Lenght</th>\n                <th>Live_Planned_Production_Duration</th>\n                <th>Live_Production_Duration</th>\n                <th>Prod_Delay</th>\n                <th>Start_Date_Time</th>\n                 <th>Finish_Date_Time</th>\n                <th>Avability</th>\n                <th>Performance</th>\n                <th>Quality</th>\n                <th>OEE</th>\n                 <th>Downtime</th>\n                \n\n              \n                </tr>\n                <tbody>\n                    <tr align=\"center\" ng-repeat=\"row in msg.payload\">\n                        <td ng-repeat=\"item in row\" >{{item}}</td>\n                        </tr>\n                        </tbody>\n                        </table>\n        ",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
@@ -23615,8 +23868,7 @@
                 "67f7b12bad191c72",
                 "93457ed7fc9c30a0",
                 "2e7621eb46911f71",
-                "b3a1298284aaff17",
-                "816b60cdf61a7207"
+                "b3a1298284aaff17"
             ]
         ]
     },
@@ -24182,40 +24434,12 @@
         ]
     },
     {
-        "id": "f09751efa7fa644a",
-        "type": "mysql",
-        "z": "413e4a02b73e8664",
-        "mydb": "79ea3cb23e58b11c",
-        "name": "lathe",
-        "x": 670,
-        "y": 4660,
-        "wires": [
-            [
-                "c9891b8270c1af63"
-            ]
-        ]
-    },
-    {
-        "id": "23357a9ad004ee20",
-        "type": "mysql",
-        "z": "413e4a02b73e8664",
-        "mydb": "79ea3cb23e58b11c",
-        "name": "lathe",
-        "x": 650,
-        "y": 4740,
-        "wires": [
-            [
-                "a0595cb3d53a4153"
-            ]
-        ]
-    },
-    {
         "id": "daacd71cff854506",
         "type": "mysql",
         "z": "413e4a02b73e8664",
         "mydb": "79ea3cb23e58b11c",
         "name": "lathe",
-        "x": 650,
+        "x": 630,
         "y": 4800,
         "wires": [
             [
@@ -24971,7 +25195,13 @@
         "x": 2170,
         "y": 6440,
         "wires": [
-            []
+            [
+                "8b9357d8d47735e4",
+                "67f7b12bad191c72",
+                "93457ed7fc9c30a0",
+                "2e7621eb46911f71",
+                "b3a1298284aaff17"
+            ]
         ]
     },
     {
@@ -25014,8 +25244,8 @@
         "datatype": "Boolean",
         "value": "",
         "name": "Stop_Cnc",
-        "x": 2020,
-        "y": 6640,
+        "x": 2040,
+        "y": 6600,
         "wires": [
             [
                 "d4e33a6ed2d8b739"
@@ -25144,6 +25374,8 @@
         "setstatusandtime": false,
         "keepsessionalive": false,
         "name": "",
+        "applicationName": "",
+        "applicationUri": "",
         "x": 1900,
         "y": 4780,
         "wires": [
@@ -25261,7 +25493,7 @@
         "type": "OpcUa-Client",
         "z": "413e4a02b73e8664",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -25299,7 +25531,7 @@
         "type": "OpcUa-Client",
         "z": "413e4a02b73e8664",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "write",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -25331,7 +25563,7 @@
         "type": "OpcUa-Client",
         "z": "413e4a02b73e8664",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -25368,7 +25600,7 @@
         "type": "OpcUa-Client",
         "z": "413e4a02b73e8664",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -25406,7 +25638,7 @@
         "type": "OpcUa-Client",
         "z": "413e4a02b73e8664",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -25862,7 +26094,7 @@
         "id": "d4e4fda0baeccc20",
         "type": "ui_led",
         "z": "413e4a02b73e8664",
-        "order": 9,
+        "order": 5,
         "group": "27d81adb97e32aef",
         "width": 4,
         "height": 2,
@@ -26417,6 +26649,157 @@
         "wires": []
     },
     {
+        "id": "2ad950da5d350620",
+        "type": "mysql",
+        "z": "413e4a02b73e8664",
+        "mydb": "79ea3cb23e58b11c",
+        "name": "lathe",
+        "x": 550,
+        "y": 4740,
+        "wires": [
+            [
+                "a0595cb3d53a4153"
+            ]
+        ]
+    },
+    {
+        "id": "43c42b78b300a223",
+        "type": "mysql",
+        "z": "413e4a02b73e8664",
+        "mydb": "79ea3cb23e58b11c",
+        "name": "lathe",
+        "x": 650,
+        "y": 4660,
+        "wires": [
+            [
+                "c9891b8270c1af63"
+            ]
+        ]
+    },
+    {
+        "id": "9012997b66272a58",
+        "type": "debug",
+        "z": "413e4a02b73e8664",
+        "name": "SL No.",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4150,
+        "y": 3860,
+        "wires": []
+    },
+    {
+        "id": "07415c01e038034d",
+        "type": "delay",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 3500,
+        "y": 3540,
+        "wires": [
+            [
+                "c2bbdd57bf6cda5f"
+            ]
+        ]
+    },
+    {
+        "id": "2a8d35b5123c0673",
+        "type": "inject",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 3270,
+        "y": 4120,
+        "wires": [
+            [
+                "1de23df8e1e4f4fb",
+                "d9a3657dd76ed3a3",
+                "bf6e23d5c6d83bee",
+                "4396de1f8ca438d5",
+                "d6b3533c9da57c20",
+                "2435691c29bb699d",
+                "f3fbe29cc9cbb2be",
+                "fffb00ee7d4b646e",
+                "87724b2f50153f91",
+                "e0a8c51ef77552c8",
+                "8d28aa64918bac38",
+                "c3a45131deb09875",
+                "b77895db030221dd",
+                "e0929d9710d3cd1c",
+                "92bff9fc84cb98a1",
+                "b7d9abf549bdf65d",
+                "0ecf087a10600c6a",
+                "b72acc7071746bec",
+                "589bbffb446e9d97",
+                "72e5fdd281ebd1cd"
+            ]
+        ]
+    },
+    {
+        "id": "7fc3f3bf20c7a1c0",
+        "type": "s7 out",
+        "z": "413e4a02b73e8664",
+        "endpoint": "2c9330c11f6a4001",
+        "variable": "NR_Stop_CNC",
+        "name": "Stop_CNC",
+        "x": 2210,
+        "y": 6640,
+        "wires": []
+    },
+    {
+        "id": "38d5b8ae6ff5ead7",
+        "type": "link out",
+        "z": "413e4a02b73e8664",
+        "name": "Manual Start",
+        "mode": "link",
+        "links": [],
+        "x": 2075,
+        "y": 5800,
+        "wires": []
+    },
+    {
+        "id": "ec8a639d3ddc8911",
+        "type": "s7 out",
+        "z": "413e4a02b73e8664",
+        "endpoint": "2c9330c11f6a4001",
+        "variable": "Actuator_On_OFF",
+        "name": "",
+        "x": 2790,
+        "y": 6220,
+        "wires": []
+    },
+    {
         "id": "7ae9310347369f66",
         "type": "inject",
         "z": "06948f76d5659ec2",
@@ -26567,8 +26950,7 @@
         "name": "link out Actual production time",
         "mode": "link",
         "links": [
-            "0266d45482cd00c2",
-            "8218a538999e70b0"
+            "0266d45482cd00c2"
         ],
         "x": 1405,
         "y": 3080,
@@ -26732,7 +27114,8 @@
                 "a26b0f6e9af3d5e6",
                 "e4b2303cae247642",
                 "77ea15d60cf5d20b",
-                "90814760dad0ccd3"
+                "90814760dad0ccd3",
+                "f966b56f18e63eed"
             ]
         ]
     },
@@ -26865,6 +27248,7 @@
         "name": "link out Total Quality",
         "mode": "link",
         "links": [
+            "5b92fdff1089eced",
             "db6543843d34bac1",
             "f80f398bfde645c5"
         ],
@@ -26927,7 +27311,8 @@
         "mode": "link",
         "links": [
             "202a83245dd5a6e8",
-            "58122a144f955081"
+            "58122a144f955081",
+            "c7adabeb2c30ca48"
         ],
         "x": 1335,
         "y": 2240,
@@ -26940,8 +27325,9 @@
         "name": "link out % Performance",
         "mode": "link",
         "links": [
+            "8705aa9e8624c774",
             "91c67a0d26cc52f2",
-            "8705aa9e8624c774"
+            "f41966aa8186e926"
         ],
         "x": 1325,
         "y": 4580,
@@ -26988,8 +27374,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 2620,
+        "x": 1610,
+        "y": 2720,
         "wires": []
     },
     {
@@ -27446,12 +27832,10 @@
         "name": "link out Planned  production time",
         "mode": "link",
         "links": [
-            "bc6bd7c31d43b1d0",
-            "bdfcd94941ed2585",
-            "7803b8c045251501"
+            "bdfcd94941ed2585"
         ],
-        "x": 1385,
-        "y": 2680,
+        "x": 1115,
+        "y": 2620,
         "wires": []
     },
     {
@@ -27466,7 +27850,9 @@
         "y": 1840,
         "wires": [
             [
-                "eda4945daf06ddb2"
+                "eda4945daf06ddb2",
+                "abf41362caf35aee",
+                "44b8fb4782da5817"
             ]
         ]
     },
@@ -28086,8 +28472,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1180,
-        "y": 2580,
+        "x": 1320,
+        "y": 2660,
         "wires": [
             [
                 "3e58c000e1c08c31",
@@ -28108,12 +28494,11 @@
         "finalize": "",
         "libs": [],
         "x": 830,
-        "y": 2680,
+        "y": 2600,
         "wires": [
             [
-                "48d9f2dcf794e6c2",
-                "3e58c000e1c08c31",
-                "7b8d1137e74b0203"
+                "7b8d1137e74b0203",
+                "48d9f2dcf794e6c2"
             ]
         ]
     },
@@ -28125,8 +28510,8 @@
         "links": [
             "eda4945daf06ddb2"
         ],
-        "x": 1005,
-        "y": 2580,
+        "x": 1075,
+        "y": 2660,
         "wires": [
             [
                 "f9f630869a81d637"
@@ -28862,7 +29247,8 @@
         "wires": [
             [
                 "ae8e602fc6a6a380",
-                "cad43d2e4985c912"
+                "cad43d2e4985c912",
+                "84a2e7230525ea51"
             ]
         ]
     },
@@ -28874,6 +29260,7 @@
         "mode": "link",
         "links": [
             "6b1f893dd436f916",
+            "849ae6427ba159ce",
             "f97fe2718da39b9a"
         ],
         "x": 955,
@@ -28915,12 +29302,12 @@
         "z": "06948f76d5659ec2",
         "name": "Check Theroritical Time",
         "props": [],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 760,
+        "x": 770,
         "y": 4000,
         "wires": [
             [
@@ -30507,8 +30894,7 @@
         "wires": [
             [
                 "4dd6ced03c1777f6",
-                "b57b0a3f013339d6",
-                "f47012b0d888d714"
+                "b57b0a3f013339d6"
             ]
         ]
     },
@@ -30529,9 +30915,7 @@
         "wires": [
             [
                 "779a24d39b74c74b",
-                "9bd9c71e659ed8e6",
-                "f47012b0d888d714",
-                "e050a2ecb82c1ea9"
+                "9bd9c71e659ed8e6"
             ]
         ]
     },
@@ -30584,7 +30968,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Total_Income_per_Day",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -30601,7 +30985,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Total_Loss_per_Day",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31176,13 +31560,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 750,
         "y": 7860,
         "wires": [
             [
-                "266860df43fec430",
-                "d8028d3804e8bb70",
-                "c13ffcba95166e94"
+                "ebd455e7f604a10d"
             ]
         ]
     },
@@ -31191,7 +31573,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Push to table",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31542,7 +31924,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Bad_Parts_array",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31576,7 +31958,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Total_Bad_Parts",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31593,7 +31975,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Good sum ",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31610,7 +31992,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Good_Parts_array",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31627,7 +32009,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Total_Good_Parts",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31693,7 +32075,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Final_Bad_Parts",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31710,7 +32092,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Final_Good_Parts",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -31848,61 +32230,6 @@
         ],
         "x": 1035,
         "y": 6080,
-        "wires": []
-    },
-    {
-        "id": "f11ed4b09f2d39a2",
-        "type": "function",
-        "z": "06948f76d5659ec2",
-        "name": "Chart Data",
-        "func": "let sales = flow.get(\"Total_Income_per_Day\") || 0;\nlet loss = flow.get(\"Total_Loss_per_Day\") || 0;\n\n// Optional: round to 2 decimal places\nmsg.sales = Math.round(sales * 100) / 100;\nmsg.loss = Math.round(loss * 100) / 100;\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2950,
-        "y": 6180,
-        "wires": [
-            [
-                "d6f30ab2e4baa75f"
-            ]
-        ]
-    },
-    {
-        "id": "90f12e229481793c",
-        "type": "inject",
-        "z": "06948f76d5659ec2",
-        "name": "",
-        "props": [],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 2770,
-        "y": 6180,
-        "wires": [
-            [
-                "f11ed4b09f2d39a2"
-            ]
-        ]
-    },
-    {
-        "id": "f47012b0d888d714",
-        "type": "debug",
-        "z": "06948f76d5659ec2",
-        "name": "debug 17",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3340,
-        "y": 6180,
         "wires": []
     },
     {
@@ -32242,7 +32569,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
+        "x": 1280,
         "y": 5660,
         "wires": []
     },
@@ -32279,7 +32606,8 @@
         "y": 5660,
         "wires": [
             [
-                "0edbeb0c258d2415"
+                "0edbeb0c258d2415",
+                "396aa5deab93c7ba"
             ]
         ]
     },
@@ -32302,7 +32630,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0",
+        "payload": "5",
         "payloadType": "num",
         "x": 1910,
         "y": 5880,
@@ -32444,8 +32772,8 @@
         "name": "link out Production_Delay",
         "mode": "link",
         "links": [
-            "a75f61e0c4b571aa",
-            "5ac93ad715da0529"
+            "4231a7971ce37faf",
+            "a75f61e0c4b571aa"
         ],
         "x": 665,
         "y": 3220,
@@ -32472,7 +32800,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 700,
+        "x": 480,
         "y": 7860,
         "wires": [
             [
@@ -32601,7 +32929,7 @@
         "z": "06948f76d5659ec2",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
+        "timeout": "4",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -32613,7 +32941,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 840,
-        "y": 7780,
+        "y": 7760,
         "wires": [
             [
                 "8c76f7a211931242"
@@ -32933,7 +33261,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0",
+        "payload": "10",
         "payloadType": "num",
         "x": 1950,
         "y": 6500,
@@ -32941,29 +33269,6 @@
             [
                 "df03b9479d7ccad7"
             ]
-        ]
-    },
-    {
-        "id": "e050a2ecb82c1ea9",
-        "type": "delay",
-        "z": "06948f76d5659ec2",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 2910,
-        "y": 6120,
-        "wires": [
-            []
         ]
     },
     {
@@ -33268,35 +33573,35 @@
         "id": "48d9f2dcf794e6c2",
         "type": "ui_text",
         "z": "06948f76d5659ec2",
-        "group": "27d81adb97e32aef",
-        "order": 10,
-        "width": 5,
+        "group": "bd503191652db753",
+        "order": 21,
+        "width": 10,
         "height": 1,
         "name": "",
         "label": "Planned Production Duration :",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-left",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1210,
-        "y": 2660,
+        "x": 1310,
+        "y": 2720,
         "wires": []
     },
     {
         "id": "c690a364468f1dac",
         "type": "ui_text",
         "z": "06948f76d5659ec2",
-        "group": "27d81adb97e32aef",
-        "order": 11,
-        "width": 5,
+        "group": "bd503191652db753",
+        "order": 22,
+        "width": 10,
         "height": 1,
         "name": "",
         "label": "Current Production Duration :",
         "format": "{{msg.payload}}",
-        "layout": "col-center",
+        "layout": "row-left",
         "className": "",
         "style": false,
         "font": "",
@@ -33311,7 +33616,7 @@
         "type": "ui_text",
         "z": "06948f76d5659ec2",
         "group": "bd503191652db753",
-        "order": 4,
+        "order": 5,
         "width": 5,
         "height": 1,
         "name": "",
@@ -33353,7 +33658,7 @@
         "type": "ui_text",
         "z": "06948f76d5659ec2",
         "group": "bd503191652db753",
-        "order": 5,
+        "order": 6,
         "width": 5,
         "height": 1,
         "name": "",
@@ -33760,7 +34065,7 @@
         "z": "06948f76d5659ec2",
         "group": "27d81adb97e32aef",
         "name": "Progress",
-        "order": 18,
+        "order": 12,
         "width": 21,
         "height": 1,
         "format": "<div style=\"width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;\">\n  <div style=\"width: 100%; background-color: #ddd; border-radius: 8px; height: 30px; position: relative;\">\n    <div style=\"width: {{msg.payload}}%; background-color: #4CAF50; height: 100%; border-radius: 8px; text-align: center; line-height: 30px; color: white;\">\n      Progress {{msg.payload}} %\n    </div>\n  </div>\n</div>\n",
@@ -33778,44 +34083,21 @@
         ]
     },
     {
-        "id": "d6f30ab2e4baa75f",
-        "type": "ui_template",
-        "z": "06948f76d5659ec2",
-        "group": "5d0bfe04d04539d8",
-        "name": "",
-        "order": 1,
-        "width": 21,
-        "height": 4,
-        "format": "<canvas id=\"salesLossChart\" style=\"height:100%; width:100%\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\n(function(scope) {\n    if (scope.chart) return; // avoid re-creating\n\n    const ctx = document.getElementById(\"salesLossChart\").getContext(\"2d\");\n\n    const timeLabels = [];\n    const salesData = [];\n    const lossData = [];\n\n    const chart = new Chart(ctx, {\n        type: 'line',\n        data: {\n            labels: timeLabels,\n            datasets: [\n                {\n                    label: 'Sales (₹)',\n                    data: salesData,\n                    borderColor: 'green',\n                    fill: false,\n                    tension: 0.3\n                },\n                {\n                    label: 'Loss (₹)',\n                    data: lossData,\n                    borderColor: 'red',\n                    fill: false,\n                    tension: 0.3\n                }\n            ]\n        },\n        options: {\n            responsive: true,\n            maintainAspectRatio: false,\n            scales: {\n                x: {\n                    ticks: {\n                        autoSkip: false,\n                        maxRotation: 90,\n                        minRotation: 45\n                    },\n                    title: {\n                        display: true,\n                        text: 'Day-HH:mm'\n                    }\n                },\n                y: {\n                    title: {\n                        display: true,\n                        text: 'Amount (₹)'\n                    },\n                    beginAtZero: true\n                }\n            },\n            plugins: {\n                legend: {\n                    position: 'top'\n                }\n            }\n        }\n    });\n\n    scope.chart = chart;\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n\n        const now = new Date();\n        const dayStr = now.toLocaleString('en-IN', { weekday: 'short' });\n        const hour = now.getHours().toString().padStart(2, '0');\n        const minute = now.getMinutes().toString().padStart(2, '0');\n        const label = `${dayStr}-${hour}:${minute}`;\n\n        // Update labels and datasets\n        timeLabels.push(label);\n        salesData.push(msg.sales || 0);\n        lossData.push(msg.loss || 0);\n\n        // Limit to last 24 entries\n        if (timeLabels.length > 24) {\n            timeLabels.shift();\n            salesData.shift();\n            lossData.shift();\n        }\n\n        chart.update();\n    });\n})(scope);\n</script>\n<button onclick=\"downloadCSV()\">Download CSV</button>\n<script>\nlet csvData = [];\n\nfunction addToCSV(label, sales, loss) {\n    csvData.push(`${label},${sales},${loss}`);\n    if (csvData.length > 100) csvData.shift(); // Keep only latest 100 rows\n}\n\nfunction downloadCSV() {\n    let csvContent = \"data:text/csv;charset=utf-8,Time,Sales,Loss\\n\" + csvData.join(\"\\n\");\n    const encodedUri = encodeURI(csvContent);\n    const link = document.createElement(\"a\");\n    link.setAttribute(\"href\", encodedUri);\n    link.setAttribute(\"download\", \"sales_loss_log.csv\");\n    document.body.appendChild(link);\n    link.click();\n    document.body.removeChild(link);\n}\n\n// Hook into $watch\nscope.$watch('msg', function(msg) {\n    if (!msg) return;\n\n    const now = new Date();\n    const label = now.toLocaleString('en-IN');\n    addToCSV(label, msg.sales, msg.loss);\n});\n</script>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 3160,
-        "y": 6180,
-        "wires": [
-            [
-                "f47012b0d888d714"
-            ]
-        ]
-    },
-    {
         "id": "0edbeb0c258d2415",
         "type": "ui_template",
         "z": "06948f76d5659ec2",
-        "group": "27d81adb97e32aef",
-        "name": "",
+        "group": "b6ec6f01ada09fa7",
+        "name": "Good/Bad parts",
         "order": 5,
         "width": 4,
-        "height": 6,
+        "height": "4",
         "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['Parts'],\n            datasets: [\n                {\n                    label: 'Produced',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Good',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1080,
+        "x": 1100,
         "y": 5660,
         "wires": [
             [
@@ -33906,7 +34188,7 @@
         "type": "OpcUa-Client",
         "z": "06948f76d5659ec2",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -33942,7 +34224,7 @@
         "type": "OpcUa-Client",
         "z": "06948f76d5659ec2",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -33978,7 +34260,7 @@
         "type": "OpcUa-Client",
         "z": "06948f76d5659ec2",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -34012,7 +34294,7 @@
         "type": "OpcUa-Client",
         "z": "06948f76d5659ec2",
         "d": true,
-        "endpoint": "149871b0549cd023",
+        "endpoint": "",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -34203,6 +34485,853 @@
         "x": 380,
         "y": 7800,
         "wires": []
+    },
+    {
+        "id": "359779d73e1cad68",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 5800,
+        "wires": [
+            [
+                "d1f744674fb997a8"
+            ]
+        ]
+    },
+    {
+        "id": "396aa5deab93c7ba",
+        "type": "link out",
+        "z": "06948f76d5659ec2",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [],
+        "x": 1155,
+        "y": 5760,
+        "wires": []
+    },
+    {
+        "id": "a671a06afe0ecbae",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 330,
+        "y": 5680,
+        "wires": [
+            [
+                "a5f86650dafe3b02"
+            ]
+        ]
+    },
+    {
+        "id": "f966b56f18e63eed",
+        "type": "link out",
+        "z": "06948f76d5659ec2",
+        "name": "link out current OEE",
+        "mode": "link",
+        "links": [
+            "de80898e4fddcdc5"
+        ],
+        "x": 1045,
+        "y": 7560,
+        "wires": []
+    },
+    {
+        "id": "1c412032ae506295",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 930,
+        "y": 2200,
+        "wires": [
+            [
+                "3cb2fe0be554cafe"
+            ]
+        ]
+    },
+    {
+        "id": "5b174960dcb1c408",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1070,
+        "y": 4440,
+        "wires": [
+            [
+                "e334d89c6fb8ae8d"
+            ]
+        ]
+    },
+    {
+        "id": "bc4ba2f311202886",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 810,
+        "y": 7340,
+        "wires": [
+            [
+                "b9fa0a330e22d818"
+            ]
+        ]
+    },
+    {
+        "id": "84a2e7230525ea51",
+        "type": "ui_text",
+        "z": "06948f76d5659ec2",
+        "group": "844a37958fe8b48d",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Machine Shutdown : ",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1160,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "a1a39752ba3698bb",
+        "type": "inject",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 730,
+        "y": 2720,
+        "wires": [
+            [
+                "a56bb871503df513"
+            ]
+        ]
+    },
+    {
+        "id": "d493a661abfdf807",
+        "type": "link out",
+        "z": "06948f76d5659ec2",
+        "name": "link out Planned Production Duration",
+        "mode": "link",
+        "links": [
+            "bc6bd7c31d43b1d0"
+        ],
+        "x": 1155,
+        "y": 2760,
+        "wires": []
+    },
+    {
+        "id": "a56bb871503df513",
+        "type": "function",
+        "z": "06948f76d5659ec2",
+        "name": " Get Planned_production_time",
+        "func": "var A = flow.get(\"Theoritical_Production_time\");\nmsg.payload = A;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 2720,
+        "wires": [
+            [
+                "d493a661abfdf807",
+                "48d9f2dcf794e6c2"
+            ]
+        ]
+    },
+    {
+        "id": "ebd455e7f604a10d",
+        "type": "rbe",
+        "z": "06948f76d5659ec2",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 910,
+        "y": 7840,
+        "wires": [
+            [
+                "c13ffcba95166e94",
+                "266860df43fec430",
+                "d8028d3804e8bb70"
+            ]
+        ]
+    },
+    {
+        "id": "e11f228367117b8d",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Get Data",
+        "func": "msg.produced =  flow.get(\"Current_OEE\")|| 0;\nmsg.good = flow.get(\"Predict_OEE\") || 0;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 640,
+        "wires": [
+            [
+                "2cf30f5f5096b3c6"
+            ]
+        ]
+    },
+    {
+        "id": "18d804d2b4fd124e",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 600,
+        "wires": [
+            [
+                "e11f228367117b8d"
+            ]
+        ]
+    },
+    {
+        "id": "0d080e17219c39c3",
+        "type": "debug",
+        "z": "bc452dfad4aef27a",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ad65016b3a355719",
+        "type": "debug",
+        "z": "bc452dfad4aef27a",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "0bd795653c30cf19",
+        "type": "debug",
+        "z": "bc452dfad4aef27a",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "acc12b36f278ff6e",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "name": "Pred_Speed",
+        "order": 3,
+        "width": 4,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['OEE'],\n            datasets: [\n                {\n                    label: 'Current OEE',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Pred OEE',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 910,
+        "y": 1260,
+        "wires": [
+            [
+                "ad65016b3a355719"
+            ]
+        ]
+    },
+    {
+        "id": "eaada14529592f93",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "name": "Predict_Profit",
+        "order": 5,
+        "width": 4,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['OEE'],\n            datasets: [\n                {\n                    label: 'Current OEE',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Pred OEE',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 920,
+        "y": 1960,
+        "wires": [
+            [
+                "0bd795653c30cf19"
+            ]
+        ]
+    },
+    {
+        "id": "c7adabeb2c30ca48",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Avability",
+        "links": [
+            "51a77e7bdefb8a2c"
+        ],
+        "x": 185,
+        "y": 600,
+        "wires": [
+            [
+                "6c074a6a9b4e3fee"
+            ]
+        ]
+    },
+    {
+        "id": "f41966aa8186e926",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Performance",
+        "links": [
+            "6e6b143235ae0845"
+        ],
+        "x": 185,
+        "y": 680,
+        "wires": [
+            [
+                "bbb42b518eed26f5"
+            ]
+        ]
+    },
+    {
+        "id": "5b92fdff1089eced",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Quaity",
+        "links": [
+            "26f622e94d5b80fa"
+        ],
+        "x": 185,
+        "y": 740,
+        "wires": [
+            [
+                "c2db51c5c6c18767"
+            ]
+        ]
+    },
+    {
+        "id": "de80898e4fddcdc5",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "OEE",
+        "links": [
+            "f966b56f18e63eed"
+        ],
+        "x": 185,
+        "y": 800,
+        "wires": [
+            [
+                "9ff23af464fcfcaf",
+                "4db3c83f8c9ed6c9"
+            ]
+        ]
+    },
+    {
+        "id": "4231a7971ce37faf",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Delay",
+        "links": [
+            "c2e57cd1af5543a6"
+        ],
+        "x": 185,
+        "y": 860,
+        "wires": [
+            [
+                "8c7bb092b9cbb72d"
+            ]
+        ]
+    },
+    {
+        "id": "849ae6427ba159ce",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Downtime",
+        "links": [
+            "20e79959d0dfc836"
+        ],
+        "x": 185,
+        "y": 920,
+        "wires": [
+            [
+                "7570ba7c7c7eeeec"
+            ]
+        ]
+    },
+    {
+        "id": "9feaeeb66f326a7f",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Current_Prod_Speed",
+        "links": [],
+        "x": 185,
+        "y": 980,
+        "wires": [
+            [
+                "545ee9e16e86ee11"
+            ]
+        ]
+    },
+    {
+        "id": "5da90b98653ce4f6",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Avaliabilty",
+        "info": "",
+        "x": 100,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "204192babdbbd7a1",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Performance",
+        "info": "",
+        "x": 90,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3eec15951bc57502",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Quality",
+        "info": "",
+        "x": 70,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f918f4b8a32929cf",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Current OEE",
+        "info": "",
+        "x": 90,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "e62be04aaf3102e3",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Prod Delay",
+        "info": "",
+        "x": 80,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "bab13002298c3fce",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Downtime",
+        "info": "",
+        "x": 80,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "243a150e7e114e72",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Cur_Prod_Speed",
+        "info": "",
+        "x": 80,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "6c074a6a9b4e3fee",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Avaliabity",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bbb42b518eed26f5",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Performance",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c2db51c5c6c18767",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Qaulity",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9ff23af464fcfcaf",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current OEE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "8c7bb092b9cbb72d",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Prod Delay",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7570ba7c7c7eeeec",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Downtime",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "545ee9e16e86ee11",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Speed",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 340,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "be11f33feca88b0e",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Flow for OEE Prediction",
+        "info": "",
+        "x": 640,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "946bbc6fb5018a64",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Flow for Prod Speed Prediction",
+        "info": "",
+        "x": 710,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "0904ee3a29ce1d6d",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Flow for Profit Prediction",
+        "info": "",
+        "x": 690,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "4db3c83f8c9ed6c9",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Get Current_OEE",
+        "func": "flow.set(\"Current_OEE\",msg.payload)|| 0;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 580,
+        "wires": [
+            [
+                "e11f228367117b8d"
+            ]
+        ]
+    },
+    {
+        "id": "49e543f91f1263bc",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Get Predict_OEE",
+        "func": "flow.set(\"Predict_OEE\",msg.payload)|| 0;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 720,
+        "wires": [
+            [
+                "e11f228367117b8d"
+            ]
+        ]
+    },
+    {
+        "id": "6de8ae2d8e313abd",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "55",
+        "payloadType": "num",
+        "x": 850,
+        "y": 760,
+        "wires": [
+            [
+                "49e543f91f1263bc"
+            ]
+        ]
+    },
+    {
+        "id": "743d01bec76209ef",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "70",
+        "payloadType": "num",
+        "x": 850,
+        "y": 540,
+        "wires": [
+            [
+                "4db3c83f8c9ed6c9"
+            ]
+        ]
+    },
+    {
+        "id": "2cf30f5f5096b3c6",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "name": "OEE Prediction",
+        "order": 1,
+        "width": 4,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: [''],\n            datasets: [\n                {\n                    label: 'Produced',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Good',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1240,
+        "y": 700,
+        "wires": [
+            [
+                "0d080e17219c39c3"
+            ]
+        ]
     },
     {
         "id": "3b63cd8c989d603f",
@@ -38769,7 +39898,7 @@
         "id": "7a892e397b82631a",
         "type": "mysql",
         "z": "3b749428d849f316",
-        "mydb": "f52cf6270c847958",
+        "mydb": "",
         "name": "",
         "x": 1270,
         "y": 820,
@@ -38785,7 +39914,7 @@
         "id": "d440e09547e5beb3",
         "type": "mysql",
         "z": "3b749428d849f316",
-        "mydb": "f52cf6270c847958",
+        "mydb": "",
         "name": "",
         "x": 610,
         "y": 1560,
@@ -38800,7 +39929,7 @@
         "id": "8a0a589a2fbd8996",
         "type": "mysql",
         "z": "3b749428d849f316",
-        "mydb": "f52cf6270c847958",
+        "mydb": "",
         "name": "",
         "x": 550,
         "y": 880,
@@ -38815,7 +39944,7 @@
         "id": "0669fc94e22e3549",
         "type": "mysql",
         "z": "3b749428d849f316",
-        "mydb": "f52cf6270c847958",
+        "mydb": "",
         "name": "",
         "x": 1890,
         "y": 1880,
@@ -38829,7 +39958,7 @@
         "id": "98513517c09273d9",
         "type": "mysql",
         "z": "3b749428d849f316",
-        "mydb": "f52cf6270c847958",
+        "mydb": "",
         "name": "",
         "x": 1890,
         "y": 1920,
@@ -38843,7 +39972,7 @@
         "id": "2fab2768e632ee2d",
         "type": "mysql",
         "z": "3b749428d849f316",
-        "mydb": "f52cf6270c847958",
+        "mydb": "",
         "name": "",
         "x": 650,
         "y": 1060,
@@ -39283,7 +40412,8 @@
             [
                 "049492cc6e244ea1",
                 "c72a65da04523e57",
-                "1d0590d66a4d9b16"
+                "1d0590d66a4d9b16",
+                "6fc3a7782332dd51"
             ]
         ]
     },
@@ -39402,7 +40532,8 @@
                 "c72a65da04523e57",
                 "ed3cc4dba9d7af64",
                 "bef269d865ede794",
-                "7868ec9425af1a02"
+                "7868ec9425af1a02",
+                "6fc3a7782332dd51"
             ]
         ]
     },
@@ -40182,17 +41313,6 @@
         "wires": []
     },
     {
-        "id": "ec8a639d3ddc8911",
-        "type": "s7 out",
-        "z": "f77fc6864f564ae2",
-        "endpoint": "2c9330c11f6a4001",
-        "variable": "Actuator_On_OFF",
-        "name": "",
-        "x": 790,
-        "y": 640,
-        "wires": []
-    },
-    {
         "id": "1502c9319d02d545",
         "type": "inject",
         "z": "f77fc6864f564ae2",
@@ -40504,22 +41624,6 @@
         "wires": []
     },
     {
-        "id": "27f3cc75072ca36b",
-        "type": "link in",
-        "z": "f77fc6864f564ae2",
-        "name": "Machine On Off_In",
-        "links": [
-            "8e4bde0e789d775d"
-        ],
-        "x": 575,
-        "y": 640,
-        "wires": [
-            [
-                "ec8a639d3ddc8911"
-            ]
-        ]
-    },
-    {
         "id": "dd87aefd71c7c2c5",
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
@@ -40586,5 +41690,134 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6fc3a7782332dd51",
+        "type": "ui_led",
+        "z": "f77fc6864f564ae2",
+        "order": 8,
+        "group": "27d81adb97e32aef",
+        "width": 4,
+        "height": 2,
+        "label": "Production Status",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Production Status",
+        "x": 1410,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "5cda220085284a44",
+        "type": "link in",
+        "z": "f77fc6864f564ae2",
+        "name": "link in 4",
+        "links": [
+            "d17cb2d0594d37d6"
+        ],
+        "x": 105,
+        "y": 1960,
+        "wires": [
+            [
+                "c2b3491d21c407e9"
+            ]
+        ]
+    },
+    {
+        "id": "65b27f5fbf84de15",
+        "type": "ui_switch",
+        "z": "f77fc6864f564ae2",
+        "name": "",
+        "label": "Manual Start",
+        "tooltip": "",
+        "group": "5e022236e47e8d05",
+        "order": 17,
+        "width": "7",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 910,
+        "y": 1400,
+        "wires": [
+            [
+                "bef269d865ede794"
+            ]
+        ]
+    },
+    {
+        "id": "86ae065d88448cbf",
+        "type": "s7 in",
+        "z": "f77fc6864f564ae2",
+        "endpoint": "b33a72c8a3abf7b1",
+        "mode": "single",
+        "variable": "RM_Status",
+        "diff": true,
+        "name": "",
+        "x": 180,
+        "y": 2180,
+        "wires": [
+            [
+                "685e582ac96997a9"
+            ]
+        ]
+    },
+    {
+        "id": "685e582ac96997a9",
+        "type": "ui_led",
+        "z": "f77fc6864f564ae2",
+        "order": 9,
+        "group": "844a37958fe8b48d",
+        "width": "4",
+        "height": "2",
+        "label": "RM Status",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Mode led",
+        "x": 560,
+        "y": 2180,
+        "wires": []
     }
 ]
