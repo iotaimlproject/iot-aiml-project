@@ -2,46 +2,23 @@ from pydantic import BaseModel, Field
 
 
 class PredictRequest(BaseModel):
-    current_time: str | None = Field(None, description="ISO timestamp")
-    current_rpm: int = Field(..., ge=300, le=500)
-    current_oee: float = Field(..., ge=0, le=100)
-    availability: float | None = Field(None, ge=0, le=100)
-    performance: float | None = Field(None, ge=0, le=100)
-    quality: float | None = Field(None, ge=0, le=100)
-    downtime_minutes: float | None = Field(None, ge=0)
-
-
-class HorizonPredictions(BaseModel):
-    pred_30m: float
-    pred_1h: float
-    pred_2h: float
-    pred_6h: float
-    pred_8h: float
+    batch_part_no: str = Field(..., description="Batch identifier, e.g. WM-23-A-1_b7")
+    part_slno: int = Field(..., ge=1, description="Current part index within batch (1-based)")
+    total_batch_size: int = Field(..., ge=1, description="Total parts planned for this batch")
+    current_speed: int = Field(..., ge=20, le=100)
+    availability: int = Field(..., ge=0, le=100)
+    performance: int = Field(..., ge=0, le=100)
+    quality: int = Field(..., ge=0, le=100)
+    current_oee: int = Field(..., ge=0, le=100)
+    downtime_sec: int = Field(default=0, ge=0)
+    oee_delta: int = Field(default=0, ge=-100, le=100)
+    state: str = Field(default="NORMAL", description="Machine state")
 
 
 class PredictResponse(BaseModel):
-    current_rpm: int
-    current_oee: float
-    predictions: HorizonPredictions
-
-
-class OptimizeRequest(BaseModel):
-    target_oee: float | None = Field(None, ge=0, le=100)
-    target_oee_percentage: float | None = Field(None, ge=0, le=100)
-    horizon: str = Field(default="1h", pattern=r"^(30m|1h|2h|6h|8h)$")
-    current_rpm: int = Field(..., ge=300, le=500)
-    current_oee: float = Field(..., ge=0, le=100)
-    availability: float | None = Field(None, ge=0, le=100)
-    performance: float | None = Field(None, ge=0, le=100)
-    quality: float | None = Field(None, ge=0, le=100)
-    downtime_minutes: float | None = Field(None, ge=0)
-
-
-class OptimizeResponse(BaseModel):
-    current_oee: float
-    target_oee: float
-    optimal_rpm: int
-    optimal_hz: float
-    predicted_oee: float
-    feasible: bool
-    search_range: dict[str, int]
+    pred_oee_10m: float = Field(..., description="Predicted OEE 10 minutes ahead (0-100)")
+    confidence_pct: float = Field(..., description="Confidence in prediction (0-100%)")
+    recommended_speed: int = Field(..., description="Optimal conveyor speed (%)")
+    confidence_speed_pct: float = Field(..., description="Confidence in speed recommendation (0-100%)")
+    change_needed: bool = Field(..., description="True if recommended speed differs from current")
+    batch_position: str = Field(..., description="e.g. '5/12'")
