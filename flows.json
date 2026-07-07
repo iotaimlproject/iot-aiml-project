@@ -16,11 +16,6 @@
         "env": []
     },
     {
-        "id": "bc452dfad4aef27a",
-        "type": "tab",
-        "label": "AI Optimize"
-    },
-    {
         "id": "3b749428d849f316",
         "type": "tab",
         "label": "Idea lab dashboard",
@@ -35,6 +30,11 @@
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "bc452dfad4aef27a",
+        "type": "tab",
+        "label": "AI Optimize"
     },
     {
         "id": "2c9330c11f6a4001",
@@ -1033,7 +1033,7 @@
         "tab": "0a25afb0b7a2a950",
         "order": 3,
         "disp": false,
-        "width": "22",
+        "width": 18,
         "collapse": false,
         "className": ""
     },
@@ -2844,383 +2844,17 @@
         "className": ""
     },
     {
-        "id": "83621cc9f65eec3d",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 6,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "85e69bebd02bd8a7",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "52bca795889b4ab4",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "38f8c1a64f684b2c",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 10,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "aa6202f3596ed263",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 11,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "f662cb2a90b6045b",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "7078fb20f8a3cd77",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 2,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "5bf45c79e747363f",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "28c99e0777d7f1b2",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "4d1a870a36967368",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6f34b21b81c3bfec",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "c72030db9993a653",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 9,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "6ac3738c0f95418e",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "906634c72e651eac",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 11,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "ee416cbba433c881",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 12,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "5539cb87be337ece",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 13,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "9418f7a5ae4c8228",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 14,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "eac78cbc405a0415",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 15,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "54a28b07c8482890",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 16,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "6e82969c283a247c",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 17,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "5b5079733e2448a5",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 18,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "b24081eca22c0105",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 19,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "051dddb795577f90",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 20,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "9af7518d3f42deee",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "5d0bfe04d04539d8",
-        "order": 21,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "7e2414e18f49deb3",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "92cafd3b08404384",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 12,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "faf9d501564b00c9",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "afb9b75b72fd37e0",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 14,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2e24f4cbdd6537ea",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 15,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "80bbfbf1b44e7ac4",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d88b35b99dda5370",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 17,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d8c54b5a5d480c18",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 18,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "7ce2702bdc35f381",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 19,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "66383afa0d0d4be9",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 20,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "59c1e4730f5821ca",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 21,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9982a7a91925ee2c",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 22,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "01a5acd510fa5e56",
-        "type": "ui_spacer",
-        "z": "413e4a02b73e8664",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 23,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "7e97f9b7516b351e",
-        "type": "ui_group",
-        "name": "Group 5",
-        "tab": "0a25afb0b7a2a950",
-        "order": 5,
-        "disp": true,
-        "width": 6
+        "id": "36bd98a21d1627a7",
+        "type": "OpcUa-Endpoint",
+        "name": "ProSys",
+        "endpoint": "opc.tcp://DESKTOP-9VQ31N6:53530/OPCUA/SimulationServer",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
     },
     {
         "id": "de33ef43a504a9a5",
@@ -3273,17 +2907,194 @@
         "height": 1
     },
     {
-        "id": "36bd98a21d1627a7",
-        "type": "OpcUa-Endpoint",
-        "name": "ProSys",
-        "endpoint": "opc.tcp://DESKTOP-9VQ31N6:53530/OPCUA/SimulationServer",
-        "secpol": "None",
-        "secmode": "None",
-        "none": true,
-        "login": false,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
+        "id": "26297e64ecd1deb1",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c87f8352aa986411",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0bcc1116c678d184",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "05883ebc63641614",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 10,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "b3898809d2c00253",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "9a6bf257511149b3",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "780d7863e306014a",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "02b825d08b84dd5f",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "546615270a324583",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b8548e208774c15b",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ebbb6057f7ee8c56",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c9dfa7af5b91ed69",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6d2ecb192b5767c3",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 17,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "94e4621ec3959873",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 18,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e18456e4b5dada93",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 19,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d8c06b902f199942",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 20,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c0337f98299c2b1d",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "643e425507eaf72e",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 22,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ec901ff60968db2c",
+        "type": "ui_spacer",
+        "z": "bc452dfad4aef27a",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 23,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "0ce6edb24a23fbb1",
@@ -32026,7 +31837,7 @@
         "links": [
             "c37481c9f4e26679"
         ],
-        "x": 825,
+        "x": 845,
         "y": 3760,
         "wires": []
     },
@@ -41422,7 +41233,8 @@
         "name": "link out Prod_Speed",
         "mode": "link",
         "links": [
-            "84fbf9cfb70f2208"
+            "84fbf9cfb70f2208",
+            "9feaeeb66f326a7f"
         ],
         "x": 815,
         "y": 780,
@@ -41499,5 +41311,1017 @@
                 "f05de9553d8fce06"
             ]
         ]
+    },
+    {
+        "id": "ad65016b3a355719",
+        "type": "debug",
+        "z": "bc452dfad4aef27a",
+        "name": "Speed Predict",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "0bd795653c30cf19",
+        "type": "debug",
+        "z": "bc452dfad4aef27a",
+        "name": "Profit Predict",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "acc12b36f278ff6e",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "name": "Speed Prediction",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"speedChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    var ctx = document.getElementById('speedChart').getContext('2d');\n    var chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['Speed'],\n            datasets: [\n                { label: 'Current', backgroundColor: 'rgba(0, 123, 255, 0.8)', data: [0] },\n                { label: 'Predicted', backgroundColor: 'rgba(40, 167, 69, 0.8)', data: [0] }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },\n            scales: {\n                y: { beginAtZero: true, max: 100, ticks: { stepSize: 10, font: { size: 12 } } },\n                x: { ticks: { font: { size: 12 } } }\n            }\n        }\n    });\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        chart.data.datasets[0].data = [msg.produced || 0];\n        chart.data.datasets[1].data = [msg.good || 0];\n        chart.update();\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1490,
+        "y": 820,
+        "wires": [
+            [
+                "ad65016b3a355719"
+            ]
+        ]
+    },
+    {
+        "id": "eaada14529592f93",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "name": "Profit Prediction",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"profitChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    var ctx = document.getElementById('profitChart').getContext('2d');\n    var chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['Profit'],\n            datasets: [\n                { label: 'Current', backgroundColor: 'rgba(0, 123, 255, 0.8)', data: [0] },\n                { label: 'Predicted', backgroundColor: 'rgba(40, 167, 69, 0.8)', data: [0] }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },\n            scales: {\n                y: { beginAtZero: true, max: 100, ticks: { font: { size: 12 } } },\n                x: { ticks: { font: { size: 12 } } }\n            }\n        }\n    });\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        chart.data.datasets[0].data = [msg.produced || 0];\n        chart.data.datasets[1].data = [msg.good || 0];\n        chart.update();\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1460,
+        "y": 1040,
+        "wires": [
+            [
+                "0bd795653c30cf19"
+            ]
+        ]
+    },
+    {
+        "id": "c7adabeb2c30ca48",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Avability",
+        "links": [
+            "51a77e7bdefb8a2c"
+        ],
+        "x": 185,
+        "y": 600,
+        "wires": [
+            [
+                "6c074a6a9b4e3fee",
+                "052a7e50102eace3"
+            ]
+        ]
+    },
+    {
+        "id": "f41966aa8186e926",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Performance",
+        "links": [
+            "6e6b143235ae0845"
+        ],
+        "x": 185,
+        "y": 680,
+        "wires": [
+            [
+                "bbb42b518eed26f5",
+                "b22b4a3535eae2fb"
+            ]
+        ]
+    },
+    {
+        "id": "5b92fdff1089eced",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Quaity",
+        "links": [
+            "26f622e94d5b80fa"
+        ],
+        "x": 185,
+        "y": 740,
+        "wires": [
+            [
+                "c2db51c5c6c18767",
+                "f3a87430d6fae67f"
+            ]
+        ]
+    },
+    {
+        "id": "de80898e4fddcdc5",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "OEE",
+        "links": [
+            "f966b56f18e63eed"
+        ],
+        "x": 185,
+        "y": 800,
+        "wires": [
+            [
+                "9ff23af464fcfcaf",
+                "f05025cb24b8e41e"
+            ]
+        ]
+    },
+    {
+        "id": "4231a7971ce37faf",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Delay",
+        "links": [
+            "c2e57cd1af5543a6"
+        ],
+        "x": 185,
+        "y": 860,
+        "wires": [
+            [
+                "8c7bb092b9cbb72d",
+                "440cf28706bc1fcb"
+            ]
+        ]
+    },
+    {
+        "id": "849ae6427ba159ce",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Downtime",
+        "links": [
+            "20e79959d0dfc836"
+        ],
+        "x": 185,
+        "y": 920,
+        "wires": [
+            [
+                "7570ba7c7c7eeeec",
+                "cba907fa371abc34"
+            ]
+        ]
+    },
+    {
+        "id": "9feaeeb66f326a7f",
+        "type": "link in",
+        "z": "bc452dfad4aef27a",
+        "name": "Current_Prod_Speed",
+        "links": [
+            "c081d68e6f65f89c"
+        ],
+        "x": 185,
+        "y": 980,
+        "wires": [
+            [
+                "545ee9e16e86ee11",
+                "538659d23faafb09"
+            ]
+        ]
+    },
+    {
+        "id": "5da90b98653ce4f6",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Avaliabilty",
+        "info": "",
+        "x": 100,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "204192babdbbd7a1",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Performance",
+        "info": "",
+        "x": 90,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3eec15951bc57502",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Quality",
+        "info": "",
+        "x": 90,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f918f4b8a32929cf",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Current OEE",
+        "info": "",
+        "x": 90,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "e62be04aaf3102e3",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Prod Delay",
+        "info": "",
+        "x": 80,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "bab13002298c3fce",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Downtime",
+        "info": "",
+        "x": 80,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "243a150e7e114e72",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Cur_Prod_Speed",
+        "info": "",
+        "x": 80,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "6c074a6a9b4e3fee",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Avaliabity",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bbb42b518eed26f5",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Performance",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c2db51c5c6c18767",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Qaulity",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9ff23af464fcfcaf",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current OEE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "8c7bb092b9cbb72d",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Prod Delay",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7570ba7c7c7eeeec",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Downtime",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "545ee9e16e86ee11",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "7b41df74657aac38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Speed",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 340,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "be11f33feca88b0e",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Flow for OEE Prediction",
+        "info": "",
+        "x": 920,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "946bbc6fb5018a64",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Flow for Prod Speed Prediction",
+        "info": "",
+        "x": 1090,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0904ee3a29ce1d6d",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Flow for Profit Prediction",
+        "info": "",
+        "x": 1070,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "2cf30f5f5096b3c6",
+        "type": "ui_template",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "name": "OEE Prediction",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"oeeChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    var ctx = document.getElementById('oeeChart').getContext('2d');\n    var chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['OEE'],\n            datasets: [\n                { label: 'Current', backgroundColor: 'rgba(0, 123, 255, 0.8)', data: [0] },\n                { label: 'Predicted', backgroundColor: 'rgba(40, 167, 69, 0.8)', data: [0] }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },\n            scales: {\n                y: { beginAtZero: true, max: 100, ticks: { stepSize: 5, font: { size: 12 } } },\n                x: { ticks: { font: { size: 12 } } }\n            }\n        }\n    });\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        chart.data.datasets[0].data = [msg.produced || 0];\n        chart.data.datasets[1].data = [msg.good || 0];\n        chart.update();\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1440,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e239643b2ca38322",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Build Payload",
+        "func": "msg.payload = {\n  batch_part_no: flow.get('Live_Batch_PartNo') || 'BATCH',\n  part_slno: flow.get('Live_Part_SLNo') || 1, \n  total_batch_size: 1,\n  current_speed: Number(flow.get('Current_Speed')) || 0,\n  availability: Number(flow.get('avaliability%')) || Number(flow.get('OEE')) || 0,\n  performance: Number(flow.get('Performance%')) || Number(flow.get('OEE')) || 0,\n  quality: Number(flow.get('Quality%')) || Number(flow.get('OEE')) || 0,\n  current_oee: Number(flow.get('OEE')) || 0,\n  downtime_sec: Number(flow.get('Downtime')) || 0,\n  oee_delta: Number(flow.get('oee_delta')) || 0,\n  state: 'NORMAL'\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 660,
+        "wires": [
+            [
+                "53c55f03addccdf7"
+            ]
+        ]
+    },
+    {
+        "id": "53c55f03addccdf7",
+        "type": "http request",
+        "z": "bc452dfad4aef27a",
+        "name": "POST /predict-oee",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8000/predict-oee",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 970,
+        "y": 500,
+        "wires": [
+            [
+                "62302f3d5b1e80e4"
+            ]
+        ]
+    },
+    {
+        "id": "62302f3d5b1e80e4",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Parse Response",
+        "func": "var r = msg.payload;\nif (!r || r.error) { node.warn('API: ' + JSON.stringify(r)); return null; }\nmsg.payload = {\n  current_oee: Number(flow.get('OEE')) || 0,\n  pred_oee: r.pred_oee_10m || 0,\n  rec_speed: r.recommended_speed || 0,\n  confidence: r.confidence_pct || 0,\n  change_needed: r.change_needed || false\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1330,
+        "y": 420,
+        "wires": [
+            [
+                "da4ebb35e30c75e1",
+                "78a823a222ba7efe",
+                "9f7dcd4d38ef7bbd",
+                "83bb2025c1d61647",
+                "456ca9d76e736fe5",
+                "e43a35e40566a060",
+                "8f2e1b4a7c69d0e3"
+            ]
+        ]
+    },
+    {
+        "id": "83bb2025c1d61647",
+        "type": "debug",
+        "z": "bc452dfad4aef27a",
+        "name": "API Response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1600,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "456ca9d76e736fe5",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Predicted OEE",
+        "format": "{{msg.payload.pred_oee}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1600,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e43a35e40566a060",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Predicted Speed",
+        "format": "{{msg.payload.rec_speed}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1610,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "052a7e50102eace3",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Avability",
+        "func": "var k='avaliability%', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 600,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "b22b4a3535eae2fb",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Performance",
+        "func": "var k='Performance%', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 680,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "f3a87430d6fae67f",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Quality",
+        "func": "var k='Quality%', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "f05025cb24b8e41e",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store OEE",
+        "func": "var v=Number(msg.payload)||0;\nvar p=Number(flow.get('OEE'))||v;\nflow.set('prev_oee',p);\nflow.set('oee_delta',v-p);\nflow.set('OEE',v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 800,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "440cf28706bc1fcb",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Delay",
+        "func": "var k='Delay', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 860,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "cba907fa371abc34",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Downtime",
+        "func": "var k='Downtime', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 920,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "538659d23faafb09",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Store Speed",
+        "func": "var RawS7Speed = Number(msg.payload) || 0;\nvar ActualSpeed = RawS7Speed / 20;\nvar ValidSpeeds = [20, 40, 60, 80, 100];\nvar closest = ValidSpeeds.reduce((a, b) => Math.abs(b - ActualSpeed) < Math.abs(a - ActualSpeed) ? b : a);\nvar k = 'Current_Speed', v = closest;\nif (flow.get(k) === v) return null;\nflow.set(k, v);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 980,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "047152858ce94abe",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Set All",
+        "func": "var p=msg.payload;\nif(typeof p==='object'&&p!==null){\nfor(var k in p){flow.set(k,p[k]);}\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "e239643b2ca38322"
+            ]
+        ]
+    },
+    {
+        "id": "b8db6d5adfd22770",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Aval 85",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "85",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "avaliability%",
+        "payload": "85",
+        "payloadType": "num",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "052a7e50102eace3"
+            ]
+        ]
+    },
+    {
+        "id": "f1af4912e2456dfc",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Perf 82",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "82",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "Performance%",
+        "payload": "82",
+        "payloadType": "num",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "b22b4a3535eae2fb"
+            ]
+        ]
+    },
+    {
+        "id": "477ba06c2f96ee62",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Qual 90",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "90",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "Quality%",
+        "payload": "90",
+        "payloadType": "num",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "f3a87430d6fae67f"
+            ]
+        ]
+    },
+    {
+        "id": "c23fad3af46d942b",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "OEE 62",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "62",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "OEE",
+        "payload": "62",
+        "payloadType": "num",
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "f05025cb24b8e41e"
+            ]
+        ]
+    },
+    {
+        "id": "0584ce06403036d9",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Downt 30",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "Downtime",
+        "payload": "30",
+        "payloadType": "num",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "cba907fa371abc34"
+            ]
+        ]
+    },
+    {
+        "id": "97843ee6fb40a0df",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Delay 10",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "10",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "Delay",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "440cf28706bc1fcb"
+            ]
+        ]
+    },
+    {
+        "id": "5c59d8bcc4c739a2",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Speed 80",
+        "props": [
+            {
+                "p": "topic"
+            },
+            {
+                "p": "payload",
+                "v": "80",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "topic": "Current_Speed",
+        "payload": "80",
+        "payloadType": "num",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "538659d23faafb09"
+            ]
+        ]
+    },
+    {
+        "id": "8b181ae1969476a9",
+        "type": "inject",
+        "z": "bc452dfad4aef27a",
+        "name": "Test All",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{\"avaliability%\":85,\"Performance%\":82,\"Quality%\":90,\"OEE\":62,\"Downtime\":30,\"Delay\":10,\"Current_Speed\":80}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "payload": "",
+        "payloadType": "none",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "047152858ce94abe"
+            ]
+        ]
+    },
+    {
+        "id": "da4ebb35e30c75e1",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Format OEE Chart",
+        "func": "var d=msg.payload||{};\nmsg.produced=d.current_oee||0;\nmsg.good=d.pred_oee||0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1200,
+        "y": 640,
+        "wires": [
+            [
+                "2cf30f5f5096b3c6"
+            ]
+        ]
+    },
+    {
+        "id": "78a823a222ba7efe",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Format Speed Chart",
+        "func": "var d=msg.payload||{};\nmsg.produced=Number(flow.get('Current_Speed'))||0;\nmsg.good=d.rec_speed||0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1200,
+        "y": 820,
+        "wires": [
+            [
+                "acc12b36f278ff6e"
+            ]
+        ]
+    },
+    {
+        "id": "9f7dcd4d38ef7bbd",
+        "type": "function",
+        "z": "bc452dfad4aef27a",
+        "name": "Format Profit Chart",
+        "func": "var d=msg.payload||{};\nmsg.produced=d.current_oee||0;\nmsg.good=d.pred_oee||0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 1040,
+        "wires": [
+            [
+                "eaada14529592f93"
+            ]
+        ]
+    },
+    {
+        "id": "d830481b91e941c0",
+        "type": "comment",
+        "z": "bc452dfad4aef27a",
+        "name": "Dummy Injects for Testing",
+        "x": 190,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8f2e1b4a7c69d0e3",
+        "type": "ui_text",
+        "z": "bc452dfad4aef27a",
+        "group": "5d0bfe04d04539d8",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Confidence",
+        "format": "{{msg.payload.confidence}}%",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1600,
+        "y": 460,
+        "wires": []
     }
 ]

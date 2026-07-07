@@ -3,3 +3,6 @@ node_modules
 __pycache__
 .config*
 flows_cred.json
+node-registry.json
+.jupyter*
+.ipynb_checkpoints

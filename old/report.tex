@@ -1,0 +1,384 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=2.2cm, top=2cm, bottom=2cm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{parskip}
+\usepackage{enumitem}
+\setlist{itemsep=1pt, topsep=4pt, parsep=1pt}
+\definecolor{codeblue}{RGB}{0,0,140}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{codeblue},
+    frame=single,
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny,
+}
+
+\title{\textbf{Physical AI Closed Loop System for\\[4pt]
+Future OEE Forecasting using Artificial Neural Networks}}
+\author{Industrial IoT \& AI/ML Project}
+\date{\today}
+
+\begin{document}
+\normalsize
+\setlength{\parskip}{0.5ex plus 0.2ex minus 0.1ex}
+\maketitle
+\thispagestyle{empty}
+
+%====================================================================%
+% PAGE 1: Manufacturing Efficiency and OEE Fundamentals
+%====================================================================%
+\section{Manufacturing Efficiency and OEE Fundamentals}
+
+\vspace{-6pt}
+\subsection{The Need for Measuring Manufacturing Efficiency}
+
+Manufacturing productivity requires a standardised metric to quantify losses and benchmark performance. Overall Equipment Effectiveness (OEE) provides a dimensionless number (0--100\%) capturing three independent dimensions: Availability, Performance, and Quality.
+
+\subsection{The Three OEE Components}
+
+OEE decomposes into Availability, Performance, and Quality (ISO 22400-2). Each addresses a distinct loss category:
+
+\medskip
+\begin{center}
+\begin{tabular}{c}
+\textbf{Planned Production Time} $\downarrow$ \\
+\textbf{Availability Loss} (Breakdowns, Setup) $\rightarrow$ \textbf{Running Time} $\downarrow$ \\
+\textbf{Performance Loss} (Slow cycles, Stops) $\downarrow$ \\
+\textbf{Quality Loss} (Defects, Rework) $\downarrow$ \\
+\textbf{Fully Productive Time}
+\end{tabular}
+\end{center}
+\medskip
+
+\textbf{Availability} measures the ratio of actual operating time to planned production time:
+
+\begin{equation}
+\text{Availability} = \frac{\text{Operating Time}}{\text{Planned Production Time}} \times 100
+\end{equation}
+
+Availability losses include equipment breakdowns, unscheduled maintenance, and changeover time. In our lathe dataset, availability typically ranges from 70\% to 100\%, with downtime events injecting sudden drops followed by gradual recovery.
+
+\textbf{Performance} measures how fast the machine runs compared to its designed ideal speed:
+
+\begin{equation}
+\text{Performance} = \frac{\text{Ideal Cycle Time} \times \text{Total Parts}}{\text{Operating Time}} \times 100
+\end{equation}
+
+Performance losses include slow running (below design speed), minor stops, and operator inefficiency. In our system, performance is directly coupled to the motor RPM (300--500 range), with higher speeds yielding better performance but potentially degrading quality.
+
+\textbf{Quality} measures the proportion of good parts out of total produced:
+
+\begin{equation}
+\text{Quality} = \frac{\text{Good Parts}}{\text{Total Parts}} \times 100
+\end{equation}
+
+Quality losses include scrap, rework, and yield loss. In our synthetic dataset, quality degrades gradually over each 8-hour shift and resets at shift boundaries, simulating tool wear patterns.
+
+\subsection{OEE Calculation and Benchmarks}
+
+These three factors combine multiplicatively, meaning a deficiency in any single component directly compresses the final OEE:
+
+\begin{equation}
+\text{OEE} = \frac{\text{Availability} \times \text{Performance} \times \text{Quality}}{10000}
+\end{equation}
+
+The division by 10,000 arises because all three inputs are percentages (0--100). World-class OEE benchmarks established by the Japan Institute of Plant Maintenance (JIPM) are:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} & \textbf{World-Class} & \textbf{Typical Average} \\
+\midrule
+Availability & 90\%+ & 75--85\% \\
+Performance & 95\%+ & 60--75\% \\
+Quality & 99\%+ & 90--97\% \\
+\textbf{OEE} & \textbf{85\%+} & \textbf{55--65\%} \\
+\bottomrule
+\end{tabular}
+\caption{OEE benchmarks by class (source: JIPM / ISO 22400-2).}
+\end{table}
+
+An OEE of 85\% is considered world-class; most manufacturing plants operate between 55\% and 65\%. Each 1\% improvement in OEE directly translates to increased throughput without capital expenditure.
+
+\subsection{Why Predict OEE?}
+
+Traditional OEE measurement is \emph{reactive} -- it tells operators what already happened. This project develops a \emph{predictive} OEE system that forecasts future OEE at multiple horizons (30 minutes to 8 hours), enabling proactive decision-making. The key insight is that OEE is not a random variable; it evolves deterministically based on machine state (RPM, downtime, quality trends), making it suitable for data-driven forecasting with artificial neural networks.
+
+%====================================================================%
+% PAGE 2: Digital Twin Architecture and Data Acquisition
+%====================================================================%
+\section{Digital Twin Architecture and Data Acquisition}
+
+\subsection{Digital Twin Concept}
+
+A Digital Twin is a virtual representation of a physical manufacturing system that mirrors its real-time state through continuous data synchronisation. Unlike static simulations, a Digital Twin maintains bidirectional communication with the physical asset: sensor data flows from the machine to the digital model, and control signals (such as RPM setpoints) flow back from the digital model to the machine.
+
+\subsection{System Architecture}
+
+The closed-loop pipeline: \textbf{Factory I/O} (conveyor 3--18~mm/s) $\rightarrow$ \textbf{TIA Portal PLC} (S7-1200, ISO-on-TCP, IP 10.11.15.193) $\rightarrow$ \textbf{Node-RED} (poll S7, compute A/P/Q/OEE, write MySQL) $\rightarrow$ \textbf{MySQL} (\texttt{lathe.manufacture\_ai\_data}) $\rightarrow$ \textbf{FastAPI + ANN} (predict/optimise) $\rightarrow$ \textbf{Node-RED Dashboard} (gauges) $\rightarrow$ \textbf{VFD} (Hz = RPM/10) $\rightarrow$ back to Factory I/O.
+
+\subsection{Control Variable: Feed Rate and RPM}
+
+The manufacturing process centres on a single conveyor feed mechanism. The physical control variable is the \texttt{feed\_rate\_mmps}, operating in the range 3~mm/s to 18~mm/s. This feed rate is converted to motor RPM through a linear mapping:
+
+\begin{equation}
+\text{RPM} = 300 + (\text{feed\_rate\_mmps} - 3) \times 13.33
+\end{equation}
+
+Thus, 3~mm/s corresponds to 300~RPM and 18~mm/s to 500~RPM. For VFD (Variable Frequency Drive) integration, the frequency command is:
+
+\begin{equation}
+\text{Hz} = \frac{\text{RPM}}{10}
+\end{equation}
+
+This gives a 30--50~Hz range compatible with standard industrial VFDs. The feed rate influences all three OEE components:
+\begin{itemize}
+    \item \textbf{Availability}: higher feed rates increase mechanical stress and downtime probability.
+    \item \textbf{Performance}: directly proportional to feed rate (more parts per unit time).
+    \item \textbf{Quality}: excessive speed increases defect rate (tool chatter, surface finish degradation).
+\end{itemize}
+
+\subsection{Data Acquisition via Node-RED}
+
+Node-RED connects to the Siemens S7-1200 PLC via \texttt{node-red-contrib-s7} (ISO-on-TCP, port 102). At 1-minute intervals it: reads RPM, part count, downtime, rejects; computes A/P/Q/OEE; writes to \texttt{lathe.manufacture\_ai\_data}; calls the FastAPI prediction endpoint; and updates dashboard gauges.
+
+%====================================================================%
+% PAGE 3: Synthetic Time-Series Dataset Generation
+%====================================================================%
+\section{Synthetic Time-Series Dataset Generation}
+
+\subsection{Why Synthetic Data?}
+
+The real dataset has only 5 rows -- insufficient for deep learning. An initial regression model (Polynomial Degree 2, R² $\approx$ 0.995) learned only instantaneous state-to-OEE mappings without temporal understanding. Time-series forecasting requires data that: (1) spans multi-hour temporal patterns, (2) has sequential dependencies, (3) includes realistic dynamics (shifts, tool wear, downtime), and (4) has known ground-truth targets for supervised learning.
+
+\subsection{Dataset Size Rationale (Why 20,000 Rows?)}
+
+The dataset size selection follows from three constraints:
+
+\textbf{1. Temporal coverage requirement.} The longest forecast horizon is 8 hours (480 minutes). To have sufficient training examples for 8-hour predictions, the dataset must span multiple days. At a 1-minute sampling rate, 20,000 rows cover approximately 13.9 days of continuous production -- enough for the model to learn daily and multi-day patterns.
+
+\textbf{2. Parameter-to-sample ratio.} Each ANN (Section~\ref{sec:ann}) has 3,073 trainable parameters. A rule of thumb in deep learning is 5--10 training samples per parameter to avoid overfitting. With 15,616 training samples (80\% of 19,520), we achieve approximately 5.1 samples per parameter -- at the lower bound but acceptable with early stopping and regularisation.
+
+\textbf{3. Industry precedent.} Published OEE forecasting papers (CIRP 2023, MDPI Sensors 2022) use datasets of 3,000--5,000 rows. Our 20,000-row dataset is 4--6 times larger, providing a safety margin for the more complex ANN architecture.
+
+\subsection{Data Generation Methodology}
+
+The synthetic data generator creates 20,000 rows at 1-minute intervals starting from a known seed distribution:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Feature} & \textbf{Unit} & \textbf{Range} & \textbf{Generation Method} \\
+\midrule
+\texttt{rpm} & RPM & 300--500 & Random walk $\pm 5$, clip at bounds \\
+\texttt{availability} & \% & 70--100 & State evolution: drop $\propto$ downtime, recover +0.1/step \\
+\texttt{performance} & \% & 30--100 & Linear with RPM: $\text{RPM}/500 \times 100 \pm 3$ noise \\
+\texttt{quality} & \% & 60--100 & Gradual decay ($-0.001$/step), reset every 480 steps \\
+\texttt{current\_oee} & \% & 15--99 & Computed: A $\times$ P $\times$ Q $/$ 10000 \\
+\texttt{downtime\_minutes} & min & 0--20 & 3\% event probability, $\text{Exp}(\lambda=5)$ magnitude \\
+\bottomrule
+\end{tabular}
+\caption{Six input features with generation methods and ranges.}
+\end{table}
+
+The simulation models several realistic phenomena:
+\begin{itemize}
+    \item \textbf{RPM random walk}: mimics operator adjustments and process drift.
+    \item \textbf{Downtime events}: 3\% probability per minute with exponentially distributed duration (mean 5 min, max 20 min).
+    \item \textbf{Quality shift cycle}: resets every 480 minutes (8-hour shift), simulating tool change or shift handover.
+    \item \textbf{Availability recovery}: gradual uptick when no downtime occurs, modelling reactive maintenance.
+\end{itemize}
+
+\subsection{Target Generation for Multi-Horizon Forecasting}
+
+The targets are created by shifting \texttt{current\_oee} forward in time:
+
+\begin{equation}
+\text{target\_oee\_H} = \text{current\_oee}_{t+H}
+\end{equation}
+
+where $H \in \{30, 60, 120, 360, 480\}$ minutes, corresponding to horizons of 30m, 1h, 2h, 6h, and 8h. Shifting creates NaN values for the last $H$ rows, which are dropped. Starting from 20,000 rows, this yields:
+
+\begin{equation}
+\text{Usable rows} = 20000 - \max(H) = 20000 - 480 = 19520
+\end{equation}
+
+The chronological ordering is preserved throughout, and the temporal split (80\% train, 10\% validation, 10\% test) respects time order -- no shuffling, preventing data leakage from future to past.
+
+%====================================================================%
+% PAGE 4: ANN Design and Training
+%====================================================================%
+\section{Artificial Neural Network Design and Training}
+\label{sec:ann}
+
+\subsection{Why an Artificial Neural Network?}
+
+Polynomial regression (the baseline model) can capture non-linear relationships between input features and output, but it cannot model the temporal structure implicit in the data. An ANN offers two key advantages:
+
+\begin{enumerate}
+    \item \textbf{Hierarchical feature learning}: hidden layers learn progressively more abstract representations of the input space.
+    \item \textbf{Non-linear universal approximation}: a feedforward network with sufficient hidden units can approximate any continuous function (Universal Approximation Theorem, Cybenko 1989).
+\end{enumerate}
+
+\subsection{Network Architecture}
+
+Each horizon model uses an identical architecture:
+
+\begin{equation}
+\mathbb{R}^{6} \xrightarrow{W_1, b_1} \mathbb{R}^{64} \xrightarrow{\sigma} \mathbb{R}^{64} \xrightarrow{W_2, b_2} \mathbb{R}^{32} \xrightarrow{\sigma} \mathbb{R}^{32} \xrightarrow{W_3, b_3} \mathbb{R}^{16} \xrightarrow{\sigma} \mathbb{R}^{16} \xrightarrow{W_4, b_4} \mathbb{R}^{1}
+\end{equation}
+
+where $W_i$ are weight matrices, $b_i$ bias vectors, and $\sigma$ the ReLU activation function:
+
+\begin{equation}
+\text{ReLU}(x) = \max(0, x)
+\end{equation}
+
+ReLU is chosen for hidden layers because it mitigates the vanishing gradient problem, is computationally efficient, and promotes sparse activation. The output layer uses a linear activation (no squashing) since OEE is a continuous regression target in [0, 100].
+
+\begin{center}
+\texttt{Input[6]} $\xrightarrow{\text{448+64}}$ \texttt{Dense(64)+ReLU} $\xrightarrow{\text{2080+32}}$ \texttt{Dense(32)+ReLU} $\xrightarrow{\text{528+16}}$ \texttt{Dense(16)+ReLU} $\xrightarrow{\text{17+1}}$ \texttt{Dense(1)+Linear} $\rightarrow$ \textbf{Predicted OEE}
+\end{center}
+\noindent Total: \textbf{3,073 parameters} per model (6 input features, 3 hidden layers, 1 output).
+
+\subsection{Training Pipeline}
+
+\textbf{Loss function:} Mean Squared Error (MSE):
+
+\begin{equation}
+\mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\end{equation}
+
+MSE penalises large errors quadratically, which drives the model to avoid large prediction deviations at the cost of accepting many small errors.
+
+\textbf{Optimiser:} Adam (Adaptive Moment Estimation, Kingma and Ba 2014):
+
+\begin{equation}
+\theta_{t+1} = \theta_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
+\end{equation}
+
+where $\hat{m}_t$ and $\hat{v}_t$ are bias-corrected estimates of the first and second moments of the gradient. Adam combines the benefits of AdaGrad (adaptive learning rates) and RMSProp (gradient normalisation) with momentum. Learning rate $\eta = 0.001$.
+
+\textbf{Training configuration:}
+\begin{itemize}
+    \item Chronological split: 80\% train (15,616 rows), 10\% validation (1,952), 10\% test (1,952).
+    \item Feature scaling: StandardScaler (zero mean, unit variance), fitted on training set only.
+    \item Batch size: 32 (mini-batch gradient descent).
+    \item Epochs: 100 maximum, with EarlyStopping (patience=10, restore best weights).
+    \item Regularisation via early stopping prevents overfitting to training noise.
+\end{itemize}
+
+\textbf{Backpropagation:} Gradients propagate backward via the chain rule: $\frac{\partial \mathcal{L}}{\partial W_{ij}^{(l)}} = \frac{\partial \mathcal{L}}{\partial a_j^{(l)}} \cdot \frac{\partial a_j^{(l)}}{\partial z_j^{(l)}} \cdot \frac{\partial z_j^{(l)}}{\partial W_{ij}^{(l)}}$, where $z_j^{(l)} = \sum_i W_{ij}^{(l)} a_i^{(l-1)} + b_j^{(l)}$ is the pre-activation and $a_j^{(l)} = \sigma(z_j^{(l)})$ the post-activation.
+
+%====================================================================%
+% PAGE 5: Results and Future Scope
+%====================================================================%
+\section{Future OEE Forecasting Results and Future Scope}
+
+\subsection{Forecasting Pipeline}
+
+The complete prediction pipeline for a single query is:
+
+\begin{enumerate}
+    \item Receive current machine state: RPM, Availability, Performance, Quality, OEE, Downtime.
+    \item Scale the 6-dimensional input vector using the pre-fitted StandardScaler.
+    \item Pass the scaled vector through all 5 ANN models (one per horizon).
+    \item Apply $\text{clip}(\hat{y}, 0, 100)$ to constrain predictions to the valid OEE range.
+    \item Return the 5-horizon forecast array.
+\end{enumerate}
+
+\subsection{Model Performance Results}
+
+Five separate models were trained, one per horizon. The evaluation metrics on the held-out test set are:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcccl@{}}
+\toprule
+\textbf{Horizon} & \textbf{R²} & \textbf{MAE} & \textbf{RMSE} & \textbf{MAPE} \\
+\midrule
+30 minutes  & 0.840 & 3.66 & 4.64 & 5.5\% \\
+1 hour      & 0.790 & 4.30 & 5.42 & 6.4\% \\
+2 hours     & 0.648 & 5.92 & 7.22 & 8.7\% \\
+6 hours     & $-0.179$ & 11.29 & 13.03 & 16.6\% \\
+8 hours     & $-0.494$ & 12.83 & 14.43 & 18.6\% \\
+\bottomrule
+\end{tabular}
+\caption{Test-set performance across all five horizons.}
+\label{tab:results}
+\end{table}
+
+\subsection{Analysis of Results}
+
+The performance pattern is clear and physically meaningful:
+
+\textbf{Short horizons (30m--2h):} The ANN achieves useful predictive skill. At 30 minutes, R² = 0.84 with MAPE of only 5.5\%, meaning the model can forecast OEE within $\pm$3.7 points on average. This is sufficient for operator decision support: if the model predicts a 5-point OEE drop in 30 minutes, the operator can investigate proactively.
+
+\textbf{Long horizons (6h--8h):} R² becomes negative, indicating the model performs worse than simply predicting the mean. This is not a model deficiency but a fundamental limitation of feedforward ANNs: they have no internal memory. At 6--8 hours, OEE depends on events that have not yet occurred (future downtime, future quality degradation) that the model cannot see.
+
+The negative R² for 6h and 8h horizons is an important finding: it demonstrates that \emph{current-state-only} models are insufficient for long-horizon forecasting in manufacturing, and that temporal sequence models are required.
+
+\subsection{Advantages of the ANN Approach}
+
+\begin{itemize}
+    \item \textbf{No explicit feature engineering}: the ANN learns relevant representations from raw inputs.
+    \item \textbf{Fast inference}: a single forward pass takes microseconds, enabling real-time deployment.
+    \item \textbf{Separate models per horizon}: each horizon optimises its own weights, avoiding the trade-off inherent in multi-output models.
+    \item \textbf{Interpretable via feature importance}: first-layer weight magnitudes reveal which input features dominate each horizon.
+\end{itemize}
+
+\subsection{Limitations and Future Upgrades}
+
+\textbf{Limitation 1: No temporal memory.} The feedforward ANN treats each row independently. For long-horizon forecasting, past states contain predictive information (e.g., a quality decline trend over the last hour predicts future quality). This requires sequence models.
+
+\textbf{Limitation 2: Fixed architecture.} All horizons share the same 64-32-16 layout. Shorter horizons may benefit from a wider, shallower network; longer horizons may need deeper networks with more capacity.
+
+\textbf{Future upgrades planned:}
+
+\begin{enumerate}
+    \item \textbf{LSTM (Long Short-Term Memory)}: replaces dense layers with recurrent gates that maintain a cell state, enabling the network to remember relevant past events over 100+ time steps.
+
+    \item \textbf{Transformer (Attention)}: applies self-attention mechanisms (Vaswani et al., 2017) to weigh the importance of different past time steps when making a prediction.
+
+    \item \textbf{TimesFM (Google, 2024)}: a foundation model for time-series forecasting pre-trained on 100 billion time points, which can be fine-tuned on manufacturing data with minimal examples.
+\end{enumerate}
+
+\subsection{Optimisation Engine}
+
+Beyond pure forecasting, the system includes an optimisation endpoint that performs grid search across RPM values:
+
+\begin{equation}
+\text{RPM}^* = \arg\max_{\text{RPM} \in \{300, 305, \dots, 500\}} \text{ANN}_{\text{horizon}}(\text{RPM}, \text{state})
+\end{equation}
+
+The grid search evaluates the ANN at 41 candidate RPM values and returns the setting that yields the highest predicted OEE (or the lowest RPM that meets a target). This enables closed-loop control: the ANN recommends a speed setpoint, the VFD executes it, and the next prediction cycle evaluates the result.
+
+\subsection{Closed-Loop Conclusion}
+
+This project delivers a complete Physical AI closed-loop system for OEE forecasting and optimisation:
+
+\medskip
+\begin{center}
+\textbf{Factory I/O} $\rightarrow$ \textbf{PLC} $\rightarrow$ \textbf{Node-RED} $\rightarrow$ \textbf{ANN} $\rightarrow$ \textbf{Dashboard} $\rightarrow$ \textbf{VFD} $\rightarrow$ \textbf{Factory I/O}
+\end{center}
+\medskip
+\noindent Endpoints: \texttt{POST /predict-oee} (future OEE at 5 horizons) and \texttt{POST /optimize-oee} (optimal RPM). Deployed via \texttt{uvicorn} with 4 workers and MySQL async backend.
+
+The system transforms OEE from a backward-looking lagging indicator into a forward-looking leading indicator, empowering operators to make data-driven decisions before losses occur. Short-horizon predictions (30m--2h) are already actionable with the current feedforward ANN; future upgrades to LSTM and Transformer architectures will extend reliable forecasting to 8+ hours, enabling shift-level production planning and predictive maintenance scheduling. This represents a concrete step toward Industry 4.0 and AI-assisted digital twin manufacturing.
+
+\end{document}

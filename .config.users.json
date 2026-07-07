@@ -15,6 +15,12 @@
             },
             "tours": {
                 "welcome": "4.1.7"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": true
+                }
             }
         }
     }
