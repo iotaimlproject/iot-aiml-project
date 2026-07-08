@@ -32,7 +32,7 @@
         "env": []
     },
     {
-        "id": "bc452dfad4aef27a",
+        "id": "a45474e6038573a9",
         "type": "tab",
         "label": "AI Optimize"
     },
@@ -275,6 +275,14 @@
             {
                 "addr": "DB1,X68.1",
                 "name": "End_Position_Status"
+            },
+            {
+                "addr": "DB1,X68.2",
+                "name": "CNC_Gate_Coil_New"
+            },
+            {
+                "addr": "DB1,X40.2",
+                "name": "Prod_Status"
             }
         ]
     },
@@ -2857,7 +2865,7 @@
         "userprivatekey": ""
     },
     {
-        "id": "de33ef43a504a9a5",
+        "id": "30643132140bcd6a",
         "type": "ui_spacer",
         "z": "f77fc6864f564ae2",
         "name": "spacer",
@@ -2867,7 +2875,7 @@
         "height": 1
     },
     {
-        "id": "3ebdde23a63b24e1",
+        "id": "8caf1e37e8dda208",
         "type": "ui_spacer",
         "z": "f77fc6864f564ae2",
         "name": "spacer",
@@ -2877,7 +2885,7 @@
         "height": 1
     },
     {
-        "id": "88177a948fba93a0",
+        "id": "c5c4e59370261caf",
         "type": "ui_spacer",
         "z": "f77fc6864f564ae2",
         "name": "spacer",
@@ -2887,7 +2895,7 @@
         "height": 1
     },
     {
-        "id": "ec7a4d73164f2459",
+        "id": "296f37b616b01819",
         "type": "ui_spacer",
         "z": "f77fc6864f564ae2",
         "name": "spacer",
@@ -2897,7 +2905,7 @@
         "height": 1
     },
     {
-        "id": "b802107ede947be8",
+        "id": "f81a284d3df47cc8",
         "type": "ui_spacer",
         "z": "f77fc6864f564ae2",
         "name": "spacer",
@@ -2907,9 +2915,9 @@
         "height": 1
     },
     {
-        "id": "26297e64ecd1deb1",
+        "id": "2bc3efa528d97e4b",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "27d81adb97e32aef",
         "order": 6,
@@ -2917,9 +2925,9 @@
         "height": 1
     },
     {
-        "id": "c87f8352aa986411",
+        "id": "ad58482b43d1ca5c",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "27d81adb97e32aef",
         "order": 7,
@@ -2927,9 +2935,9 @@
         "height": 1
     },
     {
-        "id": "0bcc1116c678d184",
+        "id": "b6e183cab31ce3c0",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "27d81adb97e32aef",
         "order": 9,
@@ -2937,9 +2945,9 @@
         "height": 1
     },
     {
-        "id": "05883ebc63641614",
+        "id": "dbd117b4ce894bc5",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "27d81adb97e32aef",
         "order": 10,
@@ -2947,9 +2955,9 @@
         "height": 1
     },
     {
-        "id": "b3898809d2c00253",
+        "id": "3a7bdd6caa91cac2",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "27d81adb97e32aef",
         "order": 11,
@@ -2957,9 +2965,9 @@
         "height": 1
     },
     {
-        "id": "9a6bf257511149b3",
+        "id": "0bd78c127ba1c8e8",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "27d81adb97e32aef",
         "order": 13,
@@ -2967,9 +2975,9 @@
         "height": 1
     },
     {
-        "id": "780d7863e306014a",
+        "id": "fd84499715283b95",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 10,
@@ -2977,9 +2985,9 @@
         "height": 1
     },
     {
-        "id": "02b825d08b84dd5f",
+        "id": "2cc0ec49cd807202",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 12,
@@ -2987,9 +2995,9 @@
         "height": 1
     },
     {
-        "id": "546615270a324583",
+        "id": "483bb732b2bf6f48",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 13,
@@ -2997,9 +3005,9 @@
         "height": 1
     },
     {
-        "id": "b8548e208774c15b",
+        "id": "40a243d86ec35d11",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 14,
@@ -3007,9 +3015,9 @@
         "height": 1
     },
     {
-        "id": "ebbb6057f7ee8c56",
+        "id": "c7d8f14acdf8672a",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 15,
@@ -3017,9 +3025,9 @@
         "height": 1
     },
     {
-        "id": "c9dfa7af5b91ed69",
+        "id": "0bd345e5021c0150",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 16,
@@ -3027,9 +3035,9 @@
         "height": 1
     },
     {
-        "id": "6d2ecb192b5767c3",
+        "id": "2d6c3b972c2e16cb",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 17,
@@ -3037,9 +3045,9 @@
         "height": 1
     },
     {
-        "id": "94e4621ec3959873",
+        "id": "08926f4349e32cd1",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 18,
@@ -3047,9 +3055,9 @@
         "height": 1
     },
     {
-        "id": "e18456e4b5dada93",
+        "id": "16095daf02e7c17a",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 19,
@@ -3057,9 +3065,9 @@
         "height": 1
     },
     {
-        "id": "d8c06b902f199942",
+        "id": "f6c6d3e440925b11",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 20,
@@ -3067,9 +3075,9 @@
         "height": 1
     },
     {
-        "id": "c0337f98299c2b1d",
+        "id": "caf0de298557172d",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 21,
@@ -3077,9 +3085,9 @@
         "height": 1
     },
     {
-        "id": "643e425507eaf72e",
+        "id": "bb6f16cb045e2b0a",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 22,
@@ -3087,9 +3095,9 @@
         "height": 1
     },
     {
-        "id": "ec901ff60968db2c",
+        "id": "33852256933322e8",
         "type": "ui_spacer",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "spacer",
         "group": "3380c99b9e3c584c",
         "order": 23,
@@ -6410,7 +6418,6 @@
             "673185f1388112ce",
             "4467a059db51f10a",
             "d6c19ce543af7321",
-            "a55bde0b5dd36a91",
             "5b5252dad703f636",
             "6a5de7ad28ebfdec",
             "027ef747772c8465",
@@ -13480,7 +13487,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1830,
+        "x": 1790,
         "y": 5420,
         "wires": [
             [
@@ -14625,7 +14632,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1910,
+        "x": 1810,
         "y": 4680,
         "wires": [
             [
@@ -15149,7 +15156,6 @@
             "94059cb2514d7f50",
             "9a6ff884d27e4b4b",
             "9c3882268c6f64d4",
-            "a55bde0b5dd36a91",
             "0bbb958345af4243",
             "88405687f724901d",
             "3f824508c74158fa",
@@ -18529,17 +18535,16 @@
         "z": "413e4a02b73e8664",
         "endpoint": "b33a72c8a3abf7b1",
         "mode": "single",
-        "variable": "CNC_Gate_Coil",
+        "variable": "CNC_Gate_Coil_New",
         "diff": true,
         "name": "",
-        "x": 1300,
-        "y": 5040,
+        "x": 1540,
+        "y": 5100,
         "wires": [
             [
                 "082cc0355a98527f",
                 "69180799f0daacfa",
                 "e42dcd7c8f25a3f2",
-                "6dc1cf3f76de3a92",
                 "49a586bb2618a2cb"
             ]
         ]
@@ -22580,7 +22585,7 @@
         "type": "ui_text",
         "z": "413e4a02b73e8664",
         "group": "8d58f4ba1c114b87",
-        "order": 9,
+        "order": 10,
         "width": 3,
         "height": 1,
         "name": "",
@@ -25367,8 +25372,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1330,
-        "y": 5160,
+        "x": 1370,
+        "y": 5280,
         "wires": [
             [
                 "e42dcd7c8f25a3f2"
@@ -25487,7 +25492,8 @@
         "name": "link out Stop_Prod_after_Complete",
         "mode": "link",
         "links": [
-            "c4ec357845a818ad"
+            "c4ec357845a818ad",
+            "a55bde0b5dd36a91"
         ],
         "x": 2095,
         "y": 6380,
@@ -25794,30 +25800,6 @@
         ]
     },
     {
-        "id": "6dc1cf3f76de3a92",
-        "type": "function",
-        "z": "413e4a02b73e8664",
-        "name": "When true : ON",
-        "func": "var MSG = msg.payload ;\nif ( MSG == true)\n{\n    msg.payload = true\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1500,
-        "y": 4900,
-        "wires": [
-            [
-                "0f0bb84e8f5675ed",
-                "3b5e7b56ab831e68",
-                "cd7c21ee1816e035",
-                "ac9368b6b3a6cc08",
-                "84b72638d003a35b"
-            ]
-        ]
-    },
-    {
         "id": "f6f8d442c5316760",
         "type": "inject",
         "z": "413e4a02b73e8664",
@@ -25834,12 +25816,34 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1330,
-        "y": 5100,
+        "x": 1370,
+        "y": 5220,
         "wires": [
             [
-                "6dc1cf3f76de3a92",
                 "69180799f0daacfa"
+            ]
+        ]
+    },
+    {
+        "id": "cc4ded08b1d7e601",
+        "type": "inject",
+        "z": "413e4a02b73e8664",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1370,
+        "y": 4860,
+        "wires": [
+            [
+                "0f0bb84e8f5675ed",
+                "3b5e7b56ab831e68",
+                "cd7c21ee1816e035",
+                "ac9368b6b3a6cc08",
+                "84b72638d003a35b"
             ]
         ]
     },
@@ -25930,7 +25934,7 @@
         "type": "function",
         "z": "06948f76d5659ec2",
         "name": "avaliability %",
-        "func": "var Avaliability_percnt = Math.round(msg.payload* 100);\n\nif (Avaliability_percnt <= 100 && Avaliability_percnt > 0)\n\n{\nmsg.payload = Avaliability_percnt;\nflow.set(\"avaliability%\",msg.payload);\nreturn msg;\n\n}\n\nelse if (Avaliability_percnt > 100 )\n\n{\nmsg.payload = 100 ;\nflow.set(\"avaliability%\",msg.payload);\nreturn msg;\n\n}\n\nelse \n\n{\n  msg.payload  = \" Invalid\";   \nflow.set(\"avaliability%\",msg.payload);\n  return msg;\n}\n\n",
+        "func": "var Avaliability_percnt = Math.round(msg.payload* 100);\n\nif (Avaliability_percnt <= 100 && Avaliability_percnt > 0)\n\n{\nmsg.payload = Avaliability_percnt;\nflow.set(\"avaliability%\",msg.payload);\nreturn msg;\n\n}\n\nelse if (Avaliability_percnt > 100 )\n\n{\nmsg.payload = 100 ;\nflow.set(\"avaliability%\",msg.payload);\nreturn msg;\n\n}\n\nelse \n\n{\n  msg.payload  = 0;   \nflow.set(\"avaliability%\",msg.payload);\n  return msg;\n}\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -25941,7 +25945,6 @@
         "y": 2240,
         "wires": [
             [
-                "51a77e7bdefb8a2c",
                 "3cb2fe0be554cafe"
             ]
         ]
@@ -26077,7 +26080,6 @@
         "y": 4580,
         "wires": [
             [
-                "6e6b143235ae0845",
                 "e334d89c6fb8ae8d"
             ]
         ]
@@ -26118,22 +26120,19 @@
         "type": "function",
         "z": "06948f76d5659ec2",
         "name": "Quality %",
-        "func": "var Quality_Percent = Math.round(flow.get(\"Quality_count\")*100);\n\nif (Quality_Percent <= 100 && Quality_Percent >= 0)\n\n{\nmsg.payload = Quality_Percent;\nflow.set(\"Quality%\",msg.payload);\nreturn msg;\n\n}\n\nelse if (Quality_Percent > 100 )\n{\nmsg.payload = 100 ;\nflow.set(\"Quality%\",msg.payload);\nreturn msg;\n\n}\n\n\nelse \n\n{\n  msg.payload  = \" Invalid\";  \n  flow.set(\"Quality%\",msg.payload); \n  return msg;\n}\n\n",
+        "func": "var Quality_Percent = Math.round(flow.get(\"Quality_count\")*100);\n\nif (Quality_Percent <= 100 && Quality_Percent >= 0)\n\n{\nmsg.payload = Quality_Percent;\nflow.set(\"Quality%\",msg.payload);\nreturn msg;\n\n}\n\nelse if (Quality_Percent >= 100 )\n{\nmsg.payload = 100 ;\nflow.set(\"Quality%\",msg.payload);\nreturn msg;\n\n}\nelse {\n  msg.payload  = 0;  \n  flow.set(\"Quality%\",msg.payload); \n  return msg;\n}\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1020,
+        "x": 1040,
         "y": 7160,
         "wires": [
             [
-                "fdf74a37d956e8a8",
-                "ad1ae271b8b2590f",
-                "d58c9cedcb0a8422",
-                "26f622e94d5b80fa",
-                "b9fa0a330e22d818"
+                "b9fa0a330e22d818",
+                "891a592065f951a7"
             ]
         ]
     },
@@ -26296,8 +26295,8 @@
             "db6543843d34bac1",
             "f80f398bfde645c5"
         ],
-        "x": 1235,
-        "y": 7220,
+        "x": 1555,
+        "y": 7200,
         "wires": []
     },
     {
@@ -26358,8 +26357,8 @@
             "58122a144f955081",
             "c7adabeb2c30ca48"
         ],
-        "x": 1335,
-        "y": 2240,
+        "x": 1355,
+        "y": 2200,
         "wires": []
     },
     {
@@ -26373,8 +26372,8 @@
             "91c67a0d26cc52f2",
             "f41966aa8186e926"
         ],
-        "x": 1325,
-        "y": 4580,
+        "x": 1425,
+        "y": 4500,
         "wires": []
     },
     {
@@ -26401,8 +26400,8 @@
             "0bdd25c500c2bbb6",
             "5e87f803fb845066"
         ],
-        "x": 995,
-        "y": 7120,
+        "x": 1375,
+        "y": 7460,
         "wires": []
     },
     {
@@ -26512,7 +26511,7 @@
         "type": "debug",
         "z": "06948f76d5659ec2",
         "name": "Quality%",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -26520,8 +26519,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 7180,
+        "x": 1600,
+        "y": 6940,
         "wires": []
     },
     {
@@ -26599,8 +26598,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 7420,
+        "x": 1400,
+        "y": 7380,
         "wires": []
     },
     {
@@ -26706,7 +26705,7 @@
         "links": [
             "eda4945daf06ddb2"
         ],
-        "x": 785,
+        "x": 725,
         "y": 2140,
         "wires": [
             [
@@ -26731,7 +26730,8 @@
         "wires": [
             [
                 "5cf079047e29c891",
-                "300154e0a2fb902c"
+                "300154e0a2fb902c",
+                "6e6b143235ae0845"
             ]
         ]
     },
@@ -26798,8 +26798,8 @@
         "links": [
             "eda4945daf06ddb2"
         ],
-        "x": 875,
-        "y": 7120,
+        "x": 885,
+        "y": 7060,
         "wires": [
             [
                 "43d911937a1aab3f"
@@ -26818,7 +26818,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 990,
-        "y": 7080,
+        "y": 7000,
         "wires": [
             [
                 "43d911937a1aab3f"
@@ -26845,7 +26845,8 @@
             "95994387add173f4",
             "0bbb958345af4243",
             "4a414674456d3af4",
-            "e1335274992d7f6d"
+            "e1335274992d7f6d",
+            "305c738d4ae9e2cc"
         ],
         "x": 365,
         "y": 1860,
@@ -27173,26 +27174,6 @@
         ]
     },
     {
-        "id": "39e896b88e2892ff",
-        "type": "function",
-        "z": "06948f76d5659ec2",
-        "name": "Quality  Status",
-        "func": "var value = msg.payload ;\nif(value > 1)\n{\n    \n    msg.payload = \"Quality  >> 100\"\n    return msg;\n}\n\nelse if(value > 0.60 && value < 0.85)\n{\n    \n    msg.payload = \"Quality : Good \"\n    return msg;\n}\n\nelse if( value < 0.60)\n{\n    \n    msg.payload = \"Quality : Bad \"\n    return msg;\n}\n\nelse if( value > 0.85 && value <= 1)\n{\n    \n    msg.payload = \"Quality : Perfect \"\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1020,
-        "y": 7220,
-        "wires": [
-            [
-                "2962967b299042a4"
-            ]
-        ]
-    },
-    {
         "id": "22e428323c384d9a",
         "type": "function",
         "z": "06948f76d5659ec2",
@@ -27409,15 +27390,15 @@
         "type": "function",
         "z": "06948f76d5659ec2",
         "name": "Remove Quality%",
-        "func": "msg.payload= \"--\";\nflow.set(\"Quality%\",null);  // or use flow.set(\"yourVariableName\", null);\nreturn msg;\n\n",
+        "func": "msg.payload= null;\nflow.set(\"Quality%\",null);  // or use flow.set(\"yourVariableName\", null);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 7120,
+        "x": 1090,
+        "y": 7060,
         "wires": [
             [
                 "fdf74a37d956e8a8",
@@ -28485,8 +28466,7 @@
         "y": 7160,
         "wires": [
             [
-                "696b07bbe1997ee2",
-                "39e896b88e2892ff"
+                "696b07bbe1997ee2"
             ]
         ]
     },
@@ -29065,7 +29045,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1110,
+        "x": 1230,
         "y": 3300,
         "wires": []
     },
@@ -29103,8 +29083,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 3300,
+        "x": 810,
+        "y": 3340,
         "wires": [
             [
                 "b9f8b41891ecc4d7",
@@ -29120,7 +29100,7 @@
         "links": [
             "eda4945daf06ddb2"
         ],
-        "x": 745,
+        "x": 695,
         "y": 3300,
         "wires": [
             [
@@ -29152,8 +29132,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 670,
-        "y": 3300,
+        "x": 570,
+        "y": 3340,
         "wires": [
             [
                 "253e20a3497b9cd2"
@@ -29216,7 +29196,8 @@
         "wires": [
             [
                 "ec3f07f4e5577dd5",
-                "922c9c2b1314113c"
+                "922c9c2b1314113c",
+                "51a77e7bdefb8a2c"
             ]
         ]
     },
@@ -29446,17 +29427,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "d58c9cedcb0a8422",
-        "type": "link out",
-        "z": "06948f76d5659ec2",
-        "name": "link out Quality%",
-        "mode": "link",
-        "links": [],
-        "x": 1235,
-        "y": 7260,
-        "wires": []
     },
     {
         "id": "c9efdae9b9b478b9",
@@ -30506,12 +30476,11 @@
         "id": "a55bde0b5dd36a91",
         "type": "link in",
         "z": "06948f76d5659ec2",
-        "name": "link in Reset",
+        "name": "link in push to final parts table led",
         "links": [
-            "d17cb2d0594d37d6",
-            "d98a781a70cda7d8"
+            "98acf14e57fa5fd7"
         ],
-        "x": 815,
+        "x": 695,
         "y": 7920,
         "wires": [
             [
@@ -30549,15 +30518,15 @@
         "id": "92d77dd6e0d0cb0d",
         "type": "function",
         "z": "06948f76d5659ec2",
-        "name": "false",
-        "func": "msg.payload = false;\nreturn msg;",
+        "name": "Stop_Parts_Count_Status",
+        "func": "var Stop_Parts_Count_Status = msg.payload;\n\nif (Stop_Parts_Count_Status== true )\n{\nmsg.payload = false;\nreturn msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
+        "x": 890,
         "y": 7920,
         "wires": [
             [
@@ -31218,7 +31187,8 @@
             "62635f24bdee6a96",
             "91d15a91a2e92dc4",
             "3dd0351a3a352b69",
-            "a7cc252516d2dad4"
+            "a7cc252516d2dad4",
+            "b3b8b9ee22f34275"
         ],
         "x": 555,
         "y": 3880,
@@ -31950,7 +31920,7 @@
         "name": "link out Parts Produced",
         "mode": "link",
         "links": [],
-        "x": 1085,
+        "x": 1105,
         "y": 3780,
         "wires": []
     },
@@ -32546,27 +32516,6 @@
         "wires": []
     },
     {
-        "id": "2962967b299042a4",
-        "type": "ui_text",
-        "z": "06948f76d5659ec2",
-        "group": "",
-        "order": 8,
-        "width": "4",
-        "height": "1",
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1050,
-        "y": 7300,
-        "wires": []
-    },
-    {
         "id": "48d9f2dcf794e6c2",
         "type": "ui_text",
         "z": "06948f76d5659ec2",
@@ -32646,8 +32595,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1180,
-        "y": 3260,
+        "x": 1200,
+        "y": 3240,
         "wires": []
     },
     {
@@ -32968,8 +32917,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1210,
-        "y": 7460,
+        "x": 1410,
+        "y": 7420,
         "wires": []
     },
     {
@@ -33024,8 +32973,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1260,
-        "y": 7140,
+        "x": 1580,
+        "y": 7120,
         "wires": []
     },
     {
@@ -33682,7 +33631,8 @@
         "y": 4120,
         "wires": [
             [
-                "18f29cd7c6c09900"
+                "18f29cd7c6c09900",
+                "a9d988adf626c8e7"
             ]
         ]
     },
@@ -33829,614 +33779,44 @@
         ]
     },
     {
-        "id": "e11f228367117b8d",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Get Data",
-        "func": "msg.produced =  flow.get(\"Current_OEE\")|| 0;\nmsg.good = flow.get(\"Predict_OEE\") || 0;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1060,
-        "y": 640,
-        "wires": [
-            [
-                "2cf30f5f5096b3c6"
-            ]
-        ]
-    },
-    {
-        "id": "18d804d2b4fd124e",
-        "type": "inject",
-        "z": "bc452dfad4aef27a",
-        "name": "",
-        "props": [],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1050,
-        "y": 600,
-        "wires": [
-            [
-                "e11f228367117b8d"
-            ]
-        ]
-    },
-    {
-        "id": "0d080e17219c39c3",
-        "type": "debug",
-        "z": "bc452dfad4aef27a",
-        "name": "debug 17",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "ad65016b3a355719",
-        "type": "debug",
-        "z": "bc452dfad4aef27a",
-        "name": "debug 38",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "0bd795653c30cf19",
-        "type": "debug",
-        "z": "bc452dfad4aef27a",
-        "name": "debug 40",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 2000,
-        "wires": []
-    },
-    {
-        "id": "acc12b36f278ff6e",
-        "type": "ui_template",
-        "z": "bc452dfad4aef27a",
-        "group": "5d0bfe04d04539d8",
-        "name": "Pred_Speed",
+        "id": "a9d988adf626c8e7",
+        "type": "ui_text",
+        "z": "06948f76d5659ec2",
+        "group": "b6ec6f01ada09fa7",
         "order": 3,
-        "width": 4,
-        "height": 6,
-        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['OEE'],\n            datasets: [\n                {\n                    label: 'Current OEE',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Pred OEE',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Cur_Prod_Qty",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
         "className": "",
-        "x": 910,
-        "y": 1260,
-        "wires": [
-            [
-                "ad65016b3a355719"
-            ]
-        ]
-    },
-    {
-        "id": "eaada14529592f93",
-        "type": "ui_template",
-        "z": "bc452dfad4aef27a",
-        "group": "5d0bfe04d04539d8",
-        "name": "Predict_Profit",
-        "order": 5,
-        "width": 4,
-        "height": 6,
-        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['OEE'],\n            datasets: [\n                {\n                    label: 'Current OEE',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Pred OEE',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 920,
-        "y": 1960,
-        "wires": [
-            [
-                "0bd795653c30cf19"
-            ]
-        ]
-    },
-    {
-        "id": "c7adabeb2c30ca48",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "Avability",
-        "links": [
-            "51a77e7bdefb8a2c"
-        ],
-        "x": 185,
-        "y": 600,
-        "wires": [
-            [
-                "6c074a6a9b4e3fee"
-            ]
-        ]
-    },
-    {
-        "id": "f41966aa8186e926",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "Performance",
-        "links": [
-            "6e6b143235ae0845"
-        ],
-        "x": 185,
-        "y": 680,
-        "wires": [
-            [
-                "bbb42b518eed26f5"
-            ]
-        ]
-    },
-    {
-        "id": "5b92fdff1089eced",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "Quaity",
-        "links": [
-            "26f622e94d5b80fa"
-        ],
-        "x": 185,
-        "y": 740,
-        "wires": [
-            [
-                "c2db51c5c6c18767"
-            ]
-        ]
-    },
-    {
-        "id": "de80898e4fddcdc5",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "OEE",
-        "links": [
-            "f966b56f18e63eed"
-        ],
-        "x": 185,
-        "y": 800,
-        "wires": [
-            [
-                "9ff23af464fcfcaf",
-                "4db3c83f8c9ed6c9"
-            ]
-        ]
-    },
-    {
-        "id": "4231a7971ce37faf",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "Delay",
-        "links": [
-            "c2e57cd1af5543a6"
-        ],
-        "x": 185,
-        "y": 860,
-        "wires": [
-            [
-                "8c7bb092b9cbb72d"
-            ]
-        ]
-    },
-    {
-        "id": "849ae6427ba159ce",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "Downtime",
-        "links": [
-            "20e79959d0dfc836"
-        ],
-        "x": 185,
-        "y": 920,
-        "wires": [
-            [
-                "7570ba7c7c7eeeec"
-            ]
-        ]
-    },
-    {
-        "id": "9feaeeb66f326a7f",
-        "type": "link in",
-        "z": "bc452dfad4aef27a",
-        "name": "Current_Prod_Speed",
-        "links": [],
-        "x": 185,
-        "y": 980,
-        "wires": [
-            [
-                "545ee9e16e86ee11"
-            ]
-        ]
-    },
-    {
-        "id": "5da90b98653ce4f6",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Avaliabilty",
-        "info": "",
-        "x": 100,
-        "y": 600,
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1020,
+        "y": 4220,
         "wires": []
     },
     {
-        "id": "204192babdbbd7a1",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Performance",
-        "info": "",
-        "x": 90,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "3eec15951bc57502",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "id": "891a592065f951a7",
+        "type": "function",
+        "z": "06948f76d5659ec2",
         "name": "Quality",
-        "info": "",
-        "x": 70,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "f918f4b8a32929cf",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Current OEE",
-        "info": "",
-        "x": 90,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "e62be04aaf3102e3",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Prod Delay",
-        "info": "",
-        "x": 80,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "bab13002298c3fce",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Downtime",
-        "info": "",
-        "x": 80,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "243a150e7e114e72",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Cur_Prod_Speed",
-        "info": "",
-        "x": 80,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "6c074a6a9b4e3fee",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Avaliabity",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 320,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "bbb42b518eed26f5",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Performance",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 330,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "c2db51c5c6c18767",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Qaulity",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 320,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "9ff23af464fcfcaf",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Current OEE",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 330,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "8c7bb092b9cbb72d",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Prod Delay",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 330,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "7570ba7c7c7eeeec",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Downtime",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 320,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "545ee9e16e86ee11",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Current Speed",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 340,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "be11f33feca88b0e",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Flow for OEE Prediction",
-        "info": "",
-        "x": 640,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "946bbc6fb5018a64",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Flow for Prod Speed Prediction",
-        "info": "",
-        "x": 710,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "0904ee3a29ce1d6d",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Flow for Profit Prediction",
-        "info": "",
-        "x": 690,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "4db3c83f8c9ed6c9",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Get Current_OEE",
-        "func": "flow.set(\"Current_OEE\",msg.payload)|| 0;\n\n\n",
+        "func": "var A = flow.get(\"Quality%\");\nmsg.payload = A;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 580,
+        "x": 1300,
+        "y": 7160,
         "wires": [
             [
-                "e11f228367117b8d"
-            ]
-        ]
-    },
-    {
-        "id": "49e543f91f1263bc",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Get Predict_OEE",
-        "func": "flow.set(\"Predict_OEE\",msg.payload)|| 0;\n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 870,
-        "y": 720,
-        "wires": [
-            [
-                "e11f228367117b8d"
-            ]
-        ]
-    },
-    {
-        "id": "6de8ae2d8e313abd",
-        "type": "inject",
-        "z": "bc452dfad4aef27a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "55",
-        "payloadType": "num",
-        "x": 850,
-        "y": 760,
-        "wires": [
-            [
-                "49e543f91f1263bc"
-            ]
-        ]
-    },
-    {
-        "id": "743d01bec76209ef",
-        "type": "inject",
-        "z": "bc452dfad4aef27a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "70",
-        "payloadType": "num",
-        "x": 850,
-        "y": 540,
-        "wires": [
-            [
-                "4db3c83f8c9ed6c9"
-            ]
-        ]
-    },
-    {
-        "id": "2cf30f5f5096b3c6",
-        "type": "ui_template",
-        "z": "bc452dfad4aef27a",
-        "group": "5d0bfe04d04539d8",
-        "name": "OEE Prediction",
-        "order": 1,
-        "width": 4,
-        "height": 6,
-        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"barChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    let ctx = document.getElementById('barChart').getContext('2d');\n\n    let chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: [''],\n            datasets: [\n                {\n                    label: 'Produced',\n                    backgroundColor: 'rgba(0, 123, 255, 0.8)',\n                    data: [0]\n                },\n                {\n                    label: 'Good',\n                    backgroundColor: 'rgba(40, 167, 69, 0.8)',\n                    data: [0]\n                }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: {\n                legend: {\n                    position: 'top',\n                    labels: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            },\n            scales: {\n                y: {\n                    beginAtZero: true,\n                    ticks: {\n                        stepSize: 1,\n                        font: {\n                            size: 12\n                        }\n                    }\n                },\n                x: {\n                    ticks: {\n                        font: {\n                            size: 12\n                        }\n                    }\n                }\n            }\n        }\n    });\n\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        let produced = msg.produced || 0;\n        let good = msg.good || 0;\n\n        chart.data.datasets[0].data = [produced];\n        chart.data.datasets[1].data = [good];\n        chart.update();\n    });\n})(scope);\n</script>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1240,
-        "y": 700,
-        "wires": [
-            [
-                "0d080e17219c39c3"
+                "26f622e94d5b80fa",
+                "ad1ae271b8b2590f"
             ]
         ]
     },
@@ -39624,7 +39004,7 @@
         "type": "function",
         "z": "f77fc6864f564ae2",
         "name": "True to False ",
-        "func": "var MSG = msg.payload;\nif (MSG == true)\n\n{\nmsg.payload = false\nreturn msg;\n}\n",
+        "func": "var MSG = msg.payload;\nif (MSG == true) {\n    msg.payload = false\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -39641,7 +39021,8 @@
                 "bef269d865ede794",
                 "7868ec9425af1a02",
                 "6fc3a7782332dd51",
-                "65b27f5fbf84de15"
+                "65b27f5fbf84de15",
+                "6f08e7e6873f9f25"
             ]
         ]
     },
@@ -39925,7 +39306,7 @@
         "variable": "NR_RM_Set_Pro_Qty",
         "name": "",
         "x": 440,
-        "y": 1560,
+        "y": 1580,
         "wires": []
     },
     {
@@ -40293,7 +39674,7 @@
         "group": "8d58f4ba1c114b87",
         "name": "Manual Mode",
         "order": 2,
-        "width": 2,
+        "width": 3,
         "height": 2,
         "format": "<script>\n(function(scope) {\n    scope.state = false;\n\n    scope.$watch('msg.payload', function(newVal) {\n        if (typeof newVal === \"boolean\") {\n            scope.state = newVal;\n        }\n    });\n\n    scope.toggle = function() {\n        scope.state = !scope.state;\n        scope.send({ payload: scope.state });\n    };\n})(scope);\n</script>\n\n<style>\n.icon-button-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    user-select: none;\n    width: 100%;\n    height: 100%;\n    box-sizing: border-box;\n    padding: 5px;\n}\n\n.icon-button {\n    font-size: 1.5em;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    border: 3px solid transparent;\n    background-color: #555;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.3s ease;\n    box-shadow: 0 0 4px rgba(0,0,0,0.2);\n}\n\n.icon-on {\n    border-color: #4caf50;\n    background-color: #4caf50;\n    box-shadow: 0 0 10px #4caf50, 0 0 20px #66ff66;\n}\n\n.icon-off {\n    border-color: #f44336;\n    background-color: #f44336;\n    box-shadow: 0 0 10px #f44336, 0 0 20px #ff6666;\n}\n</style>\n\n<div class=\"icon-button-container\" ng-click=\"toggle()\">\n    <div class=\"icon-button\" ng-class=\"state ? 'icon-on' : 'icon-off'\">\n        <i class=\"fa fa-power-off\"></i>\n    </div>\n</div>\n",
         "storeOutMessages": true,
@@ -40429,8 +39810,8 @@
         "endpoint": "2c9330c11f6a4001",
         "variable": "A_Start_Production",
         "name": "",
-        "x": 1070,
-        "y": 1600,
+        "x": 1090,
+        "y": 1580,
         "wires": []
     },
     {
@@ -40493,7 +39874,8 @@
         "wires": [
             [
                 "2da33addef93999f",
-                "39b57f9f4d994cf2"
+                "39b57f9f4d994cf2",
+                "4c641f6b31bb37d1"
             ]
         ]
     },
@@ -40848,8 +40230,8 @@
         "endpoint": "2c9330c11f6a4001",
         "variable": "Conveyour_Speed",
         "name": "Conveyor_Speed",
-        "x": 890,
-        "y": 560,
+        "x": 930,
+        "y": 580,
         "wires": []
     },
     {
@@ -40880,7 +40262,7 @@
         "label": "Speed",
         "tooltip": "",
         "group": "8d58f4ba1c114b87",
-        "order": 5,
+        "order": 7,
         "width": 2,
         "height": 1,
         "passthru": true,
@@ -40891,7 +40273,7 @@
         "className": "",
         "topicType": "msg",
         "x": 210,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "b14920f6d8a2148b"
@@ -40906,19 +40288,19 @@
         "label": "Slider",
         "tooltip": "",
         "group": "8d58f4ba1c114b87",
-        "order": 6,
-        "width": "5",
-        "height": "1",
+        "order": 8,
+        "width": 5,
+        "height": 1,
         "passthru": true,
         "outs": "all",
         "topic": "payload",
         "topicType": "msg",
         "min": 0,
-        "max": "5",
+        "max": "10",
         "step": 1,
         "className": "",
         "x": 390,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "e6a0981d1f955a0f",
@@ -40931,20 +40313,20 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "8d58f4ba1c114b87",
-        "order": 7,
-        "width": "2",
-        "height": "1",
+        "order": 6,
+        "width": 3,
+        "height": 1,
         "name": "",
         "label": "Prod_Speed",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.show_speed}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 650,
-        "y": 760,
+        "x": 930,
+        "y": 820,
         "wires": []
     },
     {
@@ -40999,7 +40381,7 @@
         "z": "f77fc6864f564ae2",
         "order": 11,
         "group": "8d58f4ba1c114b87",
-        "width": "4",
+        "width": 4,
         "height": 2,
         "label": "Home",
         "labelPlacement": "left",
@@ -41028,9 +40410,9 @@
         "id": "7d399d0199749b11",
         "type": "ui_led",
         "z": "f77fc6864f564ae2",
-        "order": 11,
+        "order": 12,
         "group": "8d58f4ba1c114b87",
-        "width": "3",
+        "width": 3,
         "height": 2,
         "label": "End ",
         "labelPlacement": "left",
@@ -41112,7 +40494,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
+        "x": 270,
         "y": 720,
         "wires": [
             [
@@ -41145,8 +40527,8 @@
         "variable": "Conveyour_Speed",
         "diff": true,
         "name": "",
-        "x": 270,
-        "y": 760,
+        "x": 350,
+        "y": 780,
         "wires": [
             [
                 "fbe3c08e8cdea64d"
@@ -41158,15 +40540,15 @@
         "type": "function",
         "z": "f77fc6864f564ae2",
         "name": "Prod_speed",
-        "func": "var Prod_Speed = msg.payload;\nvar Scaled_Speed = (Prod_Speed *2 )* 10;\nvar Prod_Speed_Perc = Scaled_Speed + \" % \" ;\nmsg.payload = Scaled_Speed ;\nreturn msg;",
+        "func": "var Prod_Speed = msg.payload;\nvar Scaled_Speed = (Prod_Speed )* 10;\nvar Prod_Speed_Perc = Scaled_Speed + \" % \" ;\nmsg.show_speed = Prod_Speed_Perc;\nmsg.payload = Scaled_Speed;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 760,
+        "x": 630,
+        "y": 780,
         "wires": [
             [
                 "37d3474df07662fb",
@@ -41180,7 +40562,7 @@
         "type": "debug",
         "z": "f77fc6864f564ae2",
         "name": "Prod_Speed",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -41188,8 +40570,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 720,
+        "x": 930,
+        "y": 740,
         "wires": []
     },
     {
@@ -41236,7 +40618,7 @@
             "84fbf9cfb70f2208",
             "9feaeeb66f326a7f"
         ],
-        "x": 815,
+        "x": 955,
         "y": 780,
         "wires": []
     },
@@ -41275,9 +40657,9 @@
         "type": "ui_text",
         "z": "f77fc6864f564ae2",
         "group": "8d58f4ba1c114b87",
-        "order": 7,
-        "width": "2",
-        "height": "1",
+        "order": 9,
+        "width": 4,
+        "height": 1,
         "name": "",
         "label": "RM_Delay",
         "format": "{{msg.payload}}",
@@ -41313,89 +40695,119 @@
         ]
     },
     {
-        "id": "ad65016b3a355719",
-        "type": "debug",
-        "z": "bc452dfad4aef27a",
-        "name": "Speed Predict",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1760,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "0bd795653c30cf19",
-        "type": "debug",
-        "z": "bc452dfad4aef27a",
-        "name": "Profit Predict",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1730,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "acc12b36f278ff6e",
-        "type": "ui_template",
-        "z": "bc452dfad4aef27a",
-        "group": "5d0bfe04d04539d8",
-        "name": "Speed Prediction",
-        "order": 2,
-        "width": 6,
-        "height": 6,
-        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"speedChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    var ctx = document.getElementById('speedChart').getContext('2d');\n    var chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['Speed'],\n            datasets: [\n                { label: 'Current', backgroundColor: 'rgba(0, 123, 255, 0.8)', data: [0] },\n                { label: 'Predicted', backgroundColor: 'rgba(40, 167, 69, 0.8)', data: [0] }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },\n            scales: {\n                y: { beginAtZero: true, max: 100, ticks: { stepSize: 10, font: { size: 12 } } },\n                x: { ticks: { font: { size: 12 } } }\n            }\n        }\n    });\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        chart.data.datasets[0].data = [msg.produced || 0];\n        chart.data.datasets[1].data = [msg.good || 0];\n        chart.update();\n    });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1490,
-        "y": 820,
-        "wires": [
-            [
-                "ad65016b3a355719"
-            ]
-        ]
-    },
-    {
-        "id": "eaada14529592f93",
-        "type": "ui_template",
-        "z": "bc452dfad4aef27a",
-        "group": "5d0bfe04d04539d8",
-        "name": "Profit Prediction",
-        "order": 3,
-        "width": 6,
-        "height": 6,
-        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"profitChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    var ctx = document.getElementById('profitChart').getContext('2d');\n    var chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['Profit'],\n            datasets: [\n                { label: 'Current', backgroundColor: 'rgba(0, 123, 255, 0.8)', data: [0] },\n                { label: 'Predicted', backgroundColor: 'rgba(40, 167, 69, 0.8)', data: [0] }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },\n            scales: {\n                y: { beginAtZero: true, max: 100, ticks: { font: { size: 12 } } },\n                x: { ticks: { font: { size: 12 } } }\n            }\n        }\n    });\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        chart.data.datasets[0].data = [msg.produced || 0];\n        chart.data.datasets[1].data = [msg.good || 0];\n        chart.update();\n    });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1460,
-        "y": 1040,
-        "wires": [
-            [
-                "0bd795653c30cf19"
-            ]
-        ]
-    },
-    {
-        "id": "c7adabeb2c30ca48",
+        "id": "b7c3248ed07a1fb3",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "f77fc6864f564ae2",
+        "name": "link in Predicted_Speed",
+        "links": [
+            "07540f6add989d57"
+        ],
+        "x": 175,
+        "y": 440,
+        "wires": [
+            [
+                "80dfdbb2bfcc86d6"
+            ]
+        ]
+    },
+    {
+        "id": "4b6e3f6f141f73f5",
+        "type": "function",
+        "z": "f77fc6864f564ae2",
+        "name": "Speed Format",
+        "func": "if (msg.payload == true) {\n    msg.payload = (msg.good / 20);\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "7e2df0c817b54901",
+                "2d972d567edad87e"
+            ]
+        ]
+    },
+    {
+        "id": "80dfdbb2bfcc86d6",
+        "type": "ui_switch",
+        "z": "f77fc6864f564ae2",
+        "name": "Pred Speed",
+        "label": "AI Speed",
+        "tooltip": "",
+        "group": "8d58f4ba1c114b87",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 250,
+        "y": 500,
+        "wires": [
+            [
+                "4b6e3f6f141f73f5"
+            ]
+        ]
+    },
+    {
+        "id": "7e2df0c817b54901",
+        "type": "debug",
+        "z": "f77fc6864f564ae2",
+        "name": "Pred_Speed",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6f08e7e6873f9f25",
+        "type": "link out",
+        "z": "f77fc6864f564ae2",
+        "name": "link out Prod_Start_AI",
+        "mode": "link",
+        "links": [],
+        "x": 425,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "4c641f6b31bb37d1",
+        "type": "link out",
+        "z": "f77fc6864f564ae2",
+        "name": "link out Actuatar_Rest",
+        "mode": "link",
+        "links": [],
+        "x": 375,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "54d5393ce5b6856e",
+        "type": "link in",
+        "z": "a45474e6038573a9",
         "name": "Avability",
         "links": [
             "51a77e7bdefb8a2c"
@@ -41404,15 +40816,15 @@
         "y": 600,
         "wires": [
             [
-                "6c074a6a9b4e3fee",
-                "052a7e50102eace3"
+                "259cbf08f03dc96f",
+                "17cf17a64ed2f77c"
             ]
         ]
     },
     {
-        "id": "f41966aa8186e926",
+        "id": "42191f34f0564d10",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Performance",
         "links": [
             "6e6b143235ae0845"
@@ -41421,172 +40833,172 @@
         "y": 680,
         "wires": [
             [
-                "bbb42b518eed26f5",
-                "b22b4a3535eae2fb"
+                "8e5d4a4cbc9de0ec",
+                "90bcbd4cfbba775c"
             ]
         ]
     },
     {
-        "id": "5b92fdff1089eced",
+        "id": "91646556851f18b8",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Quaity",
         "links": [
             "26f622e94d5b80fa"
         ],
         "x": 185,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
-                "c2db51c5c6c18767",
-                "f3a87430d6fae67f"
+                "29e358bf33aecf03",
+                "922280c1a7367dbb"
             ]
         ]
     },
     {
-        "id": "de80898e4fddcdc5",
+        "id": "0c97d14ef00b715e",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "OEE",
         "links": [
             "f966b56f18e63eed"
         ],
         "x": 185,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
-                "9ff23af464fcfcaf",
-                "f05025cb24b8e41e"
+                "5d35a1998b8f1eb3",
+                "c3e08a72cbfa17d2"
             ]
         ]
     },
     {
-        "id": "4231a7971ce37faf",
+        "id": "a75dd8414b826633",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Delay",
         "links": [
             "c2e57cd1af5543a6"
         ],
         "x": 185,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
-                "8c7bb092b9cbb72d",
-                "440cf28706bc1fcb"
+                "8632c3a95ec7b2a4",
+                "393d8bcd32c6f6bb"
             ]
         ]
     },
     {
-        "id": "849ae6427ba159ce",
+        "id": "4d0990c1e87d4c38",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Downtime",
         "links": [
             "20e79959d0dfc836"
         ],
         "x": 185,
-        "y": 920,
+        "y": 1000,
         "wires": [
             [
-                "7570ba7c7c7eeeec",
-                "cba907fa371abc34"
+                "1832f8a1ae8a7642",
+                "2b818bae3decef20"
             ]
         ]
     },
     {
-        "id": "9feaeeb66f326a7f",
+        "id": "d9cb6fddc00f6fe0",
         "type": "link in",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Current_Prod_Speed",
         "links": [
             "c081d68e6f65f89c"
         ],
         "x": 185,
-        "y": 980,
+        "y": 1080,
         "wires": [
             [
-                "545ee9e16e86ee11",
-                "538659d23faafb09"
+                "64a3e37bf47e6eb1",
+                "34ec8b66f1da2874"
             ]
         ]
     },
     {
-        "id": "5da90b98653ce4f6",
+        "id": "9106aaaf648046de",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Avaliabilty",
         "info": "",
-        "x": 100,
+        "x": 80,
         "y": 600,
         "wires": []
     },
     {
-        "id": "204192babdbbd7a1",
+        "id": "d0f647008271cabd",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Performance",
         "info": "",
-        "x": 90,
+        "x": 70,
         "y": 680,
         "wires": []
     },
     {
-        "id": "3eec15951bc57502",
+        "id": "29e3d0002d9a25e6",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Quality",
         "info": "",
         "x": 90,
-        "y": 740,
+        "y": 780,
         "wires": []
     },
     {
-        "id": "f918f4b8a32929cf",
+        "id": "4d215d51ce6e53dd",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Current OEE",
         "info": "",
-        "x": 90,
-        "y": 800,
+        "x": 70,
+        "y": 840,
         "wires": []
     },
     {
-        "id": "e62be04aaf3102e3",
+        "id": "0c97d1a7abc495d7",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Prod Delay",
-        "info": "",
-        "x": 80,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "bab13002298c3fce",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Downtime",
         "info": "",
         "x": 80,
         "y": 920,
         "wires": []
     },
     {
-        "id": "243a150e7e114e72",
+        "id": "4bf2808db519c737",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Cur_Prod_Speed",
+        "z": "a45474e6038573a9",
+        "name": "Downtime",
         "info": "",
         "x": 80,
-        "y": 980,
+        "y": 1000,
         "wires": []
     },
     {
-        "id": "6c074a6a9b4e3fee",
+        "id": "93f8aec6aea0b0e1",
+        "type": "comment",
+        "z": "a45474e6038573a9",
+        "name": "Cur_Prod_Speed",
+        "info": "",
+        "x": 80,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "259cbf08f03dc96f",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "7b41df74657aac38",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -41598,16 +41010,16 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 320,
-        "y": 600,
+        "x": 380,
+        "y": 620,
         "wires": []
     },
     {
-        "id": "bbb42b518eed26f5",
+        "id": "8e5d4a4cbc9de0ec",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "7b41df74657aac38",
-        "order": 0,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -41619,37 +41031,16 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 330,
-        "y": 680,
+        "x": 390,
+        "y": 700,
         "wires": []
     },
     {
-        "id": "c2db51c5c6c18767",
+        "id": "5d35a1998b8f1eb3",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Qaulity",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 320,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "9ff23af464fcfcaf",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -41661,37 +41052,16 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 330,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "8c7bb092b9cbb72d",
-        "type": "ui_text",
-        "z": "bc452dfad4aef27a",
-        "group": "7b41df74657aac38",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Prod Delay",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 330,
+        "x": 390,
         "y": 860,
         "wires": []
     },
     {
-        "id": "7570ba7c7c7eeeec",
+        "id": "1832f8a1ae8a7642",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "7b41df74657aac38",
-        "order": 0,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
@@ -41703,16 +41073,16 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 320,
-        "y": 920,
+        "x": 380,
+        "y": 1040,
         "wires": []
     },
     {
-        "id": "545ee9e16e86ee11",
+        "id": "64a3e37bf47e6eb1",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "7b41df74657aac38",
-        "order": 0,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "",
@@ -41724,85 +41094,24 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 340,
-        "y": 980,
+        "x": 400,
+        "y": 1100,
         "wires": []
     },
     {
-        "id": "be11f33feca88b0e",
+        "id": "6508bffc236c04ae",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Flow for OEE Prediction",
         "info": "",
-        "x": 920,
-        "y": 360,
+        "x": 640,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "946bbc6fb5018a64",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Flow for Prod Speed Prediction",
-        "info": "",
-        "x": 1090,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "0904ee3a29ce1d6d",
-        "type": "comment",
-        "z": "bc452dfad4aef27a",
-        "name": "Flow for Profit Prediction",
-        "info": "",
-        "x": 1070,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "2cf30f5f5096b3c6",
-        "type": "ui_template",
-        "z": "bc452dfad4aef27a",
-        "group": "5d0bfe04d04539d8",
-        "name": "OEE Prediction",
-        "order": 1,
-        "width": 6,
-        "height": 6,
-        "format": "<div style=\"width:100%; height:100%;\">\n  <canvas id=\"oeeChart\" style=\"width:100%; height:100%;\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n    var ctx = document.getElementById('oeeChart').getContext('2d');\n    var chart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n            labels: ['OEE'],\n            datasets: [\n                { label: 'Current', backgroundColor: 'rgba(0, 123, 255, 0.8)', data: [0] },\n                { label: 'Predicted', backgroundColor: 'rgba(40, 167, 69, 0.8)', data: [0] }\n            ]\n        },\n        options: {\n            maintainAspectRatio: false,\n            plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },\n            scales: {\n                y: { beginAtZero: true, max: 100, ticks: { stepSize: 5, font: { size: 12 } } },\n                x: { ticks: { font: { size: 12 } } }\n            }\n        }\n    });\n    scope.$watch('msg', function(msg) {\n        if (!msg) return;\n        chart.data.datasets[0].data = [msg.produced || 0];\n        chart.data.datasets[1].data = [msg.good || 0];\n        chart.update();\n    });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1440,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e239643b2ca38322",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Build Payload",
-        "func": "msg.payload = {\n  batch_part_no: flow.get('Live_Batch_PartNo') || 'BATCH',\n  part_slno: flow.get('Live_Part_SLNo') || 1, \n  total_batch_size: 1,\n  current_speed: Number(flow.get('Current_Speed')) || 0,\n  availability: Number(flow.get('avaliability%')) || Number(flow.get('OEE')) || 0,\n  performance: Number(flow.get('Performance%')) || Number(flow.get('OEE')) || 0,\n  quality: Number(flow.get('Quality%')) || Number(flow.get('OEE')) || 0,\n  current_oee: Number(flow.get('OEE')) || 0,\n  downtime_sec: Number(flow.get('Downtime')) || 0,\n  oee_delta: Number(flow.get('oee_delta')) || 0,\n  state: 'NORMAL'\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 820,
-        "y": 660,
-        "wires": [
-            [
-                "53c55f03addccdf7"
-            ]
-        ]
-    },
-    {
-        "id": "53c55f03addccdf7",
+        "id": "01632979c9f6caf9",
         "type": "http request",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "POST /predict-oee",
         "method": "POST",
         "ret": "obj",
@@ -41815,40 +41124,44 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 970,
+        "x": 1310,
         "y": 500,
         "wires": [
             [
-                "62302f3d5b1e80e4"
+                "cc8e214004465f6e"
             ]
         ]
     },
     {
-        "id": "62302f3d5b1e80e4",
+        "id": "cc8e214004465f6e",
         "type": "function",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Parse Response",
-        "func": "var r = msg.payload;\nif (!r || r.error) { node.warn('API: ' + JSON.stringify(r)); return null; }\nmsg.payload = {\n  current_oee: Number(flow.get('OEE')) || 0,\n  pred_oee: r.pred_oee_10m || 0,\n  rec_speed: r.recommended_speed || 0,\n  confidence: r.confidence_pct || 0,\n  change_needed: r.change_needed || false\n};\nreturn msg;",
+        "func": "var r = msg.payload;\nif (!r || r.error) { node.warn('API: ' + JSON.stringify(r)); return null; }\nmsg.payload = {\n  current_oee: flow.get('Curr_OEE') || 0,\n  pred_oee: r.pred_oee_10m || 0,\n  rec_speed: r.recommended_speed || 0,\n  confidence: r.confidence_pct || 0,\n  change_needed: r.change_needed || false\n};\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
-        "x": 1330,
-        "y": 420,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 440,
         "wires": [
             [
-                "da4ebb35e30c75e1",
-                "78a823a222ba7efe",
-                "9f7dcd4d38ef7bbd",
-                "83bb2025c1d61647",
-                "456ca9d76e736fe5",
-                "e43a35e40566a060",
-                "8f2e1b4a7c69d0e3"
+                "d4bc73a604b24a82",
+                "a90f4f36b893b62e",
+                "54e3863bed2bad54",
+                "895b6142411a4da5",
+                "81bd893181e30a9a",
+                "fd4d570d51346781",
+                "1197fd26484311ee"
             ]
         ]
     },
     {
-        "id": "83bb2025c1d61647",
+        "id": "d4bc73a604b24a82",
         "type": "debug",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "API Response",
         "active": true,
         "tosidebar": true,
@@ -41856,14 +41169,14 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1600,
-        "y": 540,
+        "x": 2060,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "456ca9d76e736fe5",
+        "id": "a90f4f36b893b62e",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "5d0bfe04d04539d8",
         "order": 5,
         "width": 6,
@@ -41877,14 +41190,14 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1600,
-        "y": 340,
+        "x": 2060,
+        "y": 240,
         "wires": []
     },
     {
-        "id": "e43a35e40566a060",
+        "id": "54e3863bed2bad54",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "5d0bfe04d04539d8",
         "order": 6,
         "width": 6,
@@ -41898,146 +41211,152 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1610,
-        "y": 400,
+        "x": 2070,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "052a7e50102eace3",
+        "id": "17cf17a64ed2f77c",
         "type": "function",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Store Avability",
         "func": "var k='avaliability%', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 480,
-        "y": 600,
+        "x": 540,
+        "y": 580,
         "wires": [
             [
-                "e239643b2ca38322"
+                "4389e331325ca4f3"
             ]
         ]
     },
     {
-        "id": "b22b4a3535eae2fb",
+        "id": "90bcbd4cfbba775c",
         "type": "function",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Store Performance",
         "func": "var k='Performance%', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 490,
-        "y": 680,
+        "x": 550,
+        "y": 660,
         "wires": [
             [
-                "e239643b2ca38322"
+                "4389e331325ca4f3"
             ]
         ]
     },
     {
-        "id": "f3a87430d6fae67f",
+        "id": "29e358bf33aecf03",
         "type": "function",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Store Quality",
         "func": "var k='Quality%', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 480,
+        "x": 530,
         "y": 740,
         "wires": [
             [
-                "e239643b2ca38322"
+                "4389e331325ca4f3"
             ]
         ]
     },
     {
-        "id": "f05025cb24b8e41e",
+        "id": "c3e08a72cbfa17d2",
         "type": "function",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Store OEE",
-        "func": "var v=Number(msg.payload)||0;\nvar p=Number(flow.get('OEE'))||v;\nflow.set('prev_oee',p);\nflow.set('oee_delta',v-p);\nflow.set('OEE',v);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 800,
-        "wires": [
-            [
-                "e239643b2ca38322"
-            ]
-        ]
-    },
-    {
-        "id": "440cf28706bc1fcb",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Store Delay",
-        "func": "var k='Delay', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 860,
-        "wires": [
-            [
-                "e239643b2ca38322"
-            ]
-        ]
-    },
-    {
-        "id": "cba907fa371abc34",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Store Downtime",
-        "func": "var k='Downtime', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 480,
-        "y": 920,
-        "wires": [
-            [
-                "e239643b2ca38322"
-            ]
-        ]
-    },
-    {
-        "id": "538659d23faafb09",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Store Speed",
-        "func": "var RawS7Speed = Number(msg.payload) || 0;\nvar ActualSpeed = RawS7Speed / 20;\nvar ValidSpeeds = [20, 40, 60, 80, 100];\nvar closest = ValidSpeeds.reduce((a, b) => Math.abs(b - ActualSpeed) < Math.abs(a - ActualSpeed) ? b : a);\nvar k = 'Current_Speed', v = closest;\nif (flow.get(k) === v) return null;\nflow.set(k, v);\nreturn msg;",
+        "func": "var v=Number(msg.payload)||0;\nvar p=Number(flow.get('OEE'))||v;\nflow.set('prev_oee',p);\nflow.set('oee_delta',v-p);\nflow.set('Curr_OEE',v);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 980,
+        "x": 530,
+        "y": 820,
         "wires": [
             [
-                "e239643b2ca38322"
+                "4389e331325ca4f3"
             ]
         ]
     },
     {
-        "id": "047152858ce94abe",
+        "id": "8632c3a95ec7b2a4",
         "type": "function",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
+        "name": "Store Delay",
+        "func": "var k='Delay', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 900,
+        "wires": [
+            [
+                "4389e331325ca4f3",
+                "eb1e2b85cce901e9"
+            ]
+        ]
+    },
+    {
+        "id": "2b818bae3decef20",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Store Downtime",
+        "func": "var k='Downtime', v=Number(msg.payload)||0;\nif(flow.get(k)===v)return null;\nflow.set(k,v);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 980,
+        "wires": [
+            [
+                "4389e331325ca4f3",
+                "369c2a03382e62a8"
+            ]
+        ]
+    },
+    {
+        "id": "34ec8b66f1da2874",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Store Speed",
+        "func": "var k = 'Current_Speed', v = Number(msg.payload) || 0;\nif (flow.get(k) === v) return null;\nflow.set(\"Curr_Speed\", v);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1060,
+        "wires": [
+            [
+                "4389e331325ca4f3"
+            ]
+        ]
+    },
+    {
+        "id": "2c4cf3af2db576c4",
+        "type": "function",
+        "z": "a45474e6038573a9",
         "name": "Set All",
         "func": "var p=msg.payload;\nif(typeof p==='object'&&p!==null){\nfor(var k in p){flow.set(k,p[k]);}\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 530,
-        "y": 400,
+        "x": 750,
+        "y": 420,
         "wires": [
             [
-                "e239643b2ca38322"
+                "4389e331325ca4f3"
             ]
         ]
     },
     {
-        "id": "b8db6d5adfd22770",
+        "id": "fca13ddae9230a1f",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Aval 85",
         "props": [
             {
@@ -42057,14 +41376,14 @@
         "y": 280,
         "wires": [
             [
-                "052a7e50102eace3"
+                "17cf17a64ed2f77c"
             ]
         ]
     },
     {
-        "id": "f1af4912e2456dfc",
+        "id": "c574a6c2adcafaf5",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Perf 82",
         "props": [
             {
@@ -42084,14 +41403,14 @@
         "y": 320,
         "wires": [
             [
-                "b22b4a3535eae2fb"
+                "90bcbd4cfbba775c"
             ]
         ]
     },
     {
-        "id": "477ba06c2f96ee62",
+        "id": "1b2d3c44003e8cb2",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Qual 90",
         "props": [
             {
@@ -42111,14 +41430,14 @@
         "y": 360,
         "wires": [
             [
-                "f3a87430d6fae67f"
+                "29e358bf33aecf03"
             ]
         ]
     },
     {
-        "id": "c23fad3af46d942b",
+        "id": "e4c51e3866d5186e",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "OEE 62",
         "props": [
             {
@@ -42138,14 +41457,14 @@
         "y": 400,
         "wires": [
             [
-                "f05025cb24b8e41e"
+                "c3e08a72cbfa17d2"
             ]
         ]
     },
     {
-        "id": "0584ce06403036d9",
+        "id": "d6633af43c1ea096",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Downt 30",
         "props": [
             {
@@ -42165,14 +41484,14 @@
         "y": 440,
         "wires": [
             [
-                "cba907fa371abc34"
+                "2b818bae3decef20"
             ]
         ]
     },
     {
-        "id": "97843ee6fb40a0df",
+        "id": "9085d826b88aee4c",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Delay 10",
         "props": [
             {
@@ -42192,14 +41511,14 @@
         "y": 480,
         "wires": [
             [
-                "440cf28706bc1fcb"
+                "8632c3a95ec7b2a4"
             ]
         ]
     },
     {
-        "id": "5c59d8bcc4c739a2",
+        "id": "136982dceac4d3d8",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Speed 80",
         "props": [
             {
@@ -42219,14 +41538,14 @@
         "y": 520,
         "wires": [
             [
-                "538659d23faafb09"
+                "34ec8b66f1da2874"
             ]
         ]
     },
     {
-        "id": "8b181ae1969476a9",
+        "id": "5ed9e45858995dab",
         "type": "inject",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Test All",
         "props": [
             {
@@ -42238,75 +41557,27 @@
         "repeat": "",
         "payload": "",
         "payloadType": "none",
-        "x": 190,
-        "y": 220,
+        "x": 570,
+        "y": 420,
         "wires": [
             [
-                "047152858ce94abe"
+                "2c4cf3af2db576c4"
             ]
         ]
     },
     {
-        "id": "da4ebb35e30c75e1",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Format OEE Chart",
-        "func": "var d=msg.payload||{};\nmsg.produced=d.current_oee||0;\nmsg.good=d.pred_oee||0;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1200,
-        "y": 640,
-        "wires": [
-            [
-                "2cf30f5f5096b3c6"
-            ]
-        ]
-    },
-    {
-        "id": "78a823a222ba7efe",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Format Speed Chart",
-        "func": "var d=msg.payload||{};\nmsg.produced=Number(flow.get('Current_Speed'))||0;\nmsg.good=d.rec_speed||0;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1200,
-        "y": 820,
-        "wires": [
-            [
-                "acc12b36f278ff6e"
-            ]
-        ]
-    },
-    {
-        "id": "9f7dcd4d38ef7bbd",
-        "type": "function",
-        "z": "bc452dfad4aef27a",
-        "name": "Format Profit Chart",
-        "func": "var d=msg.payload||{};\nmsg.produced=d.current_oee||0;\nmsg.good=d.pred_oee||0;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1170,
-        "y": 1040,
-        "wires": [
-            [
-                "eaada14529592f93"
-            ]
-        ]
-    },
-    {
-        "id": "d830481b91e941c0",
+        "id": "1582a22fee74d091",
         "type": "comment",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "name": "Dummy Injects for Testing",
         "x": 190,
         "y": 140,
         "wires": []
     },
     {
-        "id": "8f2e1b4a7c69d0e3",
+        "id": "895b6142411a4da5",
         "type": "ui_text",
-        "z": "bc452dfad4aef27a",
+        "z": "a45474e6038573a9",
         "group": "5d0bfe04d04539d8",
         "order": 7,
         "width": 6,
@@ -42320,8 +41591,672 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1600,
-        "y": 460,
+        "x": 2050,
+        "y": 400,
         "wires": []
+    },
+    {
+        "id": "4389e331325ca4f3",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Build Payload",
+        "func": "if (msg.payload == true) {\n  msg.payload = {\n    batch_part_no: flow.get('Live_Batch_PartNo') || 'BATCH',\n    part_slno: flow.get('Live_Part_SLNo') || 1, \n    total_batch_size: 1,\n    current_speed: Number(flow.get('Curr_Speed')) || 0,\n    availability: Number(flow.get('avaliability%')) || Number(flow.get('OEE')) || 0,\n    performance: Number(flow.get('Performance%')) || Number(flow.get('OEE')) || 0,\n    quality: Number(flow.get('Quality%')) || Number(flow.get('OEE')) || 0,\n    current_oee: Number(flow.get('Curr_OEE')) || 0,\n    downtime_sec: Number(flow.get('Downtime')) || 0,\n    oee_delta: Number(flow.get('oee_delta')) || 0,\n    state: 'NORMAL'\n  };\n  return msg;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 620,
+        "wires": [
+            [
+                "01632979c9f6caf9",
+                "dedef22119968c6d"
+            ]
+        ]
+    },
+    {
+        "id": "a9f5cce17ae86aa3",
+        "type": "debug",
+        "z": "a45474e6038573a9",
+        "name": "Speed Predict",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "37cbd780c7ba66b5",
+        "type": "debug",
+        "z": "a45474e6038573a9",
+        "name": "Profit Predict",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2270,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "27466ebcea85d28e",
+        "type": "ui_template",
+        "z": "a45474e6038573a9",
+        "group": "5d0bfe04d04539d8",
+        "name": "Speed Prediction",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n    <canvas id=\"speedChart\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n\n    var ctx = document.getElementById(\"speedChart\").getContext(\"2d\");\n\n    var chart = new Chart(ctx, {\n        type: \"bar\",\n        data: {\n            labels: [\"Current\", \"Predicted\"],\n            datasets: [{\n                data: [0, 0],\n                backgroundColor: [\n                    \"rgba(0,123,255,0.8)\",\n                    \"rgba(40,167,69,0.8)\"\n                ],\n                borderColor: [\n                    \"rgba(0,123,255,1)\",\n                    \"rgba(40,167,69,1)\"\n                ],\n                borderWidth: 1\n            }]\n        },\n        options: {\n            responsive: true,\n            maintainAspectRatio: false,\n            animation: {\n                duration: 300\n            },\n            legend: {\n                display: false\n            },\n            title: {\n                display: false\n            },\n            scales: {\n                yAxes: [{\n                    ticks: {\n                        beginAtZero: true,\n                        min: 0,\n                        max: 100,\n                        stepSize: 10\n                    },\n                    gridLines: {\n                        display: true\n                    }\n                }],\n                xAxes: [{\n                    gridLines: {\n                        display: false\n                    },\n                    ticks: {\n                        fontSize: 13\n                    },\n                    barPercentage: 0.7,\n                    categoryPercentage: 0.6\n                }]\n            }\n        }\n    });\n\n    scope.$watch(\"msg\", function(msg) {\n        if (!msg) return;\n\n        chart.data.datasets[0].data = [\n            Number(msg.produced) || 0,\n            Number(msg.good) || 0\n        ];\n\n        chart.update(0);\n    });\n\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2040,
+        "y": 940,
+        "wires": [
+            [
+                "a9f5cce17ae86aa3"
+            ]
+        ]
+    },
+    {
+        "id": "c24526c95bd95dea",
+        "type": "ui_template",
+        "z": "a45474e6038573a9",
+        "group": "5d0bfe04d04539d8",
+        "name": "Profit Prediction",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n    <canvas id=\"profitChart\"></canvas>\n</div>\n\n<script>\n(function(scope) {\n\n    var ctx = document.getElementById(\"profitChart\").getContext(\"2d\");\n\n    var chart = new Chart(ctx, {\n        type: \"bar\",\n        data: {\n            labels: [\"Current\", \"Predicted\"],\n            datasets: [{\n                data: [0, 0],\n                backgroundColor: [\n                    \"rgba(0,123,255,0.8)\",\n                    \"rgba(40,167,69,0.8)\"\n                ],\n                borderColor: [\n                    \"rgba(0,123,255,1)\",\n                    \"rgba(40,167,69,1)\"\n                ],\n                borderWidth: 1\n            }]\n        },\n        options: {\n            responsive: true,\n            maintainAspectRatio: false,\n            animation: {\n                duration: 300\n            },\n            legend: {\n                display: false\n            },\n            title: {\n                display: false\n            },\n            scales: {\n                yAxes: [{\n                    ticks: {\n                        beginAtZero: true,\n                        min: 0,\n                        max: 100,\n                        stepSize: 10\n                    },\n                    gridLines: {\n                        display: true\n                    }\n                }],\n                xAxes: [{\n                    gridLines: {\n                        display: false\n                    },\n                    ticks: {\n                        fontSize: 13\n                    },\n                    barPercentage: 0.7,\n                    categoryPercentage: 0.6\n                }]\n            }\n        }\n    });\n\n    scope.$watch(\"msg\", function(msg) {\n        if (!msg) return;\n\n        chart.data.datasets[0].data = [\n            Number(msg.produced) || 0,\n            Number(msg.good) || 0\n        ];\n\n        chart.update(0);\n    });\n\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2020,
+        "y": 1220,
+        "wires": [
+            [
+                "37cbd780c7ba66b5"
+            ]
+        ]
+    },
+    {
+        "id": "427ab5af20f520c2",
+        "type": "comment",
+        "z": "a45474e6038573a9",
+        "name": "Flow for Prod Speed Prediction",
+        "info": "",
+        "x": 1650,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "dcce60890fc9c8ba",
+        "type": "comment",
+        "z": "a45474e6038573a9",
+        "name": "Flow for Profit Prediction",
+        "info": "",
+        "x": 1670,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "6893c5c7b116a376",
+        "type": "ui_template",
+        "z": "a45474e6038573a9",
+        "group": "5d0bfe04d04539d8",
+        "name": "OEE Prediction",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"width:100%; height:100%;\">\n    <canvas id=\"oeeChart\"></canvas>\n</div>\n\n<script>\n    (function(scope) {\n\n    var ctx = document.getElementById(\"oeeChart\").getContext(\"2d\");\n\n    var chart = new Chart(ctx, {\n        type: \"bar\",\n        data: {\n            labels: [\"Current\", \"Predicted\"],\n            datasets: [{\n                data: [0, 0],\n                backgroundColor: [\n                    \"rgba(0,123,255,0.8)\",\n                    \"rgba(40,167,69,0.8)\"\n                ],\n                borderColor: [\n                    \"rgba(0,123,255,1)\",\n                    \"rgba(40,167,69,1)\"\n                ],\n                borderWidth: 1\n            }]\n        },\n        options: {\n            responsive: true,\n            maintainAspectRatio: false,\n            animation: {\n                duration: 300\n            },\n            legend: {\n                display: false\n            },\n            title: {\n                display: false\n            },\n            scales: {\n                yAxes: [{\n                    ticks: {\n                        beginAtZero: true,\n                        min: 0,\n                        max: 100,\n                        stepSize: 5\n                    },\n                    gridLines: {\n                        display: true\n                    }\n                }],\n                xAxes: [{\n                    gridLines: {\n                        display: false\n                    },\n                    ticks: {\n                        fontSize: 13\n                    },\n                    barPercentage: 0.7,\n                    categoryPercentage: 0.6\n                }]\n            }\n        }\n    });\n\n    scope.$watch(\"msg\", function(msg) {\n        if (!msg) return;\n\n        chart.data.datasets[0].data = [\n            Number(msg.produced) || 0,\n            Number(msg.good) || 0\n        ];\n\n        chart.update(0);\n    });\n\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2060,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81bd893181e30a9a",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Format OEE Chart",
+        "func": "var d=msg.payload||{};\nmsg.produced = flow.get('Curr_OEE')||0;\nmsg.good=d.pred_oee||0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1730,
+        "y": 640,
+        "wires": [
+            [
+                "6893c5c7b116a376"
+            ]
+        ]
+    },
+    {
+        "id": "fd4d570d51346781",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Format Speed Chart",
+        "func": "var d=msg.payload||{};\nmsg.produced=Number(flow.get('Curr_Speed'))||0;\nmsg.good=d.rec_speed||0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1750,
+        "y": 940,
+        "wires": [
+            [
+                "27466ebcea85d28e",
+                "8cb1d54159f6c250"
+            ]
+        ]
+    },
+    {
+        "id": "1197fd26484311ee",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Format Profit Chart",
+        "func": "var d=msg.payload||{};\nmsg.produced=d.current_oee||0;\nmsg.good=d.pred_oee||0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1750,
+        "y": 1220,
+        "wires": [
+            [
+                "c24526c95bd95dea"
+            ]
+        ]
+    },
+    {
+        "id": "8cb1d54159f6c250",
+        "type": "link out",
+        "z": "a45474e6038573a9",
+        "name": "link out Predicted_Speed",
+        "mode": "link",
+        "links": [
+            "b7c3248ed07a1fb3"
+        ],
+        "x": 1975,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "5e1619cccd123442",
+        "type": "inject",
+        "z": "a45474e6038573a9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1150,
+        "y": 920,
+        "wires": [
+            [
+                "4389e331325ca4f3"
+            ]
+        ]
+    },
+    {
+        "id": "dedef22119968c6d",
+        "type": "debug",
+        "z": "a45474e6038573a9",
+        "name": "Payload Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d36721908671e403",
+        "type": "link in",
+        "z": "a45474e6038573a9",
+        "name": "link in Remove Avaliabilty",
+        "links": [
+            "eda4945daf06ddb2"
+        ],
+        "x": 1465,
+        "y": 300,
+        "wires": [
+            [
+                "28d30a6a3fe394a4"
+            ]
+        ]
+    },
+    {
+        "id": "28d30a6a3fe394a4",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Reset All",
+        "func": "msg.payload = {\n    current_oee: 0,\n    pred_oee:  0,\n    rec_speed:  0,\n    confidence: 0,\n    change_needed: false\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 300,
+        "wires": [
+            [
+                "a90f4f36b893b62e",
+                "54e3863bed2bad54",
+                "895b6142411a4da5",
+                "6893c5c7b116a376",
+                "27466ebcea85d28e",
+                "c24526c95bd95dea",
+                "09ea5fff0d77f338"
+            ]
+        ]
+    },
+    {
+        "id": "16f07f09b323f3ea",
+        "type": "s7 in",
+        "z": "a45474e6038573a9",
+        "endpoint": "b33a72c8a3abf7b1",
+        "mode": "single",
+        "variable": "Prod_Status",
+        "diff": true,
+        "name": "",
+        "x": 390,
+        "y": 1320,
+        "wires": [
+            [
+                "b9902cb92854da6d"
+            ]
+        ]
+    },
+    {
+        "id": "7350880c6006b7cf",
+        "type": "inject",
+        "z": "a45474e6038573a9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1520,
+        "y": 640,
+        "wires": [
+            [
+                "81bd893181e30a9a"
+            ]
+        ]
+    },
+    {
+        "id": "0e75f3d278fcadcc",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Prod_Status_AI ON",
+        "func": "var Prod_Status_AI = flow.get(\"Prod_Status_AI\");\nmsg.payload = Prod_Status_AI;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1100,
+        "wires": [
+            [
+                "1c3190dd8f4c5731"
+            ]
+        ]
+    },
+    {
+        "id": "b9902cb92854da6d",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Set Prod_Status_AI",
+        "func": "flow.set(\"Prod_Status_AI\",msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1320,
+        "wires": [
+            [
+                "0e75f3d278fcadcc"
+            ]
+        ]
+    },
+    {
+        "id": "e471443caf88fa49",
+        "type": "inject",
+        "z": "a45474e6038573a9",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 610,
+        "y": 1180,
+        "wires": [
+            [
+                "0e75f3d278fcadcc",
+                "0dab85f444065b40"
+            ]
+        ]
+    },
+    {
+        "id": "09ea5fff0d77f338",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Reset OEE & Speed",
+        "func": "flow.set('Curr_OEE', 0);\nflow.set('Curr_Speed', 0);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c3190dd8f4c5731",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Curr_Part_Status",
+        "func": "var MSG = msg.payload;\nvar Curr_Part = flow.get(\"Produced_Parts\");\n\nif (Curr_Part >= 1) {\n    msg.payload = MSG;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1100,
+        "wires": [
+            [
+                "e8853968f20ae428",
+                "993089fc9c1e053d"
+            ]
+        ]
+    },
+    {
+        "id": "93afa907eb64c984",
+        "type": "comment",
+        "z": "a45474e6038573a9",
+        "name": "",
+        "info": "\n\n1. after 1 prod, prediction occurs\n2. ",
+        "x": 140,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "922280c1a7367dbb",
+        "type": "ui_text",
+        "z": "a45474e6038573a9",
+        "group": "7b41df74657aac38",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Quality",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 380,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "393d8bcd32c6f6bb",
+        "type": "ui_text",
+        "z": "a45474e6038573a9",
+        "group": "7b41df74657aac38",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Prod Delay",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 390,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "eb1e2b85cce901e9",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Convert to Sec",
+        "func": "const str = String(msg.payload);\n\nconst match = str.match(/(\\d+)h\\s+(\\d+)m\\s+(\\d+)s/i);\n\nif (!match) {\n    node.error(\"Invalid time format\", msg);\n    return null;\n}\n\nconst seconds =\n    Number(match[1]) * 3600 +\n    Number(match[2]) * 60 +\n    Number(match[3]);\n\nmsg.payload = Number(seconds);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 740,
+        "wires": [
+            [
+                "4389e331325ca4f3"
+            ]
+        ]
+    },
+    {
+        "id": "369c2a03382e62a8",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Convert to Sec",
+        "func": "const str = String(msg.payload);\n\nconst match = str.match(/(\\d+)h\\s+(\\d+)m\\s+(\\d+)s/i);\n\nif (!match) {\n    node.error(\"Invalid time format\", msg);\n    return null;\n}\n\nconst seconds =\n    Number(match[1]) * 3600 +\n    Number(match[2]) * 60 +\n    Number(match[3]);\n\nmsg.payload = Number(seconds);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 800,
+        "wires": [
+            [
+                "4389e331325ca4f3"
+            ]
+        ]
+    },
+    {
+        "id": "e8853968f20ae428",
+        "type": "debug",
+        "z": "a45474e6038573a9",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "0dab85f444065b40",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Get Produced_Parts",
+        "func": "msg.payload = flow.get(\"Produced_Parts\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d20e4926efca9e77",
+        "type": "link in",
+        "z": "a45474e6038573a9",
+        "name": "link in Prod_Parts",
+        "links": [
+            "e8f6f2012fedada4"
+        ],
+        "x": 835,
+        "y": 1240,
+        "wires": [
+            [
+                "0b1a29d1d2e75b5c"
+            ]
+        ]
+    },
+    {
+        "id": "0b1a29d1d2e75b5c",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Set Produced_Parts",
+        "func": "flow.set(\"Produced_Parts\", msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "993089fc9c1e053d",
+        "type": "delay",
+        "z": "a45474e6038573a9",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 920,
+        "wires": [
+            [
+                "4389e331325ca4f3"
+            ]
+        ]
+    },
+    {
+        "id": "7a8b36381c8a052d",
+        "type": "link in",
+        "z": "a45474e6038573a9",
+        "name": "link in Prod_Speed",
+        "links": [
+            "c081d68e6f65f89c"
+        ],
+        "x": 1615,
+        "y": 1020,
+        "wires": [
+            [
+                "7e00a0b62b3b696d"
+            ]
+        ]
+    },
+    {
+        "id": "7e00a0b62b3b696d",
+        "type": "function",
+        "z": "a45474e6038573a9",
+        "name": "Set Curr_Speed",
+        "func": "flow.set('Curr_Speed', msg.payload||0);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1760,
+        "y": 1020,
+        "wires": [
+            []
+        ]
     }
 ]
