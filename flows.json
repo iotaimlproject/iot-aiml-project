@@ -158,6 +158,10 @@
             {
                 "addr": "DB1,W68",
                 "name": "Curved_Curveyor_Speed"
+            },
+            {
+                "addr": "DB1,X68.0",
+                "name": "NR_RM_Picked"
             }
         ]
     },
@@ -19516,7 +19520,8 @@
                 "57d4002815ba4fb0",
                 "2ccdac22b3276a8c",
                 "2353d9d6c4ad29d6",
-                "856e5051804569c8"
+                "856e5051804569c8",
+                "70500e0a7f40a9bd"
             ]
         ]
     },
@@ -25848,6 +25853,17 @@
         ]
     },
     {
+        "id": "70500e0a7f40a9bd",
+        "type": "s7 out",
+        "z": "413e4a02b73e8664",
+        "endpoint": "2c9330c11f6a4001",
+        "variable": "NR_RM_Picked",
+        "name": "",
+        "x": 1780,
+        "y": 7220,
+        "wires": []
+    },
+    {
         "id": "7ae9310347369f66",
         "type": "inject",
         "z": "06948f76d5659ec2",
@@ -26291,7 +26307,6 @@
         "name": "link out Total Quality",
         "mode": "link",
         "links": [
-            "5b92fdff1089eced",
             "db6543843d34bac1",
             "f80f398bfde645c5"
         ],
@@ -26354,8 +26369,7 @@
         "mode": "link",
         "links": [
             "202a83245dd5a6e8",
-            "58122a144f955081",
-            "c7adabeb2c30ca48"
+            "58122a144f955081"
         ],
         "x": 1355,
         "y": 2200,
@@ -26369,8 +26383,7 @@
         "mode": "link",
         "links": [
             "8705aa9e8624c774",
-            "91c67a0d26cc52f2",
-            "f41966aa8186e926"
+            "91c67a0d26cc52f2"
         ],
         "x": 1425,
         "y": 4500,
@@ -26845,8 +26858,7 @@
             "95994387add173f4",
             "0bbb958345af4243",
             "4a414674456d3af4",
-            "e1335274992d7f6d",
-            "305c738d4ae9e2cc"
+            "e1335274992d7f6d"
         ],
         "x": 365,
         "y": 1860,
@@ -28287,7 +28299,6 @@
         "mode": "link",
         "links": [
             "6b1f893dd436f916",
-            "849ae6427ba159ce",
             "f97fe2718da39b9a"
         ],
         "x": 955,
@@ -31187,8 +31198,7 @@
             "62635f24bdee6a96",
             "91d15a91a2e92dc4",
             "3dd0351a3a352b69",
-            "a7cc252516d2dad4",
-            "b3b8b9ee22f34275"
+            "a7cc252516d2dad4"
         ],
         "x": 555,
         "y": 3880,
@@ -31761,7 +31771,6 @@
         "name": "link out Production_Delay",
         "mode": "link",
         "links": [
-            "4231a7971ce37faf",
             "a75f61e0c4b571aa",
             "09568c648f17a92d"
         ],
@@ -33405,9 +33414,7 @@
         "z": "06948f76d5659ec2",
         "name": "link out current OEE",
         "mode": "link",
-        "links": [
-            "de80898e4fddcdc5"
-        ],
+        "links": [],
         "x": 1045,
         "y": 7560,
         "wires": []
@@ -40615,8 +40622,7 @@
         "name": "link out Prod_Speed",
         "mode": "link",
         "links": [
-            "84fbf9cfb70f2208",
-            "9feaeeb66f326a7f"
+            "84fbf9cfb70f2208"
         ],
         "x": 955,
         "y": 780,
@@ -40699,9 +40705,7 @@
         "type": "link in",
         "z": "f77fc6864f564ae2",
         "name": "link in Predicted_Speed",
-        "links": [
-            "07540f6add989d57"
-        ],
+        "links": [],
         "x": 175,
         "y": 440,
         "wires": [
