@@ -32,6 +32,67 @@
         "env": []
     },
     {
+        "id": "a45474e6038573a9",
+        "type": "tab",
+        "label": "AI Optimize"
+    },
+    {
+        "id": "37349dc738ce15e3",
+        "type": "group",
+        "z": "a45474e6038573a9",
+        "name": "Convert \"0h 0m 0s\" to \"0\"",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "546d0d02da66ca67",
+            "b4bc39f2eb918dbc",
+            "adc12bdf3f803d05"
+        ],
+        "x": 54,
+        "y": 1219,
+        "w": 342,
+        "h": 82
+    },
+    {
+        "id": "98fa5089468dd3d9",
+        "type": "junction",
+        "z": "a45474e6038573a9",
+        "x": 1100,
+        "y": 1000,
+        "wires": [
+            [
+                "a3e340dcb966c626"
+            ]
+        ]
+    },
+    {
+        "id": "0ae694cdcc462130",
+        "type": "junction",
+        "z": "a45474e6038573a9",
+        "x": 880,
+        "y": 620,
+        "wires": [
+            [
+                "4389e331325ca4f3"
+            ]
+        ]
+    },
+    {
+        "id": "70f913024ca689c1",
+        "type": "junction",
+        "z": "a45474e6038573a9",
+        "x": 1800,
+        "y": 400,
+        "wires": [
+            [
+                "a90f4f36b893b62e",
+                "54e3863bed2bad54",
+                "895b6142411a4da5"
+            ]
+        ]
+    },
+    {
         "id": "2c9330c11f6a4001",
         "type": "s7 endpoint",
         "transport": "iso-on-tcp",
@@ -2844,6 +2905,196 @@
         "name": "spacer",
         "group": "5e022236e47e8d05",
         "order": 20,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2bc3efa528d97e4b",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ad58482b43d1ca5c",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b6e183cab31ce3c0",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "dbd117b4ce894bc5",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 10,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "3a7bdd6caa91cac2",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0bd78c127ba1c8e8",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "27d81adb97e32aef",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fd84499715283b95",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "2cc0ec49cd807202",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "483bb732b2bf6f48",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "40a243d86ec35d11",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c7d8f14acdf8672a",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0bd345e5021c0150",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2d6c3b972c2e16cb",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 17,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "08926f4349e32cd1",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 18,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "16095daf02e7c17a",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 19,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f6c6d3e440925b11",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 20,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "caf0de298557172d",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "bb6f16cb045e2b0a",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 22,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "33852256933322e8",
+        "type": "ui_spacer",
+        "z": "a45474e6038573a9",
+        "name": "spacer",
+        "group": "3380c99b9e3c584c",
+        "order": 23,
         "width": 1,
         "height": 1
     },
@@ -10287,7 +10538,7 @@
         "type": "function",
         "z": "413e4a02b73e8664",
         "name": "Insert current_job_status",
-        "func": "var Current_Job_SLNo= flow.get(\"Live_Current_Job_SLNo\") || 1 ;\nvar Batch_PartNo = flow.get(\"Live_Batch_PartNo_Final\");\nvar Part_SLNo = flow.get(\"Live_Part_SlNo\");\nvar Component= flow.get(\"Component_Supervisor\");\nvar Production_Started = flow.get(\"OP_Job_Start_Date_Time\");\nvar Production_Completed = flow.get(\"Job_Finish_Date_Time\");\n//var Current_Duration = flow.get(\"Live_Production_Duration\");\n//var Planned_Duration = flow.get(\"Live_Planned_Production_Duration\");\nvar Avaliability = flow.get(\"Live_Avaliabilty_OP\");\nvar Performance = flow.get(\"Live_Performance_OP\");\nvar Quality = flow.get(\"Live_Quality_OP\");\nvar OEE = flow.get(\"OP_OEE\");\nvar Planned_Sales = flow.get(\"Planned_Sales\"); \nvar Income = flow.get(\"OP_Income\");\nvar Loss = flow.get(\"Loss\");\nvar Customer_ID = flow.get(\"Customer_ID_Supervisor\");\nvar Project = flow.get(\"Project_Supervisor\");\nvar Supervisor_ID = flow.get(\"Operator_ID_Supervisor\");\n\n\n\n//msg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Job_Work_SlNo`,`Batch_PartNo`,`Part_No`,`Live_Operation_Type`,`Live_RPM_Final`,`Live_Feed_Rate_Final`,`Live_Depth_of_cut_Final`,`Live_Tool_Angle_Final`,`Live_Start_Lenght_Final`,`Job_Start_Date`,`Job_Start_Time`,`Job_Finish_Date`,`Job_Finish_Time`,`Job_Work_Duration`,`Operating_parameters_status`,`Job_Handling_Time`)VALUES( ' + Job_Work_SlNo + ',\"' + Batch_PartNo + '\",\"' + Part_No + '\", \"' + Live_Operation_Type + '\", '+ Live_RPM_Final + ',' + Live_Feed_Rate_Final + ',' + Live_Depth_of_cut_Final + ',' + Live_Tool_Angle_Final + ',' + Live_Start_Lenght_Final + ',\"' + Job_Start_Date + '\",' + Job_Start_Time + ',\"' + Job_Finish_Date + '\" ,' + Job_Finish_Time + ',' + Job_Work_Duration + ',\"' + Operating_parameters_status + '\" ,' + Job_Handling_Time + ');';\n\nmsg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Current_Job_SLNo`,`Batch_PartNo`,`Part_SLNo`,`Component`,`Production_Started`,`Production_Completed`,`Avaliability`,`Performance`,`Quality`,`OEE`,`Planned_Sales`,`Income`,`Loss`,`Customer_ID`,`Project`,`Supervisor_ID`)VALUES( ' + Current_Job_SLNo + ',\"' + Batch_PartNo + '\",' + Part_SLNo + ',\"' + Production_Started + '\",\"' + Production_Completed + '\", \"' + Component + '\",\"' + Avaliability + '\",\"' + Performance + '\",\"' + Quality + '\",\"' + OEE + '\",\"' + Planned_Sales + '\",\"' + Income + '\",\"' + Loss + '\",\"' + Customer_ID + '\",\"' + Project + '\",\"' + Supervisor_ID + '\");';\n  \n\nreturn msg; \n\n//`Current_Duration`, `Planned_Duration`, \n//\"' + Current_Duration + '\",\"' + Planned_Duration + '\",",
+        "func": "var Current_Job_SLNo= flow.get(\"Live_Current_Job_SLNo\") || 1 ;\nvar Batch_PartNo = flow.get(\"Live_Batch_PartNo_Final\");\nvar Part_SLNo = flow.get(\"Live_Part_SlNo\");\nvar Component= flow.get(\"Component_Supervisor\");\nvar Production_Started = flow.get(\"OP_Job_Start_Date_Time\");\nvar Production_Completed = flow.get(\"Job_Finish_Date_Time\");\n//var Current_Duration = flow.get(\"Live_Production_Duration\");\n//var Planned_Duration = flow.get(\"Live_Planned_Production_Duration\");\nvar Avaliability = flow.get(\"Live_Avaliabilty_OP\");\nvar Performance = flow.get(\"Live_Performance_OP\");\nvar Quality = flow.get(\"Live_Quality_OP\");\nvar OEE = flow.get(\"OP_OEE\");\nvar Planned_Sales = flow.get(\"Planned_Sales\"); \nvar Income = flow.get(\"OP_Income\");\nvar Loss = flow.get(\"Loss\");\nvar Customer_ID = flow.get(\"Customer_ID_Supervisor\");\nvar Project = flow.get(\"Project_Supervisor\");\nvar Supervisor_ID = flow.get(\"Operator_ID_Supervisor\");\n\n//msg.topic = 'INSERT INTO `lathe`.`current_job_status`(`Job_Work_SlNo`,`Batch_PartNo`,`Part_No`,`Live_Operation_Type`,`Live_RPM_Final`,`Live_Feed_Rate_Final`,`Live_Depth_of_cut_Final`,`Live_Tool_Angle_Final`,`Live_Start_Lenght_Final`,`Job_Start_Date`,`Job_Start_Time`,`Job_Finish_Date`,`Job_Finish_Time`,`Job_Work_Duration`,`Operating_parameters_status`,`Job_Handling_Time`)VALUES( ' + Job_Work_SlNo + ',\"' + Batch_PartNo + '\",\"' + Part_No + '\", \"' + Live_Operation_Type + '\", '+ Live_RPM_Final + ',' + Live_Feed_Rate_Final + ',' + Live_Depth_of_cut_Final + ',' + Live_Tool_Angle_Final + ',' + Live_Start_Lenght_Final + ',\"' + Job_Start_Date + '\",' + Job_Start_Time + ',\"' + Job_Finish_Date + '\" ,' + Job_Finish_Time + ',' + Job_Work_Duration + ',\"' + Operating_parameters_status + '\" ,' + Job_Handling_Time + ');';\n\nmsg.topic = `\nINSERT INTO lathe.current_job_status (\n    Current_Job_SLNo,\n    Batch_PartNo,\n    Part_SLNo,\n    Component,\n    Production_Started,\n    Production_Completed,\n    Avaliability,\n    Performance,\n    Quality,\n    OEE,\n    Planned_Sales,\n    Income,\n    Loss,\n    Customer_ID,\n    Project,\n    Supervisor_ID\n) VALUES (\n    ${Current_Job_SLNo},\n    \"${Batch_PartNo}\",\n    ${Part_SLNo},\n    \"${Component}\",\n    \"${Production_Started}\",\n    \"${Production_Completed}\",\n    \"${Avaliability}\",\n    \"${Performance}\",\n    \"${Quality}\",\n    \"${OEE}\",\n    \"${Planned_Sales}\",\n    \"${Income}\",\n    \"${Loss}\",\n    \"${Customer_ID}\",\n    \"${Project}\",\n    \"${Supervisor_ID}\"\n);\n`;\n\nreturn msg; \n\n//`Current_Duration`, `Planned_Duration`, \n//\"' + Current_Duration + '\",\"' + Planned_Duration + '\",",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15367,22 +15618,6 @@
                 "314558c90878af41"
             ]
         ]
-    },
-    {
-        "id": "9da4bcd232794c3f",
-        "type": "debug",
-        "z": "413e4a02b73e8664",
-        "name": "debug 22",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 7120,
-        "y": 4600,
-        "wires": []
     },
     {
         "id": "58378bd9442cefeb",
@@ -22388,9 +22623,7 @@
         "x": 7070,
         "y": 4540,
         "wires": [
-            [
-                "9da4bcd232794c3f"
-            ]
+            []
         ]
     },
     {
@@ -23225,8 +23458,7 @@
         "y": 4540,
         "wires": [
             [
-                "5a7a3ddd6769018d",
-                "9f588a8d6c692780"
+                "5a7a3ddd6769018d"
             ]
         ]
     },
@@ -25591,23 +25823,6 @@
         "wires": []
     },
     {
-        "id": "9f588a8d6c692780",
-        "type": "debug",
-        "z": "413e4a02b73e8664",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 6910,
-        "y": 4660,
-        "wires": []
-    },
-    {
         "id": "7ae9310347369f66",
         "type": "inject",
         "z": "06948f76d5659ec2",
@@ -26130,7 +26345,6 @@
         "links": [
             "8705aa9e8624c774",
             "91c67a0d26cc52f2",
-            "f41966aa8186e926",
             "42191f34f0564d10"
         ],
         "x": 1425,
@@ -28047,7 +28261,6 @@
         "mode": "link",
         "links": [
             "6b1f893dd436f916",
-            "849ae6427ba159ce",
             "f97fe2718da39b9a",
             "4d0990c1e87d4c38"
         ],
@@ -29429,8 +29642,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 3480,
+        "x": 900,
+        "y": 3500,
         "wires": []
     },
     {
@@ -29540,8 +29753,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 6000,
+        "x": 820,
+        "y": 6020,
         "wires": [
             [
                 "77899cff1acea60c",
@@ -29554,14 +29767,14 @@
         "type": "function",
         "z": "06948f76d5659ec2",
         "name": "Capital_Loss/Batch",
-        "func": "var Bad_Parts = msg.payload ; \nvar Cost_Per_Part = flow.get(\"Cost_Per_Part\") ; \nvar Capital_Loss = Bad_Parts * Cost_Per_Part;\nmsg.payload =Capital_Loss,   \nflow.set(\"Capital_Loss\",Capital_Loss);\nreturn msg;",
+        "func": "var Bad_Parts = msg.payload ; \nvar Cost_Per_Part = flow.get(\"Cost_Per_Part\") ; \nvar Operating_Cost_Per_Min = flow.get(\"Operating_Cost_Per_Min\") || 0;\nvar Capital_Loss = (Bad_Parts * Cost_Per_Part) + Operating_Cost_Per_Min;\n\nif (!isFinite(Capital_Loss) || isNaN(Capital_Loss)) {\n    Capital_Loss = 0;\n}\n\nmsg.payload =Capital_Loss,   \nflow.set(\"Capital_Loss\",Capital_Loss);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
+        "x": 830,
         "y": 6120,
         "wires": [
             [
@@ -29612,7 +29825,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
+        "x": 830,
         "y": 6320,
         "wires": [
             [
@@ -29633,7 +29846,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
+        "x": 840,
         "y": 6180,
         "wires": [
             [
@@ -29651,8 +29864,8 @@
         "links": [
             "3800be7172c4bdf1"
         ],
-        "x": 1015,
-        "y": 6240,
+        "x": 1085,
+        "y": 6180,
         "wires": []
     },
     {
@@ -29735,8 +29948,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 6340,
+        "x": 1230,
+        "y": 6500,
         "wires": []
     },
     {
@@ -29752,8 +29965,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 5960,
+        "x": 1190,
+        "y": 5900,
         "wires": []
     },
     {
@@ -30429,8 +30642,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 6000,
+        "x": 1290,
+        "y": 5980,
         "wires": [
             [
                 "7baa2cbd281d10a0"
@@ -30469,8 +30682,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 6300,
+        "x": 1310,
+        "y": 6380,
         "wires": [
             [
                 "df03b9479d7ccad7"
@@ -30769,7 +30982,6 @@
             "91d15a91a2e92dc4",
             "3dd0351a3a352b69",
             "a7cc252516d2dad4",
-            "b3b8b9ee22f34275",
             "d20e4926efca9e77"
         ],
         "x": 575,
@@ -30785,7 +30997,7 @@
         "links": [
             "d926d792e47325b0"
         ],
-        "x": 805,
+        "x": 995,
         "y": 3400,
         "wires": []
     },
@@ -30798,8 +31010,8 @@
         "links": [
             "8da502cdc7f3eb1e"
         ],
-        "x": 1035,
-        "y": 6080,
+        "x": 1085,
+        "y": 6140,
         "wires": []
     },
     {
@@ -31295,8 +31507,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 5920,
+        "x": 870,
+        "y": 5900,
         "wires": [
             [
                 "60fb830a98fd9ee6",
@@ -31312,8 +31524,8 @@
         "links": [
             "d17cb2d0594d37d6"
         ],
-        "x": 565,
-        "y": 5920,
+        "x": 705,
+        "y": 5900,
         "wires": [
             [
                 "2481fd93750d0965"
@@ -31502,8 +31714,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 6020,
+        "x": 580,
+        "y": 6060,
         "wires": [
             [
                 "eeb85a89b9811c4a",
@@ -31524,8 +31736,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 6140,
+        "x": 590,
+        "y": 6300,
         "wires": [
             [
                 "db526b817348664e",
@@ -31542,8 +31754,8 @@
         "links": [
             "2fd42422f32c78c8"
         ],
-        "x": 335,
-        "y": 6020,
+        "x": 345,
+        "y": 6160,
         "wires": [
             [
                 "da21df57c6706dfa",
@@ -31560,8 +31772,8 @@
             "6a0dcce08c35363b",
             "14c59a01396814f9"
         ],
-        "x": 235,
-        "y": 6140,
+        "x": 545,
+        "y": 6160,
         "wires": [
             []
         ]
@@ -31678,7 +31890,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
+        "x": 860,
         "y": 6220,
         "wires": [
             [
@@ -31770,8 +31982,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
-        "y": 6320,
+        "x": 770,
+        "y": 6380,
         "wires": []
     },
     {
@@ -31851,8 +32063,8 @@
         "variable": "Bad_Parts_Value",
         "diff": true,
         "name": "",
-        "x": 140,
-        "y": 6060,
+        "x": 300,
+        "y": 6040,
         "wires": [
             [
                 "eeb85a89b9811c4a",
@@ -31871,8 +32083,8 @@
         "variable": "Good_Parts_Value",
         "diff": true,
         "name": "",
-        "x": 330,
-        "y": 6240,
+        "x": 310,
+        "y": 6260,
         "wires": [
             [
                 "db526b817348664e",
@@ -32195,7 +32407,7 @@
         "width": 5,
         "height": 1,
         "name": "",
-        "label": "Planned Sales  :",
+        "label": "Planned Profits  :",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -32203,7 +32415,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 860,
+        "x": 1020,
         "y": 3440,
         "wires": []
     },
@@ -32245,8 +32457,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 800,
-        "y": 6040,
+        "x": 1080,
+        "y": 6020,
         "wires": []
     },
     {
@@ -32266,8 +32478,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1040,
-        "y": 6120,
+        "x": 1280,
+        "y": 6080,
         "wires": []
     },
     {
@@ -32279,7 +32491,7 @@
         "width": 5,
         "height": 1,
         "name": "",
-        "label": "Current Sales  :",
+        "label": "Actual Profits  :",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -32287,8 +32499,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1040,
-        "y": 6180,
+        "x": 1300,
+        "y": 6240,
         "wires": []
     },
     {
@@ -32308,8 +32520,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 790,
-        "y": 6260,
+        "x": 1090,
+        "y": 6280,
         "wires": []
     },
     {
@@ -32402,7 +32614,7 @@
         "z": "06948f76d5659ec2",
         "group": "bd503191652db753",
         "order": 20,
-        "width": 5,
+        "width": "5",
         "height": 1,
         "name": "",
         "label": "Loss(T) :",
@@ -32423,10 +32635,10 @@
         "z": "06948f76d5659ec2",
         "group": "bd503191652db753",
         "order": 19,
-        "width": 5,
+        "width": "5",
         "height": 1,
         "name": "",
-        "label": "Sales(T) :",
+        "label": "Profit(T) :",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -32650,20 +32862,6 @@
         ]
     },
     {
-        "id": "d6907887c486b410",
-        "type": "OpcUa-Item",
-        "z": "06948f76d5659ec2",
-        "item": "ns=3;i=1003",
-        "datatype": "Double",
-        "value": "",
-        "name": "(Prosys)- Parts",
-        "x": 200,
-        "y": 6360,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "ad2635973fac9c2a",
         "type": "OpcUa-Client",
         "z": "06948f76d5659ec2",
@@ -32687,7 +32885,7 @@
         "setstatusandtime": false,
         "keepsessionalive": false,
         "name": "",
-        "x": 340,
+        "x": 300,
         "y": 6200,
         "wires": [
             [
@@ -32723,7 +32921,7 @@
         "setstatusandtime": false,
         "keepsessionalive": false,
         "name": "",
-        "x": 360,
+        "x": 300,
         "y": 6100,
         "wires": [
             [
@@ -33442,10 +33640,28 @@
         "z": "06948f76d5659ec2",
         "name": "Link OUT Operating_Cost_Per_Min",
         "mode": "link",
-        "links": [],
+        "links": [
+            "1f3751b94a41bfd4"
+        ],
         "x": 975,
         "y": 3540,
         "wires": []
+    },
+    {
+        "id": "1f3751b94a41bfd4",
+        "type": "link in",
+        "z": "06948f76d5659ec2",
+        "name": "Link OUT Operating_Cost_Per_Min",
+        "links": [
+            "ba395fd412d456af"
+        ],
+        "x": 545,
+        "y": 6120,
+        "wires": [
+            [
+                "bde9b246d5686f8f"
+            ]
+        ]
     },
     {
         "id": "3b63cd8c989d603f",
@@ -40430,67 +40646,6 @@
         "wires": []
     },
     {
-        "type": "tab",
-        "label": "AI Optimize",
-        "id": "a45474e6038573a9"
-    },
-    {
-        "id": "37349dc738ce15e3",
-        "type": "group",
-        "z": "a45474e6038573a9",
-        "name": "Convert \"0h 0m 0s\" to \"0\"",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "546d0d02da66ca67",
-            "b4bc39f2eb918dbc",
-            "adc12bdf3f803d05"
-        ],
-        "x": 54,
-        "y": 1219,
-        "w": 342,
-        "h": 82
-    },
-    {
-        "id": "98fa5089468dd3d9",
-        "type": "junction",
-        "z": "a45474e6038573a9",
-        "x": 1100,
-        "y": 1000,
-        "wires": [
-            [
-                "a3e340dcb966c626"
-            ]
-        ]
-    },
-    {
-        "id": "0ae694cdcc462130",
-        "type": "junction",
-        "z": "a45474e6038573a9",
-        "x": 880,
-        "y": 620,
-        "wires": [
-            [
-                "4389e331325ca4f3"
-            ]
-        ]
-    },
-    {
-        "id": "70f913024ca689c1",
-        "type": "junction",
-        "z": "a45474e6038573a9",
-        "x": 1800,
-        "y": 400,
-        "wires": [
-            [
-                "a90f4f36b893b62e",
-                "54e3863bed2bad54",
-                "895b6142411a4da5"
-            ]
-        ]
-    },
-    {
         "id": "54d5393ce5b6856e",
         "type": "link in",
         "z": "a45474e6038573a9",
@@ -41444,7 +41599,8 @@
             "b7c3248ed07a1fb3"
         ],
         "x": 2205,
-        "y": 840
+        "y": 840,
+        "wires": []
     },
     {
         "id": "dedef22119968c6d",
@@ -41891,7 +42047,8 @@
         "mode": "link",
         "links": [],
         "x": 355,
-        "y": 1260
+        "y": 1260,
+        "wires": []
     },
     {
         "id": "329a4c9399e3f39b",
@@ -41926,7 +42083,8 @@
             "27dd231f5551a964"
         ],
         "x": 1855,
-        "y": 240
+        "y": 240,
+        "wires": []
     },
     {
         "id": "05a6019ed01f04be",
@@ -42023,195 +42181,5 @@
                 "c24526c95bd95dea"
             ]
         ]
-    },
-    {
-        "id": "2bc3efa528d97e4b",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 6,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "ad58482b43d1ca5c",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 7,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "b6e183cab31ce3c0",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "dbd117b4ce894bc5",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 10,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "3a7bdd6caa91cac2",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 11,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "0bd78c127ba1c8e8",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "27d81adb97e32aef",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "fd84499715283b95",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "2cc0ec49cd807202",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 12,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "483bb732b2bf6f48",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "40a243d86ec35d11",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 14,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "c7d8f14acdf8672a",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 15,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0bd345e5021c0150",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2d6c3b972c2e16cb",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 17,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "08926f4349e32cd1",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 18,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "16095daf02e7c17a",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 19,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f6c6d3e440925b11",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 20,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "caf0de298557172d",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 21,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "bb6f16cb045e2b0a",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 22,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "33852256933322e8",
-        "type": "ui_spacer",
-        "z": "a45474e6038573a9",
-        "name": "spacer",
-        "group": "3380c99b9e3c584c",
-        "order": 23,
-        "width": 1,
-        "height": 1
     }
 ]
