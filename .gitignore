@@ -2,7 +2,9 @@
 node_modules
 __pycache__
 .config*
+flows.json
 flows_cred.json
 node-registry.json
 .jupyter*
 .ipynb_checkpoints
+.venv
