@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iot-aiml"
+version = "1.0.0"
+description = "IoT + ML OEE prediction and speed optimization"
+
+[tool.setuptools.packages.find]
+include = ["ml_model*", "api*"]

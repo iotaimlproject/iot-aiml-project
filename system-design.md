@@ -1,336 +1,467 @@
-# Physical AI Closed Loop — System Design
+# IoT-AIML Project — System Design
 
-## Architecture
+## Overview
+
+OEE (Overall Equipment Effectiveness) forecasting and conveyor speed optimization using an ensemble of Keras ANNs, with an experimental TimeFM2.5 transformer endpoint. Real-time PLC data flows through Node-RED → FastAPI → trained models → dashboard display + PLC control signal.
+
+---
+
+## Project Structure
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  Node-RED v4.1.7 (dashboard v3.6.6)                     │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │ AI Optimize Flow (per-part trigger)              │   │
-│  │                                                  │   │
-│  │  Part produced → gather metrics →                │   │
-│  │  POST /predict-oee →                             │   │
-│  │    ├─ Update OEE chart (current vs predicted)    │   │
-│  │    ├─ Update Confidence gauge                     │   │
-│  │    ├─ Update Speed indicator                     │   │
-│  │    └─ If change_needed:                          │   │
-│  │         AI Switch ON  → write speed to PLC (S7)  │   │
-│  │         AI Switch OFF → flash "suggest speed X"  │   │
-│  └─────────────────────────────────────────────────┘   │
-│  ┌─────────────────────────────────────────────────┐   │
-│  │ Supervisor DB / Performance DB (sensor data)     │   │
-│  └─────────────────────────────────────────────────┘   │
-└──────────────────────┬──────────────────────────────────┘
-                       │ HTTP POST (live metrics)
-                       ▼
-┌─────────────────────────────────────────────────────────┐
-│  FastAPI (api/)                                         │
-│                                                         │
-│  POST /predict-oee                                       │
-│    ├─ Compute pos_ratio from part_slno / total_batch_size│
-│    ├─ Build feature vector (12 features)                 │
-│    ├─ Maintain rolling buffer (last 5 readings)          │
-│    │    └─ Compute OEE_lag1, OEE_roll5_mean, OEE_trend3 │
-│    ├─ M1: 5 ANN ensemble → pred_oee_10m + confidence %  │
-│    ├─ M2: ANN classifier  → recommended_speed + conf %  │
-│    ├─ Log to predictions_log (MySQL)                     │
-│    └─ Return combined response                           │
-│                                                         │
-│  Files: main.py, config.py, database.py                  │
-│         schemas/oee.py                                   │
-│         services/predictor.py (M1+M2 combined)           │
-│         routers/predict.py (single endpoint)              │
-└──────────────────────┬──────────────────────────────────┘
-                       │ load at startup
-                       ▼
-┌─────────────────────────────────────────────────────────┐
-│  ml_model/                                               │
-│                                                         │
-│  models/                                                 │
-│    ├─ m1_oee_seed0.keras  ─┐                             │
-│    ├─ m1_oee_seed1.keras   ├─ M1 ensemble (5 models)    │
-│    ├─ m1_oee_seed2.keras   │                             │
-│    ├─ m1_oee_seed3.keras   │                             │
-│    ├─ m1_oee_seed4.keras  ─┘                             │
-│    ├─ m2_speed_optimizer.keras  ← M2 classifier          │
-│    └─ scaler.pkl              ← StandardScaler           │
-│                                                         │
-│  data/                                                   │
-│    ├─ syn_oee_10k.csv   ← training data (10k rows)      │
-│    └─ production_clean.csv  ← real seed (55 rows)       │
-│                                                         │
-│  notebooks/                                              │
-│    ├─ 01_process_production_data.ipynb  ← done          │
-│    ├─ 02_generate_synthetic_data.ipynb  ← simulator     │
-│    ├─ 03_train_m1.ipynb                  ← M1 training  │
-│    └─ 04_train_m2.ipynb                  ← M2 training  │
-└──────────────────────────────────────────────────────────┘
+E:\Projects\iot-aiml-project\
+├── api/                              # FastAPI application (sibling to ml_model/)
+│   ├── __init__.py
+│   ├── main.py                       # FastAPI app entry point
+│   ├── config.py                     # Settings: model_dir, scaler paths, speed map
+│   ├── database.py                   # MySQL connection
+│   ├── requirements.txt              # API deps (fastapi, uvicorn, tensorflow, joblib, etc.)
+│   │
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── oee.py                    # Pydantic models for request/response
+│   │
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   └── predict.py                # /predict-oee + /predict-oee-v2 routes
+│   │
+│   └── services/
+│       ├── __init__.py
+│       ├── predictor.py              # M1 ensemble + M2 classifier inference
+│       └── timefm_predictor.py       # TimeFM2.5 inference (experimental)
+│
+├── ml_model/                         # Training pipeline (Python modules, not notebooks)
+│   ├── __init__.py
+│   ├── requirements-ml.txt           # keras, tensorflow, timesfm, sklearn, etc.
+│   │
+│   ├── data/
+│   │   ├── clean_production.py       # Parse raw CSV → production_clean.csv
+│   │   └── generate_synthetic.py     # 5-state Markov + causal model → 10k syn rows
+│   │
+│   ├── features/
+│   │   └── pipeline.py               # 12-feature contract definition
+│   │
+│   ├── train/
+│   │   ├── __init__.py
+│   │   ├── config.py                 # Paths, hyperparams, seeds, speed map
+│   │   ├── models.py                 # build_m1(), build_m2() factories
+│   │   ├── train_m1.py               # 5-seed ensemble training loop
+│   │   ├── train_m2.py               # 10-class classifier with class weights
+│   │   ├── evaluate.py               # Per-state metrics, confusion matrix, ablation
+│   │   ├── export.py                 # Save .keras, .pkl, model_card.json
+│   │   └── main.py                   # CLI: python -m ml_model.train.main --m1 --m2
+│   │
+│   ├── timefm/
+│   │   ├── __init__.py
+│   │   ├── config.py                 # Window, horizon, d_model
+│   │   ├── encoder.py                # TimeFM2.5 frozen backbone → embeddings
+│   │   ├── head_m1.py                # Regression head (embeddings → OEE)
+│   │   ├── head_m2.py                # Classification head (embeddings → speed 1-10)
+│   │   ├── train.py                  # Train both heads on synthetic embeddings
+│   │   ├── predict.py                # Full pipeline: encode → M1 head → M2 head
+│   │   └── main.py                   # CLI: python -m ml_model.timefm.main
+│   │
+│   ├── models/                       # Trained artifacts (loaded by api/ at runtime)
+│   │   ├── scaler_m1.pkl
+│   │   ├── scaler_m2.pkl
+│   │   ├── m1_oee_seed{0-4}.keras    # 5 M1 ensemble models
+│   │   ├── m2_speed_optimizer.keras  # 10-class classifier
+│   │   ├── timefm_m1_head.keras      # Trained TimeFM OEE head
+│   │   ├── timefm_m2_head.keras      # Trained TimeFM speed head
+│   │   └── model_card.json           # Train metadata per run
+│   │
+│   ├── data/                         # Generated datasets
+│   │   ├── production_final.csv      # Raw 55-row seed (from factory)
+│   │   ├── production_clean.csv      # Parsed + engineered (step 1 output)
+│   │   └── syn_oee_10k.csv           # 10,000 synthetic rows (step 2 output)
+│   │
+│   └── notebooks/                    # Legacy notebooks (reference only, not for training)
+│       ├── 01_process_production_data.ipynb
+│       ├── 02_generate_synthetic_data.ipynb
+│       ├── 03_train_m1.ipynb
+│       └── 04_train_m2.ipynb
+│
+├── flows.json                        # Node-RED flows
+├── system-design.md                  # This file
+└── README.md
 ```
 
-## Data Flow (per part produced)
+---
 
-### 1. Node-RED Sends
+## Feature Engineering (The Contract)
 
+### Input Features (12 dimensions, no state input)
+
+The model receives **12 numerical features** per inference request. The API has NO state field — the model infers operating conditions from the raw metrics alone.
+
+| # | Feature | Type | Range | Source |
+|---|---------|------|-------|--------|
+| 1 | Availability | int | 0–100 | PLC / Node-RED |
+| 2 | Performance | int | 0–100 | PLC / Node-RED |
+| 3 | Quality | int | 0–100 | PLC / Node-RED |
+| 4 | Current_OEE | int | 0–100 | Computed: A×P×Q / 10000 |
+| 5 | Current_Speed | int | 1–10 | PLC (conveyor speed level) |
+| 6 | DownTime_sec | int | 0+ | PLC accumulated downtime |
+| 7 | OEE_Delta | int | -100–100 | Current_OEE - Previous_OEE |
+| 8 | Part_SLNo | int | 1+ | Part serial within batch |
+| 9 | pos_ratio | float | 0.0–1.0 | Part_SLNo / total_batch_size |
+| 10 | OEE_lag1 | int | 0–100 | Last reading's OEE (from RollingBuffer) |
+| 11 | OEE_roll5_mean | float | 0–100 | Rolling mean of last 5 OEEs |
+| 12 | OEE_trend3 | float | -50–50 | OEE change over last 3 readings |
+
+### RollingBuffer (api/services/predictor.py)
+
+Maintains last **20 readings** in memory (covers ~40s at 2s polling). Provides:
+
+| Feature | Computation |
+|---------|-------------|
+| OEE_lag1 | buffer[-2].oee (second-to-last) |
+| OEE_roll5_mean | mean of last 5 buffer entries |
+| OEE_trend3 | buffer[-1].oee - buffer[-3].oee |
+| OEE_min5 | min of last 5 entries |
+| OEE_max5 | max of last 5 entries |
+| OEE_slope5 | linear regression slope over last 5 entries |
+
+Buffer **resets** when `batch_part_no` changes (new batch detected).
+
+---
+
+## M1: OEE Forecaster (Regression)
+
+**Purpose**: Predict OEE value ~10 minutes ahead (0–100).
+
+**Architecture**: 5-model ensemble, each a Keras Sequential ANN:
+```
+Input(12) → Dense(128, ReLU) → Dropout(0.2) → Dense(64, ReLU) → Dropout(0.1) → Dense(32, ReLU) → Dense(1)
+```
+
+**Training details**:
+- Loss: MAE (mean absolute error)
+- Optimizer: Adam, lr=0.001
+- Batch size: 32
+- Early stopping: patience=15, monitor=val_loss
+- Ensemble seeds: 0, 1, 2, 3, 4 (different random init)
+- Split: 80/20 temporal (time-ordered, not random)
+- Scaler: StandardScaler (per-feature, fitted on train set)
+
+**Inference**:
+```
+pred_oee = mean(model_0(x), model_1(x), ..., model_4(x))
+confidence = 100 * (1 - std(preds) / 60), clipped to [0, 100]
+```
+
+**Target**: `Predicted_OEE` — actual OEE value 12 steps ahead in the dataset (~10 min at ~50s/row cadence). Computed by rolling forward: for each row, look up the OEE of the row ~12 positions later (within the same batch). This ensures the target reflects real temporal trajectory, not stationary state averages.
+
+---
+
+## M2: Speed Optimizer (10-Class Classification)
+
+**Purpose**: Recommend conveyor speed level (1–10) that maximizes future OEE.
+
+**Architecture**: Single Keras Sequential ANN:
+```
+Input(12) → Dense(64, ReLU) → Dropout(0.2) → Dense(32, ReLU) → Dropout(0.1) → Dense(10, softmax)
+```
+
+**Training details**:
+- Loss: sparse categorical crossentropy
+- Class weights: `n_samples / (n_classes × bin_count)` to handle imbalance
+- Optimizer: Adam, lr=0.001
+- Batch size: 32
+- Early stopping: patience=15, monitor=val_accuracy
+- Scaler: StandardScaler (separate from M1 scaler)
+
+**Inference**:
+```
+probs = model(x)                         # 10 probabilities
+speed_idx = argmax(probs)                # 0-9
+recommended_speed = speed_idx + 1         # 1-10
+speed_confidence = probs[speed_idx] * 100
+```
+
+### Graduated Post-Processing
+
+After raw M2 output, a control policy smooths speed changes:
+
+```python
+delta = recommended_speed - current_speed
+max_delta = 2 if (oee_trend > 0 and confidence > 85) else 1
+delta = np.clip(delta, -max_delta, max_delta)
+final_speed = int(current_speed + delta)
+```
+
+This ensures:
+- **Normal operation**: speed changes by max ±1 per inference
+- **Improving trend + high confidence**: allows ±2 (faster recovery)
+- **Downtrend/emergency**: drops speed by 1 per step (gradual deceleration)
+- **No abrupt jumps**: prevents mechanical stress on conveyor
+
+**Target**: `Recommended_Speed` — precomputed by brute-force simulation: for each training row, try all 10 speed levels (1–10), compute resulting OEE via the causal model, pick the speed that gives the highest OEE.
+
+---
+
+## Data Generation (`generate_synthetic.py`)
+
+### 5-State Markov Machine
+
+| State | Description | Self-loop | Avg OEE |
+|-------|-------------|-----------|---------|
+| NORMAL | Baseline stable operation | 0.94 | ~60 |
+| HIGH_LOAD | Performance up, quality down | 0.80 | ~55 |
+| MINOR_STOPPAGE | Moderate degradation | 0.65 | ~35 |
+| MAJOR_STOPPAGE | Heavy degradation | 0.82 | ~20 |
+| RECOVERY | Gradual improvement | 0.15 | ~50 |
+
+### Causal Model (Speed → OEE)
+
+Speed causally drives Performance, Quality, and Availability with calibrated tradeoffs:
+
+```
+Performance = base + speed * 5 + state_mod - pos_ratio * 8 + noise
+Quality = base - penalty * (speed - 1) + state_mod + noise
+Availability = base + state_mod - pos_ratio * (speed / 2) + noise
+OEE = (Availability * Performance * Quality) / 10000
+```
+
+The penalty term ensures that **speed 10 is not always optimal** — there's a real tradeoff:
+
+| Speed | Perf boost | Quality penalty | Avail penalty | Net OEE effect |
+|-------|-----------|----------------|---------------|----------------|
+| 1–3 | Low | None | None | Safe, low output |
+| 4–6 | Medium | Mild | Mild | Balanced sweet spot |
+| 7–9 | High | Moderate | Moderate | Good when stable |
+| 10 | Max | Heavy | Heavy | Risky, defects ↑ |
+
+Optimal speed depends on state + position:
+
+| State | Optimal Speed Range |
+|-------|-------------------|
+| NORMAL | 6–9 |
+| HIGH_LOAD | 4–7 |
+| MINOR_STOPPAGE | 2–5 |
+| MAJOR_STOPPAGE | 1–3 |
+| RECOVERY | 2→3→5→7 (increasing) |
+
+### Batch Types
+
+6 batch types with varying OEE baselines (mirroring real factory batches):
+
+| Type | OEE Base | Degrade Rate | Size Range |
+|------|---------|-------------|-----------|
+| WM-23-A-1 | 50 | 0.15 | 30–60 |
+| WM-23-A-2 | 55 | 0.12 | 25–50 |
+| Ra_21_A_1 | 45 | 0.18 | 20–40 |
+| Ra_21_A_2 | 60 | 0.10 | 30–55 |
+| Ra_21_A_3 | 40 | 0.20 | 15–35 |
+| Ra_21_A_4 | 65 | 0.08 | 35–70 |
+
+### Lag Feature Computation
+
+Computed per-batch (reset at batch boundary):
+- `OEE_lag1` = shift(1), filled with current value for row 0
+- `OEE_roll5_mean` = rolling(5, min_periods=1).mean()
+- `OEE_trend3` = diff(2), clipped to [-50, 50]
+- `pos_ratio` = (Part_SLNo - 1) / batch_size
+
+---
+
+## API Endpoints
+
+### `POST /predict-oee` (Production)
+
+**Request** (Pydantic schema — no state field):
 ```json
-POST /predict-oee
 {
-  "batch_part_no": "WM-23-A-1_b7",
-  "part_slno": 5,
-  "total_batch_size": 12,
-  "current_speed": 80,
-  "availability": 88,
-  "performance": 82,
-  "quality": 86,
-  "current_oee": 62,
-  "downtime_sec": 0,
-  "oee_delta": -2,
-  "state": "NORMAL"
+  "availability": 85,
+  "performance": 72,
+  "quality": 95,
+  "current_oee": 58,
+  "current_speed": 6,
+  "downtime_sec": 12,
+  "oee_delta": 3,
+  "part_slno": 15,
+  "total_batch_size": 50,
+  "batch_part_no": "WM-23-A-1_b42"
 }
 ```
 
-### 2. FastAPI Processes
-
-```python
-pos_ratio = request.part_slno / request.total_batch_size  # 5/12 = 0.417
-
-features = [
-    request.availability,       # 88
-    request.performance,        # 82
-    request.quality,            # 86
-    request.current_oee,        # 62
-    request.current_speed,      # 80
-    request.downtime_sec,       # 0
-    request.oee_delta,          # -2
-    request.part_slno,          # 5
-    pos_ratio,                  # 0.417
-    rolling.OEE_lag1,           # from buffer
-    rolling.OEE_roll5_mean,     # from buffer
-    rolling.OEE_trend3,         # from buffer
-    onehot_state_NORMAL,        # 1
-    onehot_state_HIGH_LOAD,     # 0
-    onehot_state_MINOR_STOP,    # 0
-    onehot_state_MAJOR_STOP,    # 0
-    onehot_state_RECOVERY       # 0
-] → scaled by scaler.transform()
-```
-
-### 3. FastAPI Returns
-
+**Response**:
 ```json
 {
-  "pred_oee_10m": 64.2,
-  "confidence_pct": 91.5,
-  "recommended_speed": 60,
-  "confidence_speed_pct": 88.0,
+  "pred_oee_10m": 61.3,
+  "confidence_pct": 94.2,
+  "recommended_speed": 7,
+  "confidence_speed_pct": 87.5,
   "change_needed": true,
-  "batch_position": "5/12",
-  "reasoning": "Part 5/12, NORMAL state, OEE 62 trending down -2. Speed 80→60 recovers expected OEE to 64.2 (+2.2 pts)."
+  "batch_position": "15/50"
 }
 ```
 
-### 4. Node-RED Consumes
+**Inference Flow**:
+1. Parse request → validate with Pydantic
+2. Detect batch change → reset RollingBuffer if new batch
+3. Push current_oee to RollingBuffer
+4. Build 12-feature vector (inline, mirrors `features/pipeline.py` contract)
+5. Scale with scaler_m1 → run 5 M1 models → mean + std → pred_oee + confidence
+6. Scale with scaler_m2 → run M2 model → argmax → raw recommendation
+7. Apply graduated post-processing (clip to ±1 / ±2)
+8. Push to OEE history buffer → return response
 
-| Field | Dashboard Element | Action |
-|-------|------------------|--------|
-| `pred_oee_10m` | OEE chart line | Show predicted OEE |
-| `confidence_pct` | Gauge | 0-100% needle |
-| `recommended_speed` | Speed chart bar | Show recommended speed |
-| `change_needed` | → if True + AI Switch ON | Write speed to PLC (S7) |
-| `change_needed` | → if True + AI Switch OFF | Flash suggestion on dashboard |
-| `batch_position` | Status text | "Part 5 of 12" |
+### `POST /predict-oee-v2` (Experimental — TimeFM2.5)
 
-## Model Architecture
-
-### M1: OEE Forecaster (Regression)
-
-| Aspect | Detail |
-|--------|--------|
-| Type | Keras Sequential ANN |
-| Architecture | Dense(128)→Dropout(0.2)→Dense(64)→Dropout(0.1)→Dense(32)→Dense(1) |
-| Output | `pred_oee_10m` (scalar, int 0-100) |
-| Loss | MSE |
-| Optimizer | Adam (lr grid: 0.001, 0.0005, 0.0001) |
-| Input | 17 features (scaled) |
-| Ensemble | 5 models, seeds 0-4, average prediction |
-| Confidence | `max(0, 100 * (1 - ensemble_std / 60))` |
-| Training target | `Predicted_OEE_t10` — conditional expected OEE (E[OEE_{t+12} \| current_state]) via 12-step transition matrix |
-| Batch size | Grid search: 16, 32, 64 |
-| Patience | EarlyStopping(patience=15), best weights restored |
-| Validation | 20% holdout |
-
-### M2: Speed Optimizer (Classification)
-
-| Aspect | Detail |
-|--------|--------|
-| Type | Keras Sequential ANN |
-| Architecture | Dense(64)→Dropout(0.2)→Dense(32)→Dropout(0.1)→Dense(5, softmax) |
-| Output | 5-class probability [20, 40, 60, 80, 100] |
-| Loss | SparseCategoricalCrossentropy |
-| Optimizer | Adam (lr grid: 0.001, 0.0005) |
-| Input | 17 features (scaled) |
-| Prediction | `argmax(probs) → speed_level`, confidence = `max(probs) * 100` |
-| Training target | `Recommended_Speed` — precomputed optimal speed from simulator |
-| Grid search | Layer sizes [64→32, 128→64→32], dropout [0.1, 0.2, 0.3] |
-| Validation | 20% holdout |
-
-### Feature Vector (17 dimensions)
-
-| # | Feature | Range | Type | Source |
-|---|---------|-------|------|--------|
-| 1 | Availability | 0-100 | int | Live sensor |
-| 2 | Performance | 0-100 | int | Live sensor |
-| 3 | Quality | 0-100 | int | Live sensor |
-| 4 | Current_OEE | 0-100 | int | Computed |
-| 5 | Current_Speed_pct | 20/40/60/80/100 | int | Live sensor |
-| 6 | DownTime_sec | ≥0 | int | Live sensor |
-| 7 | OEE_Delta | -100 to 100 | int | current - previous |
-| 8 | Part_SLNo | 1-N | int | From request |
-| 9 | pos_ratio | 0-1 | float | part_slno / total_batch_size |
-| 10 | OEE_lag1 | 0-100 | int | Rolling buffer |
-| 11 | OEE_roll5_mean | 0-100 | float | Rolling buffer |
-| 12 | OEE_trend3 | -100 to 100 | float | Rolling buffer |
-| 13-17 | _state_onehot | 0/1 | binary | One-hot encoded |
-
-### Why No Rule Layer
-
-M2's training target `Recommended_Speed` was computed by the simulator's `recommended_speed()` function, which brute-forces all feasible speed levels and picks the one maximizing projected OEE. M2 learns this optimal mapping from features alone.
-
-At inference:
-- If recommended_speed == current_speed → system is optimized, no action
-- If recommended_speed != current_speed → AI determined a change is optimal
-- **No hardcoded thresholds** (OEE < 85, OEE_Delta < 0, etc.)
-- **No state-based feasibility rules** — M2 learns from data which speeds are valid per state
-- **No trigger_reason** — change_needed = (recommended_speed != current_speed) is the trigger
-
-The "reasoning" field in the response is a template string generated by the API for dashboard display, not a model output.
-
-## API Implementation Details
-
-### `api/` Structure
-
-```
-api/
-├── main.py                 # FastAPI app, CORS, startup (load models)
-├── config.py               # Model paths, speed levels, MySQL config
-├── database.py             # MySQL connection, fetch_last_n_rows(), log_prediction()
-├── schemas/
-│   └── oee.py              # Pydantic models: PredictRequest, PredictResponse
-├── services/
-│   └── predictor.py        # RollingBuffer, M1EnsemblePredictor, M2Optimizer, predict()
-└── routers/
-    └── predict.py          # POST /predict-oee endpoint
+**Request**:
+```json
+{
+  "series": [
+    {
+      "availability": 85,
+      "performance": 72,
+      "quality": 95,
+      "current_oee": 58,
+      "current_speed": 6,
+      "downtime_sec": 12,
+      "oee_delta": 3,
+      "part_slno": 15,
+      "pos_ratio": 0.3
+    },
+    { "...": "..." }
+  ]
+}
 ```
 
-### Rolling Buffer (in predictor.py)
-
-```python
-class RollingBuffer:
-    maxlen: int = 5
-    store: list[dict]  # last N readings
-    
-    def push(self, reading: dict)  # add latest, trim to maxlen
-    def oee_lag(self, n: int = 1) -> int  # OEE from n steps ago
-    def oee_rolling_mean(self, n: int = 5) -> float  # mean of last n OEE values
-    def oee_trend(self, n: int = 3) -> float  # OEE[n-1] - OEE[0], positive = improving
-    def reset(self)  # clear buffer (e.g., batch change)
+**Response**:
+```json
+{
+  "predicted_trajectory": [58.1, 59.2, 60.0, 61.5, 62.3],
+  "pred_oee_10m": 62.3,
+  "confidence_lower": 57.8,
+  "confidence_upper": 66.9,
+  "recommended_speed": 7,
+  "speed_confidence_pct": 85.1
+}
 ```
 
-Buffering is per-batch. When `batch_part_no` changes, reset buffer.
+**TimeFM2.5 Pipeline**:
+1. Format series as `[batch=1, time_steps=N, features=9]` numpy array
+2. Run TimeFM2.5 encoder (frozen, 200M params) → embeddings
+3. **M1 Head**: Dense(128→64→1) regression → future OEE trajectory
+4. **M2 Head**: Dense(64→10) softmax → speed recommendation
+5. Both heads are lightweight (few thousand params), trained on synthetic embeddings
+6. Full TimeFM2.5 model is NOT fine-tuned — only the heads are trained
 
-### MySQL Tables
+---
 
-```sql
--- Live metrics (written by Node-RED)
-CREATE TABLE manufacture_ai_data (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    op_data_slno INT,
-    batch_part_no VARCHAR(50),
-    part_slno INT,
-    availability INT,
-    performance INT,
-    quality INT,
-    current_oee INT,
-    current_speed INT,
-    downtime_sec INT,
-    oee_delta INT,
-    state VARCHAR(20),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+## Data Flow (Node-RED → API → Dashboard)
 
--- Prediction audit log (written by FastAPI)
-CREATE TABLE predictions_log (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    batch_part_no VARCHAR(50),
-    part_slno INT,
-    pos_ratio FLOAT,
-    current_oee INT,
-    current_speed INT,
-    pred_oee_10m FLOAT,
-    confidence_pct FLOAT,
-    recommended_speed INT,
-    speed_confidence_pct FLOAT,
-    change_needed BOOLEAN,
-    features JSON,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+### Trigger Cadence
+
+```
+PLC polling (every 2s)
+  └→ Node-RED Supervisor DB tab (stores raw values in flow context)
+      └→ Performance DB tab (computes Availability, Performance, Quality, OEE)
+          └→ AI Optimize tab (triggered PER PRODUCED PART, not every 2s)
+              ├─ 7 Store X functions (track value changes)
+              ├─ Build Payload function (assemble JSON)
+              ├─ POST /predict-oee
+              ├─ Parse Response function
+              └─ Update dashboard (3 charts + 3 text widgets)
 ```
 
-### Key Design Decisions
+**Key rule**: The 2s PLC data is stored in flow context but does NOT trigger ML inference. Only the **part completion event** triggers the AI Optimize flow, ensuring:
+- Stable feature vectors (part-level granularity)
+- RollingBuffer has sufficient data between calls
+- No API flooding from 2s polling
+- Dashboard updates at meaningful cadence (~30–60s)
+
+### Dashboard Widgets (AI Dashboard group)
+
+| Widget | Data Source | Type |
+|--------|------------|------|
+| OEE Prediction | pred_oee_10m | Chart (ui_chart) |
+| Speed Prediction | recommended_speed | Chart (ui_chart) |
+| Profit Prediction | derived metric | Chart (ui_chart) |
+| Predicted OEE | pred_oee_10m | Text (ui_text) |
+| Predicted Speed | recommended_speed | Text (ui_text) |
+| Confidence | confidence_pct | Text (ui_text) |
+
+### PLC Writeback (Phase 2)
+
+When `change_needed == true`:
+```
+Node-RED → PLC write to speed register
+  ├─ If recommended_speed > current_speed: increase gradually (1 level per cycle)
+  ├─ If recommended_speed < current_speed: decrease immediately (safety)
+  └─ Cooldown: minimum 3 cycles between writes (prevent oscillation)
+```
+
+---
+
+## Training CLI
+
+### `python -m ml_model.train.main`
+
+| Flag | Description |
+|------|-------------|
+| `--m1` | Train M1 ensemble |
+| `--m2` | Train M2 classifier |
+| `--data path` | Path to training CSV (default: data/syn_oee_10k.csv) |
+| `--split float` | Temporal split ratio (default: 0.8) |
+| `--epochs int` | Max epochs (default: 200) |
+| `--seed int` | Random seed (default: 42) |
+
+### `python -m ml_model.timefm.main`
+
+| Flag | Description |
+|------|-------------|
+| `--train` | Train M1 + M2 heads |
+| `--predict` | Run inference on test set |
+| `--window int` | Lookback window (default: 30 steps) |
+| `--horizon int` | Forecast horizon (default: 12 steps) |
+
+### Model Card (`models/model_card.json`)
+
+Exported after every training run:
+```json
+{
+  "train_date": "2026-07-10T15:30:00",
+  "data_hash": "sha256:abc123...",
+  "data_rows": 10000,
+  "m1_val_mae": 1.77,
+  "m1_val_r2": 0.968,
+  "m2_val_accuracy": 0.9915,
+  "m2_class_weights": {"1": 8.5, "2": 7.2, ..., "10": 0.85},
+  "features": ["Availability", "Performance", ...],
+  "speed_range": "1-10",
+  "state_input": false,
+  "training_script": "train/main.py",
+  "seed": 42
+}
+```
+
+---
+
+## Key Design Decisions
 
 | Decision | Rationale |
 |----------|-----------|
-| Single endpoint (`/predict-oee`) | Node-RED makes one call per part → gets prediction + recommendation + confidence + trigger |
-| `pos_ratio` computed in API | Node-RED sends `part_slno` and `total_batch_size`; API computes ratio. Keeps training & inference consistent. |
-| Rolling buffer over MySQL queries | Lag features needed at inference time. MySQL query adds latency. Buffer is O(1) per push. |
-| MySQL still used | Audit trail, retraining dataset, dashboard history queries. Not in critical path. |
-| Keras Sequential ANN (not RF/XGB) | Must match old architecture pattern. ANN learns smooth decision boundaries from the deterministic `recommended_speed` target. |
-| Ensemble for confidence | 5 models with different seeds → variance measures uncertainty. Robust to single-model overconfidence. |
-| `change_needed = recommended != current` | The ONLY trigger. No rule thresholds. M2's training target already encodes the optimal speed. |
+| No state input to API | Model learns operating conditions from raw metrics; removes external dependency on state computation |
+| Speed 1-10 discrete | Matches PLC conveyor control; 10 classes give sufficient granularity |
+| ±1 speed clipping | Prevents mechanical shock; gradual changes match operator behavior |
+| 5-ensemble for M1 | Reduces prediction variance; confidence derived from ensemble spread |
+| Separate scalers per model | M1 regression vs M2 classification have different scale sensitivities |
+| RollingBuffer(20) in memory | Avoids MySQL query on critical path; sufficient for 40s of 2s data |
+| TimeFM2.5 as separate endpoint | Experimental comparison; no risk to production flow |
+| Frozen TimeFM backbone | 200M params too large to train; heads are lightweight and fast to train |
+| Temporal (not random) split | Prevents data leakage; respects production time ordering |
+| Class weights for M2 | Handles speed imbalance (speed 10 is common, speed 1 is rare) |
 
-## Implementation Order
+---
 
-### Phase 1: Data Pipeline (done ± fixes)
-1. ✅ `01_process_production_data.ipynb` — executed
-2. [ ] `02_generate_synthetic_data.ipynb` — remove `Part_SLNo` and `_pos_ratio` from `drop_cols`, add lag feature columns, re-execute
+## Future Considerations
 
-### Phase 2: Training
-3. [ ] `03_train_m1.ipynb` — Keras ANN ensemble, 5 seeds, grid search, save models + scaler
-4. [ ] `04_train_m2.ipynb` — Keras ANN classifier, grid search, save model
-
-### Phase 3: API
-5. [ ] `api/config.py` — conveyor speed levels, single model paths, MySQL config
-6. [ ] `api/schemas/oee.py` — PredictRequest, PredictResponse
-7. [ ] `api/services/predictor.py` — RollingBuffer, M1+M2, combined predict()
-8. [ ] `api/routers/predict.py` — single endpoint
-9. [ ] `api/database.py` — log_prediction(), no inference queries
-10. [ ] `api/main.py` — load models at startup
-
-### Phase 4: Node-RED
-11. [ ] Update "AI Optimize" flow — single HTTP POST, AI Switch routing to PLC
-
-### Phase 5: Integration
-12. [ ] End-to-end test: inject data → API → Node-RED → dashboard → simulated PLC
-
-## `Recommended_Speed` Ground Truth (from 02 notebook)
-
-```python
-def recommended_speed(state, pos_ratio):
-    feasible = {
-        'NORMAL': [20,40,60,80,100],
-        'HIGH_LOAD': [60,80,100],
-        'MINOR_STOPPAGE': [20,40,60],
-        'MAJOR_STOPPAGE': [20,40],
-        'RECOVERY': [20,40,60,80]
-    }[state]
-    best_spd, best_oee = None, -1
-    for spd in feasible:
-        perf = int(np.clip(round(40 + (spd/20)*8 + state_bonus[state] - pos_ratio*8), 10, 100))
-        qual = int(np.clip(round(95 - (spd/20-1)*3 + state_qual_penalty[state]), 20, 100))
-        avail = int(np.clip(round(90 + state_avail_offset[state] - pos_ratio*(spd/20)*4), 20, 100))
-        oee = int((avail * perf * qual) / 10000)
-        if oee > best_oee:
-            best_oee, best_spd = oee, spd
-    return best_spd
-```
-
-All state-speed relationships are encoded in the training target. M2 learns this function. No runtime rules needed.
+- **Online learning**: Periodically retrain on real production data collected from Node-RED
+- **Anomaly detection flag**: Add `unexpected_state: true` to response when feature distribution falls outside training range
+- **Multi-step forecast**: Extend M1 to predict OEE at t+10, t+20, t+30 minutes (3-head output)
+- **RL-based speed controller**: Replace M2 with a DQN agent that learns optimal speed through cumulative reward
+- **Model versioning**: Keep last 5 model generations in `models/archive/` with git-lfs tracking
+- **A/B testing**: Route % of traffic to TimeFM2.5 endpoint and compare MAE / recommendation acceptance rate

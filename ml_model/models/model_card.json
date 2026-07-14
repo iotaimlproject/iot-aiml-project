@@ -1,0 +1,35 @@
+{
+  "train_date": "2026-07-13T14:36:09.841753+00:00",
+  "data_hash": "796e71a80f6518d2",
+  "data_rows": 10053,
+  "model_type": "m1_regressor + m2_classifier",
+  "features": [
+    "Availability",
+    "Performance",
+    "Quality",
+    "Current_OEE",
+    "Current_Speed_pct",
+    "DownTime_sec",
+    "OEE_Delta",
+    "Part_SLNo",
+    "_pos_ratio",
+    "OEE_lag1",
+    "OEE_roll5_mean",
+    "OEE_trend3",
+    "OEE_min5",
+    "OEE_max5",
+    "OEE_range5"
+  ],
+  "state_input": false,
+  "model_version": 4,
+  "m1": {
+    "target": "Predicted_OEE_t1 (regression)",
+    "val_mae": 3.8252,
+    "val_r2": 0.9124
+  },
+  "m2": {
+    "target": "Recommended_Speed (5-class, 20-100)",
+    "n_classes": 5,
+    "val_accuracy": 0.6733
+  }
+}

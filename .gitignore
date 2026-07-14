@@ -8,3 +8,8 @@ node-registry.json
 .jupyter*
 .ipynb_checkpoints
 .venv
+*.log
+*.egg-info/
+*.pt
+plan.md
+smoke_test.py

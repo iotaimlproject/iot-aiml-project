@@ -4,9 +4,11 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from ml_model.gpu_setup import configure_gpu
 from api.config import settings
 from api.routers import predict
 from api.services.predictor import predictor
+from api.services.timefm_predictor import timefm_api
 
 logging.basicConfig(
     level=logging.INFO,
@@ -17,9 +19,19 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Loading models...")
+    configure_gpu()
+    logger.info("Loading ANN models...")
     predictor.load()
-    logger.info(f"Models loaded: M1 ensemble (5), M2 classifier")
+    logger.info("ANN loaded: M1 ensemble (20 seeds), physics-based speed optimizer")
+    try:
+        logger.info("Loading TimeFM 2.5 inference...")
+        timefm_api.load()
+        if timefm_api.loaded:
+            logger.info("TimeFM 2.5 loaded")
+        else:
+            logger.warning("TimeFM 2.5 head not found — run training to enable")
+    except Exception as e:
+        logger.warning(f"TimeFM 2.5 not available: {e}")
     yield
 
 
@@ -42,4 +54,11 @@ app.include_router(predict.router)
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "models_loaded": predictor._loaded}
+    return {
+        "status": "ok",
+        "models": {
+            "ann_m1_ensemble": predictor._loaded,
+            "speed_optimizer": "physics_based",
+            "timefm_2_5": timefm_api.loaded,
+        },
+    }
